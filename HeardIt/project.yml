@@ -1,0 +1,62 @@
+# XcodeGen spec. Run `xcodegen generate` in this folder to create HeardIt.xcodeproj.
+name: HeardIt
+options:
+  bundleIdPrefix: com.anderschan.heardit
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "0.1"
+    CURRENT_PROJECT_VERSION: "1"
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: "" # Set your Apple team ID here (or pick it in Xcode > Signing & Capabilities)
+
+targets:
+  HeardIt:
+    type: application
+    platform: iOS
+    sources:
+      - path: App
+      - path: Shared
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Heard It
+        UILaunchScreen: {}
+        UISupportedInterfaceOrientations: [UIInterfaceOrientationPortrait]
+        UIBackgroundModes: [audio] # lets the widget's speaker button play audio
+        CFBundleURLTypes:
+          - CFBundleURLName: com.anderschan.heardit
+            CFBundleURLSchemes: [heardit]
+    entitlements:
+      path: App/HeardIt.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.anderschan.heardit]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.anderschan.heardit
+    dependencies:
+      - target: HeardItWidget
+
+  HeardItWidget:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: Widget
+      - path: Shared
+    info:
+      path: Widget/Info.plist
+      properties:
+        CFBundleDisplayName: Heard It
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.widgetkit-extension
+    entitlements:
+      path: Widget/HeardItWidget.entitlements
+      properties:
+        com.apple.security.application-groups: [group.com.anderschan.heardit]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.anderschan.heardit.widget

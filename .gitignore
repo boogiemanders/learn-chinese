@@ -1,0 +1,11 @@
+# Private study material from paid courses: never commit
+cmb-notes-private/
+
+# Build output
+HeardIt/build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+
+# macOS
+.DS_Store
