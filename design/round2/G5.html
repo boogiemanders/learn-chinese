@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>G4 square-block glyphs + handwriting: 2 fonts, 3 sizes</title>
+<link href="https://fonts.googleapis.com/css2?family=Long+Cang&display=swap" rel="stylesheet">
+<script src="glyphs2.js"></script>
+<style>
+  /* Fonts: DotGothic16 (signage labels) + Long Cang (handwriting). Hero = hand-drawn block glyphs.
+     Sizes: S 15 · M 24 · hero 108. Space: 8 13 21 34 55 89. */
+  body { margin: 0; }
+  .screen { width: 390px; height: 844px; box-sizing: border-box; background: #7A8F9C; color: #fff; position: relative; overflow: hidden; font-family: 'Long Cang', cursive; }
+  .S { font-size: 15px; } .M { font-size: 24px; }
+  .px { font-family: 'DotGothic16', monospace; letter-spacing: 1px; }
+  .dot { position: absolute; width: 4px; height: 4px; background: #fff; }
+  .opt { flex: 1; min-height: 55px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <img src="wildflower.jpg" alt="" style="position:absolute;left:0;top:0;width:390px;height:844px;object-fit:cover;transform:translateX(105px);-webkit-mask-image:linear-gradient(to right,transparent 0,#000 80px);mask-image:linear-gradient(to right,transparent 0,#000 80px);">
+
+  <div style="position:absolute;left:21px;top:55px;display:flex;align-items:center;gap:13px">
+    <span style="background:#fff;padding:5px"><span class="g2" data-text="今日" data-cell="3" data-color="#5E7482"></span></span>
+    <span class="g2" data-text="TODAY · 6 LEFT" data-cell="3" data-color="#ffffff"></span>
+  </div>
+
+  <div style="position:absolute;left:21px;top:213px;display:flex;align-items:center;gap:13px">
+    <span class="g2" data-text="出" data-cell="10" data-color="#ffffff"></span>
+    <span class="g2" data-text="口" data-cell="10" data-color="#ffffff"></span>
+  </div>
+
+  <div style="position:absolute;left:21px;top:357px;display:flex;flex-direction:column;gap:8px">
+    <span class="M">chū kǒu · ceot1 hau2</span>
+    <span class="M">exit, on every metro sign</span>
+    <span class="M">出口 · 地铁站常见</span>
+  </div>
+
+  <div style="position:absolute;left:21px;right:21px;top:521px">
+    <div style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));justify-items:center"><span class="g2" data-text="MON" data-cell="2" data-color="#ffffff"></span><span class="g2" data-text="TUE" data-cell="2" data-color="#ffffff"></span><span class="g2" data-text="WED" data-cell="2" data-color="#ffffff"></span><span class="g2" data-text="THU" data-cell="2" data-color="#ffffff"></span><span class="g2" data-text="FRI" data-cell="2" data-color="#ffffff"></span><span class="g2" data-text="SAT" data-cell="2" data-color="#ffffff"></span><span class="g2" data-text="SUN" data-cell="2" data-color="#ffffff"></span></div>
+    <div class="M" style="margin-top:8px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));text-align:center">
+      <span>3</span><span>4</span><span style="opacity:0.55">5</span><span>6</span><span>7</span><span>8</span><span style="text-decoration:underline">9</span>
+    </div>
+    <div class="S" style="margin-top:8px;text-align:center">←‒ ‒ ‒ ‒ 6-day streak ‒ ‒ ‒ ‒→</div>
+  </div>
+  <span class="dot" style="left:19px;top:512px"></span><span class="dot" style="right:19px;top:512px"></span>
+  <span class="dot" style="left:19px;top:612px"></span><span class="dot" style="right:19px;top:612px"></span>
+
+  <div style="position:absolute;left:21px;right:21px;bottom:89px;display:flex;gap:8px">
+    <div class="opt" style="border:2px solid #fff"><span class="S">不记得</span><span class="M">Missed</span></div>
+    <div class="opt" style="border:2px solid #fff"><span class="S">不确定</span><span class="M">Not sure</span></div>
+    <div class="opt" style="background:#fff;color:#5E7482"><span class="S">记得</span><span class="M">Got it</span></div>
+  </div>
+
+  <div style="position:absolute;left:21px;right:21px;bottom:34px;display:flex;justify-content:space-between;align-items:center">
+    <span class="g2" data-text="▶ HEAR IT" data-cell="3" data-color="#ffffff"></span>
+    <span class="M">听过 heard it</span>
+  </div>
+</div>
+</body>
+</html>

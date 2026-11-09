@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>H2 retro sign, more blue, minimal</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;900&family=Yellowtail&family=Chivo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* Ratio: blue 60 · cream 30 · red 10. Golden scale: S 15 · M 24 · B 39 · hero 102 */
+  body { margin: 0; }
+  .screen { width: 390px; height: 844px; box-sizing: border-box; background: #2D5F7C; color: #F6F1E6; position: relative; overflow: hidden; font-family: 'Chivo', sans-serif; }
+  .S { font-size: 15px; } .M { font-size: 24px; } .B { font-size: 39px; }
+  .opt { flex: 1; min-height: 55px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1.5px solid rgba(246,241,230,0.6); }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div style="position:absolute;left:21px;right:21px;top:55px;display:flex;justify-content:space-between;align-items:baseline">
+    <span style="font-family:'Yellowtail',cursive" class="B">Heard It</span>
+    <span class="S">6 cards left</span>
+  </div>
+
+  <!-- the sign: cream panel, red characters, blue shadow -->
+  <div style="position:absolute;left:21px;right:21px;top:144px;height:288px;background:#F6F1E6;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px">
+    <span class="S" style="color:#2D5F7C;letter-spacing:4px;font-weight:700">MENU DECODER</span>
+    <span style="font-family:'Noto Serif SC',serif;font-weight:900;font-size:102px;line-height:1;color:#C43A2F;text-shadow:3px 3px 0 #2D5F7C">叉烧</span>
+    <span class="S" style="color:#2D5F7C;letter-spacing:2px">char siu · barbecued pork</span>
+  </div>
+
+  <div class="M" style="position:absolute;left:21px;right:21px;top:466px;display:flex;flex-direction:column;gap:13px">
+    <div style="display:flex;justify-content:space-between"><span style="font-family:'Noto Serif SC';font-weight:600">普</span><span>chāshāo</span></div>
+    <div style="display:flex;justify-content:space-between"><span style="font-family:'Noto Serif SC';font-weight:600">粵</span><span>caa1 siu1</span></div>
+  </div>
+
+  <div style="position:absolute;left:21px;right:21px;top:576px;display:flex;justify-content:space-between;align-items:center">
+    <span style="font-family:'Yellowtail',cursive" class="M">You already say this one.</span>
+    <span aria-label="Hear it" style="display:inline-flex;width:34px;height:34px;border-radius:17px;background:#F6F1E6;color:#2D5F7C;align-items:center;justify-content:center" class="S">▶</span>
+  </div>
+
+  <div style="position:absolute;left:21px;right:21px;bottom:89px;display:flex;gap:8px">
+    <div class="opt"><span class="S" style="font-family:'Noto Serif SC'">不记得</span><span class="S">Missed</span></div>
+    <div class="opt"><span class="S" style="font-family:'Noto Serif SC'">不确定</span><span class="S">Not sure</span></div>
+    <div class="opt" style="background:#C43A2F;border-color:#C43A2F"><span class="S" style="font-family:'Noto Serif SC'">记得</span><span class="S" style="font-weight:700">Got it</span></div>
+  </div>
+
+  <div class="S" style="position:absolute;left:21px;right:21px;bottom:34px;display:flex;justify-content:space-between;opacity:0.85">
+    <span>Today</span><span>Words</span><span>Settings</span>
+  </div>
+</div>
+</body>
+</html>

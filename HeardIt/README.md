@@ -1,4 +1,6 @@
-# Heard It (working name)
+# Hear to Read: Chinese for ABCs
+
+App Store name: **Hear to Read: Chinese for ABCs** (30). Subtitle: **Read the menu (no asking Mom)** (29). Home screen: **Hear to Read**. The Xcode target, bundle ID (`com.anderschan.heardit`) and URL scheme keep the old internal name; users never see them.
 
 Lock-screen Chinese flashcards for people who speak some Cantonese or Mandarin but can't read it. Each card shows characters with pinyin and Jyutping. You can reveal it and grade it (Knew it / Unsure / Missed) right on the Lock Screen.
 
@@ -22,7 +24,7 @@ Lock-screen Chinese flashcards for people who speak some Cantonese or Mandarin b
 3. In this folder: `xcodegen generate`, then `open HeardIt.xcodeproj`
 4. In Xcode, select each target (HeardIt and HeardItWidget). Under **Signing & Capabilities**, choose your Team. If Xcode says the bundle ID or App Group is taken, change `com.anderschan.heardit` in `project.yml` and `Store.appGroupID` in `Shared/Store.swift`, then regenerate.
 5. Run on your iPhone. A free Apple ID works, but the app stops opening after 7 days and needs reinstalling.
-6. Add the widget: long-press the Lock Screen, tap **Customize**, then **Lock Screen**, then the widget area, and pick **Heard It**.
+6. Add the widget: long-press the Lock Screen, tap **Customize**, then **Lock Screen**, then the widget area, and pick **Hear to Read**.
 
 Check the logic without Xcode:
 

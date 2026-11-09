@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>G2 signage</title>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+<script src="blocks.js"></script>
+<style>
+  body { margin: 0; }
+  .screen { width: 390px; height: 844px; box-sizing: border-box; background: #4B5859; color: #fff; font-family: 'DotGothic16', monospace; position: relative; overflow: hidden; }
+  .row { display: flex; align-items: baseline; gap: 6px; font-size: 14px; letter-spacing: 1px; }
+  .lead { flex: 1; border-bottom: 2px dotted rgba(255,255,255,0.55); transform: translateY(-4px); }
+  .day { display: flex; flex-direction: column; align-items: center; gap: 6px; font-size: 11px; letter-spacing: 1px; }
+  .sq { width: 10px; height: 10px; background: #fff; }
+  .sq.off { background: transparent; outline: 1.5px solid rgba(255,255,255,0.6); outline-offset: -1.5px; }
+  .tile { flex: 1; min-height: 50px; border: 2px solid #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 13px; letter-spacing: 1px; gap: 2px; }
+  .tile small { font-size: 11px; opacity: 0.85; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <!-- dried wildflower, hand drawn -->
+  <svg aria-hidden="true" width="390" height="844" viewBox="0 0 390 844" style="position:absolute;left:0;top:0">
+    <defs><filter id="h" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="11"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter></defs>
+    <g filter="url(#h)" fill="none" stroke-linecap="round">
+      <path d="M300 222 C306 260 292 300 302 340" stroke="#A9A77E" stroke-width="2"/>
+      <path d="M296 222 C292 268 310 300 298 340" stroke="#A9A77E" stroke-width="1.4" opacity="0.8"/>
+      <path d="M298 222 L262 180 M298 222 L274 170 M298 222 L288 164 M298 222 L298 160 M298 222 L312 164 M298 222 L324 170 M298 222 L336 182 M298 222 L254 192" stroke="#BDB88E" stroke-width="1"/>
+    </g>
+    <g fill="#E3DAC1" filter="url(#h)">
+      <circle cx="262" cy="178" r="4"/><circle cx="256" cy="184" r="3"/><circle cx="268" cy="172" r="3"/>
+      <circle cx="274" cy="168" r="4"/><circle cx="280" cy="162" r="3"/><circle cx="288" cy="162" r="4"/><circle cx="294" cy="156" r="3"/>
+      <circle cx="298" cy="158" r="4.5"/><circle cx="304" cy="152" r="3"/><circle cx="312" cy="162" r="4"/><circle cx="318" cy="166" r="3"/>
+      <circle cx="324" cy="168" r="4"/><circle cx="330" cy="174" r="3"/><circle cx="336" cy="180" r="4"/><circle cx="254" cy="190" r="3.5"/>
+    </g>
+  </svg>
+
+  <div style="position:absolute;left:24px;top:60px;display:flex;flex-direction:column;gap:10px">
+    <span class="blocks" data-text="今日" data-cell="4" data-gap="1" data-color="#ffffff"></span>
+    <span style="font-size:12px;letter-spacing:3px">TODAY · 11.09 SUN</span>
+  </div>
+
+  <div style="position:absolute;left:24px;top:182px;display:flex;flex-direction:column;gap:8px;font-size:12px;letter-spacing:2px">
+    <span>06 待复习</span>
+    <span>03 新词</span>
+  </div>
+
+  <div style="position:absolute;left:24px;top:300px;right:24px">
+    <span style="display:inline-block;background:#fff;color:#4B5859;padding:3px 8px;font-size:12px;letter-spacing:2px">出行 SURVIVAL</span>
+    <div style="margin-top:16px"><span class="blocks" data-text="出口" data-cell="10" data-gap="2" data-color="#ffffff"></span></div>
+    <div style="margin-top:18px;display:flex;flex-direction:column;gap:10px">
+      <div class="row"><span>普</span><span class="lead"></span><span>chū kǒu</span></div>
+      <div class="row"><span>粵</span><span class="lead"></span><span>CEOT1 HAU2</span></div>
+      <div class="row"><span>EN</span><span class="lead"></span><span>EXIT</span></div>
+    </div>
+  </div>
+
+  <div style="position:absolute;left:24px;right:24px;top:654px;display:flex;justify-content:space-between">
+    <div class="day">MON<span class="sq"></span></div>
+    <div class="day">TUE<span class="sq"></span></div>
+    <div class="day">WED<span class="sq off"></span></div>
+    <div class="day">THU<span class="sq"></span></div>
+    <div class="day">FRI<span class="sq"></span></div>
+    <div class="day">SAT<span class="sq"></span></div>
+    <div class="day">SUN<span class="sq off"></span></div>
+  </div>
+
+  <div style="position:absolute;left:24px;right:24px;bottom:96px;display:flex;gap:8px">
+    <div class="tile">不记得<small>MISSED</small></div>
+    <div class="tile">不确定<small>UNSURE</small></div>
+    <div class="tile" style="background:#fff;color:#4B5859">记得<small>KNEW IT</small></div>
+  </div>
+
+  <div style="position:absolute;left:24px;right:24px;bottom:40px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:2px">
+    <span style="display:flex;align-items:center;gap:6px">
+      <svg width="20" height="16" viewBox="0 0 20 16" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" filter="url(#h)"><path d="M2 6 L6 6 L10 2 L10 14 L6 10 L2 10 Z"/><path d="M13 5 C15 7 15 9 13 11"/><path d="M16 3 C19 6 19 10 16 13"/></svg>
+      播放 PLAY
+    </span>
+    <span>听过 HEARD IT</span>
+  </div>
+</div>
+</body>
+</html>

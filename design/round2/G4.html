@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>G4 square-block glyphs + handwriting: 2 fonts, 3 sizes</title>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Long+Cang&display=swap" rel="stylesheet">
+<script src="glyphs.js"></script>
+<style>
+  /* Fonts: DotGothic16 (signage labels) + Long Cang (handwriting). Hero = hand-drawn block glyphs.
+     Sizes: S 15 · M 24 · hero 108. Space: 8 13 21 34 55 89. */
+  body { margin: 0; }
+  .screen { width: 390px; height: 844px; box-sizing: border-box; background: #47524F; color: #fff; position: relative; overflow: hidden; font-family: 'Long Cang', cursive; }
+  .S { font-size: 15px; } .M { font-size: 24px; }
+  .px { font-family: 'DotGothic16', monospace; letter-spacing: 1px; }
+  .dot { position: absolute; width: 4px; height: 4px; background: #fff; }
+  .opt { flex: 1; min-height: 55px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <svg aria-hidden="true" width="390" height="844" viewBox="0 0 390 844" style="position:absolute;left:0;top:0">
+    <defs><filter id="h" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="11"/><feDisplacementMap in="SourceGraphic" scale="3"/></filter></defs>
+    <g filter="url(#h)" fill="none" stroke-linecap="round">
+      <path d="M322 150 C326 196 314 232 324 278" stroke="#A9A77E" stroke-width="1.8"/>
+      <path d="M322 150 L296 120 M322 150 L306 112 M322 150 L320 106 M322 150 L336 110 M322 150 L348 118 M322 150 L290 132" stroke="#BDB88E" stroke-width="1"/>
+    </g>
+    <g fill="#E3DAC1" filter="url(#h)">
+      <circle cx="296" cy="118" r="3.5"/><circle cx="290" cy="130" r="3"/><circle cx="306" cy="110" r="3.5"/><circle cx="312" cy="106" r="2.5"/>
+      <circle cx="320" cy="104" r="4"/><circle cx="328" cy="106" r="2.5"/><circle cx="336" cy="108" r="3.5"/><circle cx="348" cy="116" r="3.5"/>
+    </g>
+  </svg>
+
+  <div style="position:absolute;left:21px;top:55px;display:flex;align-items:center;gap:13px">
+    <span style="background:#fff;padding:5px;display:flex;gap:5px">
+      <span class="glyph" data-char="今" data-cell="3" data-color="#47524F"></span>
+      <span class="glyph" data-char="日" data-cell="3" data-color="#47524F"></span>
+    </span>
+    <span class="px S">TODAY · 6 LEFT</span>
+  </div>
+
+  <div style="position:absolute;left:21px;top:213px;display:flex;align-items:center;gap:13px">
+    <span style="background:#fff;padding:8px"><span class="glyph" data-char="出" data-cell="12" data-color="#47524F"></span></span>
+    <span class="glyph" data-char="口" data-cell="12" data-color="#ffffff"></span>
+  </div>
+
+  <div style="position:absolute;left:21px;top:357px;display:flex;flex-direction:column;gap:8px">
+    <span class="M">chū kǒu · ceot1 hau2</span>
+    <span class="M">exit, on every metro sign</span>
+    <span class="M">出口 · 地铁站常见</span>
+  </div>
+
+  <div style="position:absolute;left:21px;right:21px;top:521px">
+    <div class="px S" style="display:grid;grid-template-columns:repeat(7,minmax(0,1fr));text-align:center">
+      <span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>
+    </div>
+    <div class="M" style="margin-top:8px;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));text-align:center">
+      <span>3</span><span>4</span><span style="opacity:0.55">5</span><span>6</span><span>7</span><span>8</span><span style="text-decoration:underline">9</span>
+    </div>
+    <div class="S" style="margin-top:8px;text-align:center">←‒ ‒ ‒ ‒ 6-day streak ‒ ‒ ‒ ‒→</div>
+  </div>
+  <span class="dot" style="left:19px;top:512px"></span><span class="dot" style="right:19px;top:512px"></span>
+  <span class="dot" style="left:19px;top:612px"></span><span class="dot" style="right:19px;top:612px"></span>
+
+  <div style="position:absolute;left:21px;right:21px;bottom:89px;display:flex;gap:8px">
+    <div class="opt" style="border:2px solid #fff"><span class="px S">不记得</span><span class="M">Missed</span></div>
+    <div class="opt" style="border:2px solid #fff"><span class="px S">不确定</span><span class="M">Not sure</span></div>
+    <div class="opt" style="background:#fff;color:#47524F"><span class="px S">记得</span><span class="M">Got it</span></div>
+  </div>
+
+  <div style="position:absolute;left:21px;right:21px;bottom:34px;display:flex;justify-content:space-between;align-items:center">
+    <span class="px S">▶ HEAR IT</span>
+    <span class="M">听过 heard it</span>
+  </div>
+</div>
+</body>
+</html>

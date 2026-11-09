@@ -1,6 +1,14 @@
 import Foundation
 
+enum CardStyle: String, Codable, CaseIterable, Identifiable {
+    case poster, panel
+    var id: String { rawValue }
+    var title: String { self == .poster ? "Poster" : "Panel" }
+}
+
 struct AppSettings: Codable, Hashable {
+    var cardStyle: CardStyle = .poster
+    var disabledDecks: [Deck] = []
     var script: Script = .simplified
     var readings: ReadingMode = .both
     var newPerDay: Int = 8
@@ -12,6 +20,8 @@ struct AppSettings: Codable, Hashable {
     /// Tolerant decoding so settings saved by older versions keep loading.
     init(from decoder: Decoder) throws {
         let c = try decoder.container(keyedBy: CodingKeys.self)
+        cardStyle = try c.decodeIfPresent(CardStyle.self, forKey: .cardStyle) ?? .poster
+        disabledDecks = try c.decodeIfPresent([Deck].self, forKey: .disabledDecks) ?? []
         script = try c.decodeIfPresent(Script.self, forKey: .script) ?? .simplified
         readings = try c.decodeIfPresent(ReadingMode.self, forKey: .readings) ?? .both
         newPerDay = try c.decodeIfPresent(Int.self, forKey: .newPerDay) ?? 8
@@ -26,6 +36,29 @@ struct StoreData: Codable {
     var settings = AppSettings()
     var newCountDay: String = ""
     var newCount: Int = 0
+    /// Days with at least one graded card ("yyyy-MM-dd"). Optional so older saves still decode.
+    var practiceDays: [String]?
+}
+
+/// What the tear-off page shows on its sides: the day count and this week's strip.
+struct Practice: Hashable {
+    var days: Int = 0
+    /// Monday first. True where at least one card was graded.
+    var week: [Bool] = Array(repeating: false, count: 7)
+    /// 0 = Monday … 6 = Sunday.
+    var today: Int = 0
+
+    static func from(_ keys: [String], now: Date = .now) -> Practice {
+        var cal = Calendar(identifier: .gregorian)
+        cal.firstWeekday = 2
+        let today = (cal.component(.weekday, from: now) + 5) % 7
+        let set = Set(keys)
+        let monday = cal.date(byAdding: .day, value: -today, to: now) ?? now
+        let week = (0..<7).map { i in
+            set.contains(Store.dayKey(cal.date(byAdding: .day, value: i, to: monday) ?? now))
+        }
+        return Practice(days: set.count, week: week, today: today)
+    }
 }
 
 /// Shared state for the app and the widget, saved as one JSON file in the
@@ -77,6 +110,8 @@ final class Store {
 
     func state(for id: String) -> ReviewState? { data.states[id] }
 
+    func practice(now: Date = .now) -> Practice { Practice.from(data.practiceDays ?? [], now: now) }
+
     func newAllowedToday(now: Date = .now) -> Int {
         let today = Store.dayKey(now)
         let used = data.newCountDay == today ? data.newCount : 0
@@ -84,7 +119,8 @@ final class Store {
     }
 
     func queue(now: Date = .now) -> [Word] {
-        Scheduler.queue(words: words, states: data.states, now: now, newAllowed: newAllowedToday(now: now))
+        let off = Set(data.settings.disabledDecks)
+        return Scheduler.queue(words: words.filter { !off.contains($0.deck) }, states: data.states, now: now, newAllowed: newAllowedToday(now: now))
     }
 
     /// The card to show: the one already flipped, else the top of the queue.
@@ -110,6 +146,8 @@ final class Store {
                 d.newCount += 1
             }
             d.states[id] = Scheduler.apply(grade, to: previous, now: now)
+            let day = Store.dayKey(now)
+            if !(d.practiceDays ?? []).contains(day) { d.practiceDays = (d.practiceDays ?? []) + [day] }
             if d.revealedID == id { d.revealedID = nil }
         }
     }

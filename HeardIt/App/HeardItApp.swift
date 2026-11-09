@@ -26,7 +26,12 @@ final class AppModel: ObservableObject {
     @Published private(set) var version = 0
     /// A word opened from the widget; shown on Today until graded.
     @Published var focusedID: String?
-    @Published var selectedTab = 0
+    @Published var selectedTab: Int = {
+        // screenshot hook: -demoTab 1 opens Words, 2 opens Settings
+        let a = ProcessInfo.processInfo.arguments
+        if let i = a.firstIndex(of: "-demoTab"), i + 1 < a.count { return Int(a[i + 1]) ?? 0 }
+        return 0
+    }()
 
     var settings: AppSettings { store.settings }
 
@@ -45,8 +50,8 @@ final class AppModel: ObservableObject {
     }
 
     func open(_ url: URL) {
-        guard url.scheme == "heardit", url.host == "word" else { return }
-        focusedID = url.lastPathComponent
+        guard url.scheme == "heardit" else { return }
+        if url.host == "word" { focusedID = url.lastPathComponent }
         selectedTab = 0
         refresh()
     }

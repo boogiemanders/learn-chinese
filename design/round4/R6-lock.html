@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>R6 Lock screen with Heard It widgets</title>
+<link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+<style>
+  :root{--page:#FAFAF8;--panel:#2D5F7C;--ink:#23485C;--ink2:#FAFAF8;--muted:#4F6F82;--line:#BFCBD3;--red:#C1352B;--brush:'Zhi Mang Xing',cursive;}
+  body { margin: 0; }
+  .screen { width: 390px; height: 844px; background: var(--panel); color: var(--ink); position: relative; overflow: hidden; font-family: 'Songti SC', serif; }
+  .S { font-size: 15px; letter-spacing: 2px; } .M { font-size: 24px; }
+  .abs { position: absolute !important; }
+  .vert { writing-mode: vertical-rl; letter-spacing: 6px; }
+  .circ { border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; }
+  .row { display: flex; align-items: center; justify-content: space-between; min-height: 55px; border-bottom: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="stamp" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="4" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -5 0 0 0 4.4" result="m"/>
+    <feComposite in="SourceGraphic" in2="m" operator="in" result="s"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="9" result="w"/>
+    <feDisplacementMap in="s" in2="w" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+<div class="screen">
+
+  <div class="S abs" style="left:0;right:0;top:89px;text-align:center;color:rgba(255,255,255,.92);letter-spacing:0">叉烧 chāshāo · barbecued pork</div>
+  <div class="abs" style="left:0;right:0;top:110px;text-align:center;color:#fff;font:600 89px/1 -apple-system,system-ui,sans-serif;letter-spacing:-2px">9:41</div>
+  <div class="abs" style="left:34px;top:233px;width:221px;height:72px;border-radius:21px;background:rgba(255,255,255,.14);color:#fff"><div style="display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;padding:0 13px;box-sizing:border-box;line-height:1.25"><span class="M" style="letter-spacing:4px">叉烧</span><span class="S" style="letter-spacing:1px">chāshāo</span><span class="S" style="letter-spacing:1px;opacity:.85">barbecued pork</span></div></div>
+  <div class="abs circ" style="left:284px;top:233px;width:72px;height:72px;background:rgba(255,255,255,.14);color:#fff"><div style="display:flex;flex-direction:column;align-items:center;line-height:1.15;text-align:center"><span style="font-size:17px">叉烧</span><span style="font-size:10px">chāshāo</span><span style="font-size:10px;opacity:.85">BBQ pork</span></div></div>
+  <div class="abs circ" style="left:47px;bottom:55px;width:55px;height:55px;background:rgba(255,255,255,.14)"></div>
+  <div class="abs circ" style="right:47px;bottom:55px;width:55px;height:55px;background:rgba(255,255,255,.14)"></div>
+  <div class="abs" style="left:130px;right:130px;bottom:13px;height:5px;border-radius:3px;background:#fff"></div>
+</div>
+</body>
+</html>

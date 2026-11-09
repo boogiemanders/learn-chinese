@@ -1,0 +1,2922 @@
+[
+  {
+    "id": "t-shenzhen",
+    "simplified": "深圳",
+    "traditional": "深圳",
+    "pinyin": "Shēnzhèn",
+    "jyutping": "sam1 zan3",
+    "meaning": "Shenzhen",
+    "deck": "survival",
+    "note": "Shenzhen, family base"
+  },
+  {
+    "id": "t-aomen",
+    "simplified": "澳门",
+    "traditional": "澳門",
+    "pinyin": "Àomén",
+    "jyutping": "ou3 mun2",
+    "meaning": "Macau",
+    "deck": "survival",
+    "note": "Macau"
+  },
+  {
+    "id": "t-guangzhou",
+    "simplified": "广州",
+    "traditional": "廣州",
+    "pinyin": "Guǎngzhōu",
+    "jyutping": "gwong2 zau1",
+    "meaning": "Guangzhou",
+    "deck": "survival",
+    "note": "Guangzhou"
+  },
+  {
+    "id": "t-chongqing",
+    "simplified": "重庆",
+    "traditional": "重慶",
+    "pinyin": "Chóngqìng",
+    "jyutping": "cung4 hing3",
+    "meaning": "Chongqing",
+    "deck": "survival",
+    "note": "Chongqing"
+  },
+  {
+    "id": "t-chengdu",
+    "simplified": "成都",
+    "traditional": "成都",
+    "pinyin": "Chéngdū",
+    "jyutping": "sing4 dou1",
+    "meaning": "Chengdu",
+    "deck": "survival",
+    "note": "Chengdu, tour 1"
+  },
+  {
+    "id": "t-shanghai",
+    "simplified": "上海",
+    "traditional": "上海",
+    "pinyin": "Shànghǎi",
+    "jyutping": "soeng6 hoi2",
+    "meaning": "Shanghai",
+    "deck": "survival",
+    "note": "Shanghai, tour 2"
+  },
+  {
+    "id": "t-xianggang",
+    "simplified": "香港",
+    "traditional": "香港",
+    "pinyin": "Xiānggǎng",
+    "jyutping": "hoeng1 gong2",
+    "meaning": "Hong Kong",
+    "deck": "survival",
+    "note": "Hong Kong"
+  },
+  {
+    "id": "t-hangzhou",
+    "simplified": "杭州",
+    "traditional": "杭州",
+    "pinyin": "Hángzhōu",
+    "jyutping": "hong4 zau1",
+    "meaning": "Hangzhou",
+    "deck": "survival",
+    "note": "tour 2, Christmas Day"
+  },
+  {
+    "id": "t-wuxi",
+    "simplified": "无锡",
+    "traditional": "無錫",
+    "pinyin": "Wúxī",
+    "jyutping": "mou4 sek3",
+    "meaning": "Wuxi",
+    "deck": "survival",
+    "note": "tour 2"
+  },
+  {
+    "id": "t-nanjing",
+    "simplified": "南京",
+    "traditional": "南京",
+    "pinyin": "Nánjīng",
+    "jyutping": "naam4 ging1",
+    "meaning": "Nanjing",
+    "deck": "survival",
+    "note": "tour 2"
+  },
+  {
+    "id": "t-yangzhou",
+    "simplified": "扬州",
+    "traditional": "揚州",
+    "pinyin": "Yángzhōu",
+    "jyutping": "joeng4 zau1",
+    "meaning": "Yangzhou",
+    "deck": "survival",
+    "note": "tour 2"
+  },
+  {
+    "id": "t-suzhou",
+    "simplified": "苏州",
+    "traditional": "蘇州",
+    "pinyin": "Sūzhōu",
+    "jyutping": "sou1 zau1",
+    "meaning": "Suzhou",
+    "deck": "survival",
+    "note": "tour 2"
+  },
+  {
+    "id": "t-jiuzhaigou",
+    "simplified": "九寨沟",
+    "traditional": "九寨溝",
+    "pinyin": "Jiǔzhàigōu",
+    "jyutping": "gau2 zaai6 kau1",
+    "meaning": "Jiuzhaigou",
+    "deck": "survival",
+    "note": "tour 1"
+  },
+  {
+    "id": "t-emeishan",
+    "simplified": "峨眉山",
+    "traditional": "峨眉山",
+    "pinyin": "Éméi Shān",
+    "jyutping": "ngo4 mei4 saan1",
+    "meaning": "Mount Emei",
+    "deck": "survival",
+    "note": "tour 1"
+  },
+  {
+    "id": "t-leshan",
+    "simplified": "乐山",
+    "traditional": "樂山",
+    "pinyin": "Lèshān",
+    "jyutping": "lok6 saan1",
+    "meaning": "Leshan",
+    "deck": "survival",
+    "note": "tour 1"
+  },
+  {
+    "id": "t-foshan",
+    "simplified": "佛山",
+    "traditional": "佛山",
+    "pinyin": "Fóshān",
+    "jyutping": "fat6 saan1",
+    "meaning": "Foshan",
+    "deck": "survival",
+    "note": "Guangzhou day trip, pottery"
+  },
+  {
+    "id": "t-shuibei",
+    "simplified": "水贝",
+    "traditional": "水貝",
+    "pinyin": "Shuǐbèi",
+    "jyutping": "seoi2 bui3",
+    "meaning": "Shuibei (jewelry)",
+    "deck": "survival",
+    "note": "Shenzhen jewelry market"
+  },
+  {
+    "id": "t-luohu",
+    "simplified": "罗湖",
+    "traditional": "羅湖",
+    "pinyin": "Luóhú",
+    "jyutping": "lo4 wu4",
+    "meaning": "Luohu / Lo Wu",
+    "deck": "survival",
+    "note": "Shenzhen border"
+  },
+  {
+    "id": "t-kouan",
+    "simplified": "口岸",
+    "traditional": "口岸",
+    "pinyin": "kǒu'àn",
+    "jyutping": "hau2 ngon6",
+    "meaning": "border crossing",
+    "deck": "survival",
+    "note": "Shenzhen / HK border"
+  },
+  {
+    "id": "t-huawei",
+    "simplified": "华为",
+    "traditional": "華為",
+    "pinyin": "Huáwéi",
+    "jyutping": "waa4 wai4",
+    "meaning": "Huawei",
+    "deck": "survival",
+    "note": "Shenzhen flagship store"
+  },
+  {
+    "id": "t-gangzhuaodaqiao",
+    "simplified": "港珠澳大桥",
+    "traditional": "港珠澳大橋",
+    "pinyin": "Gǎng-Zhū-Ào Dàqiáo",
+    "jyutping": "gong2 zyu1 ou3 daai6 kiu4",
+    "meaning": "HK-Zhuhai-Macau Bridge",
+    "deck": "survival",
+    "note": "HZMB bus to Macau"
+  },
+  {
+    "id": "t-dasanba",
+    "simplified": "大三巴",
+    "traditional": "大三巴",
+    "pinyin": "Dàsānbā",
+    "jyutping": "daai6 saam1 baa1",
+    "meaning": "Ruins of St Paul's",
+    "deck": "survival",
+    "note": "Macau"
+  },
+  {
+    "id": "t-dangzai",
+    "simplified": "氹仔",
+    "traditional": "氹仔",
+    "pinyin": "Dàngzǎi",
+    "jyutping": "tam5 zai2",
+    "meaning": "Taipa",
+    "deck": "survival",
+    "note": "Macau"
+  },
+  {
+    "id": "t-lingnanhuapai",
+    "simplified": "岭南画派",
+    "traditional": "嶺南畫派",
+    "pinyin": "Lǐngnán Huàpài",
+    "jyutping": "ling5 naam4 waa2 paai3",
+    "meaning": "Lingnan School",
+    "deck": "survival",
+    "note": "Guangzhou painting"
+  },
+  {
+    "id": "t-chenjiaci",
+    "simplified": "陈家祠",
+    "traditional": "陳家祠",
+    "pinyin": "Chénjiācí",
+    "jyutping": "can4 gaa1 ci4",
+    "meaning": "Chen Clan Hall",
+    "deck": "survival",
+    "note": "Guangzhou"
+  },
+  {
+    "id": "t-shamian",
+    "simplified": "沙面",
+    "traditional": "沙面",
+    "pinyin": "Shāmiàn",
+    "jyutping": "saa1 min2",
+    "meaning": "Shamian Island",
+    "deck": "survival",
+    "note": "Guangzhou"
+  },
+  {
+    "id": "t-guangzhouta",
+    "simplified": "广州塔",
+    "traditional": "廣州塔",
+    "pinyin": "Guǎngzhōu Tǎ",
+    "jyutping": "gwong2 zau1 taap3",
+    "meaning": "Canton Tower",
+    "deck": "survival",
+    "note": "Guangzhou"
+  },
+  {
+    "id": "t-dongshankou",
+    "simplified": "东山口",
+    "traditional": "東山口",
+    "pinyin": "Dōngshānkǒu",
+    "jyutping": "dung1 saan1 hau2",
+    "meaning": "Dongshankou",
+    "deck": "survival",
+    "note": "Guangzhou shopping street"
+  },
+  {
+    "id": "t-nanfengguzao",
+    "simplified": "南风古灶",
+    "traditional": "南風古竈",
+    "pinyin": "Nánfēng Gǔzào",
+    "jyutping": "naam4 fung1 gu2 zou3",
+    "meaning": "Nanfeng Ancient Kiln",
+    "deck": "survival",
+    "note": "Foshan pottery"
+  },
+  {
+    "id": "t-baiyunjichang",
+    "simplified": "白云机场",
+    "traditional": "白雲機場",
+    "pinyin": "Báiyún Jīchǎng",
+    "jyutping": "baak6 wan4 gei1 coeng4",
+    "meaning": "Baiyun Airport",
+    "deck": "survival",
+    "note": "Guangzhou arrival / departure"
+  },
+  {
+    "id": "t-hongyadong",
+    "simplified": "洪崖洞",
+    "traditional": "洪崖洞",
+    "pinyin": "Hóngyá Dòng",
+    "jyutping": "hung4 ngaai4 dung6",
+    "meaning": "Hongya Cave",
+    "deck": "survival",
+    "note": "Chongqing"
+  },
+  {
+    "id": "t-ciqikou",
+    "simplified": "磁器口",
+    "traditional": "磁器口",
+    "pinyin": "Cíqìkǒu",
+    "jyutping": "ci4 hei3 hau2",
+    "meaning": "Ciqikou old town",
+    "deck": "survival",
+    "note": "Chongqing"
+  },
+  {
+    "id": "t-aiqingtianti",
+    "simplified": "爱情天梯",
+    "traditional": "愛情天梯",
+    "pinyin": "Àiqíng Tiāntī",
+    "jyutping": "oi3 cing4 tin1 tai1",
+    "meaning": "Love Ladder",
+    "deck": "survival",
+    "note": "Chongqing"
+  },
+  {
+    "id": "t-qinggui",
+    "simplified": "轻轨",
+    "traditional": "輕軌",
+    "pinyin": "qīngguǐ",
+    "jyutping": "hing1 gwai2",
+    "meaning": "light rail / monorail",
+    "deck": "survival",
+    "note": "Chongqing"
+  },
+  {
+    "id": "t-guwanshichang",
+    "simplified": "古玩市场",
+    "traditional": "古玩市場",
+    "pinyin": "gǔwán shìchǎng",
+    "jyutping": "gu2 wun2 si5 coeng4",
+    "meaning": "antique market",
+    "deck": "survival",
+    "note": "Chongqing ceramics hunt"
+  },
+  {
+    "id": "t-hanfu",
+    "simplified": "汉服",
+    "traditional": "漢服",
+    "pinyin": "hànfú",
+    "jyutping": "hon3 fuk6",
+    "meaning": "hanfu costume",
+    "deck": "survival",
+    "note": "Wulong photo shoot"
+  },
+  {
+    "id": "t-dajuyuan",
+    "simplified": "大剧院",
+    "traditional": "大劇院",
+    "pinyin": "dàjùyuàn",
+    "jyutping": "daai6 kek6 jyun2",
+    "meaning": "grand theatre",
+    "deck": "survival",
+    "note": "Chongqing 1949 theatre"
+  },
+  {
+    "id": "t-shuangliujichang",
+    "simplified": "双流机场",
+    "traditional": "雙流機場",
+    "pinyin": "Shuāngliú Jīchǎng",
+    "jyutping": "soeng1 lau4 gei1 coeng4",
+    "meaning": "Shuangliu Airport",
+    "deck": "survival",
+    "note": "Chengdu, Tamilyn lands"
+  },
+  {
+    "id": "t-tianfu",
+    "simplified": "天府",
+    "traditional": "天府",
+    "pinyin": "Tiānfǔ",
+    "jyutping": "tin1 fu2",
+    "meaning": "Tianfu",
+    "deck": "survival",
+    "note": "Chengdu airport / avenue"
+  },
+  {
+    "id": "t-kuanzhaixiangzi",
+    "simplified": "宽窄巷子",
+    "traditional": "寬窄巷子",
+    "pinyin": "Kuānzhǎi Xiàngzi",
+    "jyutping": "fun1 zaak3 hong6 zi2",
+    "meaning": "Kuanzhai Alley",
+    "deck": "survival",
+    "note": "Chengdu"
+  },
+  {
+    "id": "t-renmingongyuan",
+    "simplified": "人民公园",
+    "traditional": "人民公園",
+    "pinyin": "Rénmín Gōngyuán",
+    "jyutping": "jan4 man4 gung1 jyun2",
+    "meaning": "People's Park",
+    "deck": "survival",
+    "note": "Chengdu teahouse"
+  },
+  {
+    "id": "t-xiongmao",
+    "simplified": "熊猫",
+    "traditional": "熊貓",
+    "pinyin": "xióngmāo",
+    "jyutping": "hung4 maau1",
+    "meaning": "panda",
+    "deck": "survival",
+    "note": "Chengdu panda center"
+  },
+  {
+    "id": "t-bianlian",
+    "simplified": "变脸",
+    "traditional": "變臉",
+    "pinyin": "biànliǎn",
+    "jyutping": "bin3 lim5",
+    "meaning": "face-changing opera",
+    "deck": "survival",
+    "note": "Emei / Chengdu show"
+  },
+  {
+    "id": "t-leshandafo",
+    "simplified": "乐山大佛",
+    "traditional": "樂山大佛",
+    "pinyin": "Lèshān Dàfó",
+    "jyutping": "lok6 saan1 daai6 fat6",
+    "meaning": "Leshan Giant Buddha",
+    "deck": "survival",
+    "note": "tour 1, Dec 22"
+  },
+  {
+    "id": "t-zangzu",
+    "simplified": "藏族",
+    "traditional": "藏族",
+    "pinyin": "Zàngzú",
+    "jyutping": "zong6 zuk6",
+    "meaning": "Tibetan (people)",
+    "deck": "survival",
+    "note": "Tibetan village, Jiuzhaigou"
+  },
+  {
+    "id": "t-wenquan",
+    "simplified": "温泉",
+    "traditional": "溫泉",
+    "pinyin": "wēnquán",
+    "jyutping": "wan1 cyun4",
+    "meaning": "hot spring",
+    "deck": "survival",
+    "note": "InterContinental Jiuzhaigou"
+  },
+  {
+    "id": "t-gaoyuanfanying",
+    "simplified": "高原反应",
+    "traditional": "高原反應",
+    "pinyin": "gāoyuán fǎnyìng",
+    "jyutping": "gou1 jyun4 faan2 jing3",
+    "meaning": "altitude sickness",
+    "deck": "survival",
+    "note": "Jiuzhaigou, Songpan"
+  },
+  {
+    "id": "t-xiaoxindihua",
+    "simplified": "小心地滑",
+    "traditional": "小心地滑",
+    "pinyin": "xiǎoxīn dì huá",
+    "jyutping": "siu2 sam1 dei6 waat6",
+    "meaning": "caution: slippery",
+    "deck": "survival",
+    "note": "icy trails, signs"
+  },
+  {
+    "id": "t-jingqu",
+    "simplified": "景区",
+    "traditional": "景區",
+    "pinyin": "jǐngqū",
+    "jyutping": "ging2 keoi1",
+    "meaning": "scenic area",
+    "deck": "survival",
+    "note": "parks, signs"
+  },
+  {
+    "id": "t-guanguangche",
+    "simplified": "观光车",
+    "traditional": "觀光車",
+    "pinyin": "guānguāng chē",
+    "jyutping": "gun1 gwong1 ce1",
+    "meaning": "park shuttle bus",
+    "deck": "survival",
+    "note": "Jiuzhaigou"
+  },
+  {
+    "id": "t-menpiao",
+    "simplified": "门票",
+    "traditional": "門票",
+    "pinyin": "ménpiào",
+    "jyutping": "mun4 piu3",
+    "meaning": "admission ticket",
+    "deck": "survival",
+    "note": "sights"
+  },
+  {
+    "id": "t-shoupiaochu",
+    "simplified": "售票处",
+    "traditional": "售票處",
+    "pinyin": "shòupiàochù",
+    "jyutping": "sau6 piu3 cyu3",
+    "meaning": "ticket office",
+    "deck": "survival",
+    "note": "sights, signs"
+  },
+  {
+    "id": "t-daoyou",
+    "simplified": "导游",
+    "traditional": "導遊",
+    "pinyin": "dǎoyóu",
+    "jyutping": "dou6 jau4",
+    "meaning": "tour guide",
+    "deck": "survival",
+    "note": "tours"
+  },
+  {
+    "id": "t-luxingtuan",
+    "simplified": "旅行团",
+    "traditional": "旅行團",
+    "pinyin": "lǚxíngtuán",
+    "jyutping": "leoi5 hang4 tyun4",
+    "meaning": "tour group",
+    "deck": "survival",
+    "note": "tours"
+  },
+  {
+    "id": "t-jihe",
+    "simplified": "集合",
+    "traditional": "集合",
+    "pinyin": "jíhé",
+    "jyutping": "zaap6 hap6",
+    "meaning": "meet up / assemble",
+    "deck": "survival",
+    "note": "tours, meeting time"
+  },
+  {
+    "id": "t-jidianjihe",
+    "simplified": "几点集合",
+    "traditional": "幾點集合",
+    "pinyin": "jǐ diǎn jíhé",
+    "jyutping": "gei2 dim2 zaap6 hap6",
+    "meaning": "what time do we meet?",
+    "deck": "survival",
+    "note": "tours"
+  },
+  {
+    "id": "t-gouwudian",
+    "simplified": "购物点",
+    "traditional": "購物點",
+    "pinyin": "gòuwù diǎn",
+    "jyutping": "kau3 mat6 dim2",
+    "meaning": "shopping stop",
+    "deck": "survival",
+    "note": "tours"
+  },
+  {
+    "id": "t-yu",
+    "simplified": "玉",
+    "traditional": "玉",
+    "pinyin": "yù",
+    "jyutping": "juk6",
+    "meaning": "jade",
+    "deck": "survival",
+    "note": "tour jade stops"
+  },
+  {
+    "id": "t-zhenzhu",
+    "simplified": "珍珠",
+    "traditional": "珍珠",
+    "pinyin": "zhēnzhū",
+    "jyutping": "zan1 zyu1",
+    "meaning": "pearl",
+    "deck": "survival",
+    "note": "Taihu pearl factory"
+  },
+  {
+    "id": "t-sichou",
+    "simplified": "丝绸",
+    "traditional": "絲綢",
+    "pinyin": "sīchóu",
+    "jyutping": "si1 cau4",
+    "meaning": "silk",
+    "deck": "survival",
+    "note": "Suzhou silk factory"
+  },
+  {
+    "id": "t-waitan",
+    "simplified": "外滩",
+    "traditional": "外灘",
+    "pinyin": "Wàitān",
+    "jyutping": "ngoi6 taan1",
+    "meaning": "the Bund",
+    "deck": "survival",
+    "note": "Shanghai"
+  },
+  {
+    "id": "t-nanjingdonglu",
+    "simplified": "南京东路",
+    "traditional": "南京東路",
+    "pinyin": "Nánjīng Dōnglù",
+    "jyutping": "naam4 ging1 dung1 lou6",
+    "meaning": "Nanjing Road East",
+    "deck": "survival",
+    "note": "Shanghai"
+  },
+  {
+    "id": "t-hepingfandian",
+    "simplified": "和平饭店",
+    "traditional": "和平飯店",
+    "pinyin": "Hépíng Fàndiàn",
+    "jyutping": "wo4 ping4 faan6 dim3",
+    "meaning": "Peace Hotel",
+    "deck": "survival",
+    "note": "Shanghai, dress delivery"
+  },
+  {
+    "id": "t-pudong",
+    "simplified": "浦东",
+    "traditional": "浦東",
+    "pinyin": "Pǔdōng",
+    "jyutping": "pou2 dung1",
+    "meaning": "Pudong",
+    "deck": "survival",
+    "note": "Shanghai airport"
+  },
+  {
+    "id": "t-hongqiao",
+    "simplified": "虹桥",
+    "traditional": "虹橋",
+    "pinyin": "Hóngqiáo",
+    "jyutping": "hung4 kiu4",
+    "meaning": "Hongqiao",
+    "deck": "survival",
+    "note": "Shanghai airport / station"
+  },
+  {
+    "id": "t-xintiandi",
+    "simplified": "新天地",
+    "traditional": "新天地",
+    "pinyin": "Xīntiāndì",
+    "jyutping": "san1 tin1 dei6",
+    "meaning": "Xintiandi",
+    "deck": "survival",
+    "note": "Shanghai milk tea"
+  },
+  {
+    "id": "t-paopaomate",
+    "simplified": "泡泡玛特",
+    "traditional": "泡泡瑪特",
+    "pinyin": "Pàopao Mǎtè",
+    "jyutping": "paau3 paau3 maa5 dak6",
+    "meaning": "Pop Mart",
+    "deck": "survival",
+    "note": "Shanghai flagship (check jyutping)"
+  },
+  {
+    "id": "t-hema",
+    "simplified": "盒马",
+    "traditional": "盒馬",
+    "pinyin": "Hémǎ",
+    "jyutping": "hap6 maa5",
+    "meaning": "Hema supermarket",
+    "deck": "survival",
+    "note": "Shanghai"
+  },
+  {
+    "id": "t-xihu",
+    "simplified": "西湖",
+    "traditional": "西湖",
+    "pinyin": "Xīhú",
+    "jyutping": "sai1 wu4",
+    "meaning": "West Lake",
+    "deck": "survival",
+    "note": "Hangzhou"
+  },
+  {
+    "id": "t-taihu",
+    "simplified": "太湖",
+    "traditional": "太湖",
+    "pinyin": "Tàihú",
+    "jyutping": "taai3 wu4",
+    "meaning": "Lake Tai",
+    "deck": "survival",
+    "note": "Wuxi pearls"
+  },
+  {
+    "id": "t-zishahu",
+    "simplified": "紫砂壶",
+    "traditional": "紫砂壺",
+    "pinyin": "zǐshā hú",
+    "jyutping": "zi2 saa1 wu4",
+    "meaning": "zisha clay teapot",
+    "deck": "survival",
+    "note": "Yixing museum"
+  },
+  {
+    "id": "t-fuzimiao",
+    "simplified": "夫子庙",
+    "traditional": "夫子廟",
+    "pinyin": "Fūzǐ Miào",
+    "jyutping": "fu1 zi2 miu6",
+    "meaning": "Confucius Temple",
+    "deck": "survival",
+    "note": "Nanjing"
+  },
+  {
+    "id": "t-laomendong",
+    "simplified": "老门东",
+    "traditional": "老門東",
+    "pinyin": "Lǎoméndōng",
+    "jyutping": "lou5 mun4 dung1",
+    "meaning": "Laomendong",
+    "deck": "survival",
+    "note": "Nanjing snacks"
+  },
+  {
+    "id": "t-lamei",
+    "simplified": "蜡梅",
+    "traditional": "蠟梅",
+    "pinyin": "làméi",
+    "jyutping": "laap6 mui4",
+    "meaning": "wintersweet",
+    "deck": "survival",
+    "note": "Nanjing / Chengdu blossoms"
+  },
+  {
+    "id": "t-shouxihu",
+    "simplified": "瘦西湖",
+    "traditional": "瘦西湖",
+    "pinyin": "Shòu Xīhú",
+    "jyutping": "sau3 sai1 wu4",
+    "meaning": "Slender West Lake",
+    "deck": "survival",
+    "note": "Yangzhou"
+  },
+  {
+    "id": "t-pingtan",
+    "simplified": "评弹",
+    "traditional": "評彈",
+    "pinyin": "píngtán",
+    "jyutping": "ping4 taan4",
+    "meaning": "Pingtan storytelling",
+    "deck": "survival",
+    "note": "Suzhou canal boat"
+  },
+  {
+    "id": "t-yuanlin",
+    "simplified": "园林",
+    "traditional": "園林",
+    "pinyin": "yuánlín",
+    "jyutping": "jyun4 lam4",
+    "meaning": "classical garden",
+    "deck": "survival",
+    "note": "Suzhou"
+  },
+  {
+    "id": "t-yunhe",
+    "simplified": "运河",
+    "traditional": "運河",
+    "pinyin": "yùnhé",
+    "jyutping": "wan6 ho4",
+    "meaning": "canal",
+    "deck": "survival",
+    "note": "Suzhou"
+  },
+  {
+    "id": "t-youchuan",
+    "simplified": "游船",
+    "traditional": "遊船",
+    "pinyin": "yóuchuán",
+    "jyutping": "jau4 syun4",
+    "meaning": "tour boat",
+    "deck": "survival",
+    "note": "Suzhou canal, Leshan"
+  },
+  {
+    "id": "t-guzhen",
+    "simplified": "古镇",
+    "traditional": "古鎮",
+    "pinyin": "gǔzhèn",
+    "jyutping": "gu2 zan3",
+    "meaning": "ancient town",
+    "deck": "survival",
+    "note": "Puyuan, Songpan, Zhongshan"
+  },
+  {
+    "id": "t-shuixiang",
+    "simplified": "水乡",
+    "traditional": "水鄉",
+    "pinyin": "shuǐxiāng",
+    "jyutping": "seoi2 hoeng1",
+    "meaning": "water town",
+    "deck": "survival",
+    "note": "Puyuan"
+  },
+  {
+    "id": "t-weiduoliyagang",
+    "simplified": "维多利亚港",
+    "traditional": "維多利亞港",
+    "pinyin": "Wéiduōlìyà Gǎng",
+    "jyutping": "wai4 do1 lei6 aa3 gong2",
+    "meaning": "Victoria Harbour",
+    "deck": "survival",
+    "note": "HK New Year's Eve"
+  },
+  {
+    "id": "t-jianshazui",
+    "simplified": "尖沙咀",
+    "traditional": "尖沙咀",
+    "pinyin": "Jiānshāzuǐ",
+    "jyutping": "zim1 saa1 zeoi2",
+    "meaning": "Tsim Sha Tsui",
+    "deck": "survival",
+    "note": "HK hotel area"
+  },
+  {
+    "id": "t-zhonghuan",
+    "simplified": "中环",
+    "traditional": "中環",
+    "pinyin": "Zhōnghuán",
+    "jyutping": "zung1 waan4",
+    "meaning": "Central",
+    "deck": "survival",
+    "note": "HK"
+  },
+  {
+    "id": "t-shanghuan",
+    "simplified": "上环",
+    "traditional": "上環",
+    "pinyin": "Shànghuán",
+    "jyutping": "soeng6 waan4",
+    "meaning": "Sheung Wan",
+    "deck": "survival",
+    "note": "HK chop alley"
+  },
+  {
+    "id": "t-wenhuali",
+    "simplified": "文华里",
+    "traditional": "文華里",
+    "pinyin": "Wénhuá Lǐ",
+    "jyutping": "man4 waa4 lei5",
+    "meaning": "Man Wa Lane",
+    "deck": "survival",
+    "note": "HK chop alley"
+  },
+  {
+    "id": "t-shatian",
+    "simplified": "沙田",
+    "traditional": "沙田",
+    "pinyin": "Shātián",
+    "jyutping": "saa1 tin4",
+    "meaning": "Sha Tin",
+    "deck": "survival",
+    "note": "HK Chao Shao-an Gallery"
+  },
+  {
+    "id": "t-tuzhang",
+    "simplified": "图章",
+    "traditional": "圖章",
+    "pinyin": "túzhāng",
+    "jyutping": "tou4 zoeng1",
+    "meaning": "chop / seal",
+    "deck": "survival",
+    "note": "HK Man Wa Lane"
+  },
+  {
+    "id": "t-kezhang",
+    "simplified": "刻章",
+    "traditional": "刻章",
+    "pinyin": "kè zhāng",
+    "jyutping": "hak1 zoeng1",
+    "meaning": "carve a seal",
+    "deck": "survival",
+    "note": "HK chop shop"
+  },
+  {
+    "id": "t-nihongdeng",
+    "simplified": "霓虹灯",
+    "traditional": "霓虹燈",
+    "pinyin": "níhóngdēng",
+    "jyutping": "ngai4 hung4 dang1",
+    "meaning": "neon light",
+    "deck": "survival",
+    "note": "HK neon workshop"
+  },
+  {
+    "id": "t-gangtie",
+    "simplified": "港铁",
+    "traditional": "港鐵",
+    "pinyin": "Gǎngtiě",
+    "jyutping": "gong2 tit3",
+    "meaning": "MTR",
+    "deck": "survival",
+    "note": "HK"
+  },
+  {
+    "id": "t-badatong",
+    "simplified": "八达通",
+    "traditional": "八達通",
+    "pinyin": "Bādátōng",
+    "jyutping": "baat3 daat6 tung1",
+    "meaning": "Octopus card",
+    "deck": "survival",
+    "note": "HK"
+  },
+  {
+    "id": "t-tianxingxiaolun",
+    "simplified": "天星小轮",
+    "traditional": "天星小輪",
+    "pinyin": "Tiānxīng Xiǎolún",
+    "jyutping": "tin1 sing1 siu2 leon4",
+    "meaning": "Star Ferry",
+    "deck": "survival",
+    "note": "HK harbour"
+  },
+  {
+    "id": "t-youluo",
+    "simplified": "有落",
+    "traditional": "有落",
+    "pinyin": "yǒu luò",
+    "jyutping": "jau5 lok6",
+    "meaning": "stop here, please",
+    "deck": "survival",
+    "note": "HK minibus (Cantonese)"
+  },
+  {
+    "id": "t-gongzhongjiaqi",
+    "simplified": "公众假期",
+    "traditional": "公眾假期",
+    "pinyin": "gōngzhòng jiàqī",
+    "jyutping": "gung1 zung3 gaa3 kei4",
+    "meaning": "public holiday",
+    "deck": "survival",
+    "note": "HK Jan 1"
+  },
+  {
+    "id": "t-kuanian",
+    "simplified": "跨年",
+    "traditional": "跨年",
+    "pinyin": "kuànián",
+    "jyutping": "kwaa1 nin4",
+    "meaning": "NYE countdown",
+    "deck": "survival",
+    "note": "HK New Year's Eve"
+  },
+  {
+    "id": "t-yanhua",
+    "simplified": "烟花",
+    "traditional": "煙花",
+    "pinyin": "yānhuā",
+    "jyutping": "jin1 faa1",
+    "meaning": "fireworks",
+    "deck": "survival",
+    "note": "HK harbour NYE"
+  },
+  {
+    "id": "t-xinniankuaile",
+    "simplified": "新年快乐",
+    "traditional": "新年快樂",
+    "pinyin": "xīnnián kuàilè",
+    "jyutping": "san1 nin4 faai3 lok6",
+    "meaning": "Happy New Year",
+    "deck": "survival",
+    "note": "HK NYE"
+  },
+  {
+    "id": "t-yuandan",
+    "simplified": "元旦",
+    "traditional": "元旦",
+    "pinyin": "Yuándàn",
+    "jyutping": "jyun4 daan3",
+    "meaning": "New Year's Day",
+    "deck": "survival",
+    "note": "Jan 1"
+  },
+  {
+    "id": "t-pinganye",
+    "simplified": "平安夜",
+    "traditional": "平安夜",
+    "pinyin": "Píng'ān Yè",
+    "jyutping": "ping4 on1 je6",
+    "meaning": "Christmas Eve",
+    "deck": "survival",
+    "note": "Shanghai Dec 24"
+  },
+  {
+    "id": "t-shengdanjie",
+    "simplified": "圣诞节",
+    "traditional": "聖誕節",
+    "pinyin": "Shèngdàn Jié",
+    "jyutping": "sing3 daan3 zit3",
+    "meaning": "Christmas",
+    "deck": "survival",
+    "note": "Hangzhou Dec 25"
+  },
+  {
+    "id": "t-shengdankuaile",
+    "simplified": "圣诞快乐",
+    "traditional": "聖誕快樂",
+    "pinyin": "Shèngdàn kuàilè",
+    "jyutping": "sing3 daan3 faai3 lok6",
+    "meaning": "Merry Christmas",
+    "deck": "survival",
+    "note": "Dec 25"
+  },
+  {
+    "id": "t-shiyiyue",
+    "simplified": "十一月",
+    "traditional": "十一月",
+    "pinyin": "shíyī yuè",
+    "jyutping": "sap6 jat1 jyut6",
+    "meaning": "November",
+    "deck": "survival",
+    "note": "dates"
+  },
+  {
+    "id": "t-shieryue",
+    "simplified": "十二月",
+    "traditional": "十二月",
+    "pinyin": "shí'èr yuè",
+    "jyutping": "sap6 ji6 jyut6",
+    "meaning": "December",
+    "deck": "survival",
+    "note": "dates"
+  },
+  {
+    "id": "t-yiyue",
+    "simplified": "一月",
+    "traditional": "一月",
+    "pinyin": "yī yuè",
+    "jyutping": "jat1 jyut6",
+    "meaning": "January",
+    "deck": "survival",
+    "note": "dates"
+  },
+  {
+    "id": "t-jintian",
+    "simplified": "今天",
+    "traditional": "今天",
+    "pinyin": "jīntiān",
+    "jyutping": "gam1 tin1",
+    "meaning": "today",
+    "deck": "survival",
+    "note": "dates (Canto 今日 gam1 jat6)"
+  },
+  {
+    "id": "t-mingtian",
+    "simplified": "明天",
+    "traditional": "明天",
+    "pinyin": "míngtiān",
+    "jyutping": "ming4 tin1",
+    "meaning": "tomorrow",
+    "deck": "survival",
+    "note": "dates (Canto 聽日 ting1 jat6)"
+  },
+  {
+    "id": "t-xingqiyi",
+    "simplified": "星期一",
+    "traditional": "星期一",
+    "pinyin": "xīngqīyī",
+    "jyutping": "sing1 kei4 jat1",
+    "meaning": "Monday",
+    "deck": "survival",
+    "note": "museums closed Mondays"
+  },
+  {
+    "id": "t-biguan",
+    "simplified": "闭馆",
+    "traditional": "閉館",
+    "pinyin": "bìguǎn",
+    "jyutping": "bai3 gun2",
+    "meaning": "closed (museum)",
+    "deck": "survival",
+    "note": "museum signs"
+  },
+  {
+    "id": "t-mianfei",
+    "simplified": "免费",
+    "traditional": "免費",
+    "pinyin": "miǎnfèi",
+    "jyutping": "min5 fai3",
+    "meaning": "free (no charge)",
+    "deck": "survival",
+    "note": "museums, gallery"
+  },
+  {
+    "id": "t-bowuguan",
+    "simplified": "博物馆",
+    "traditional": "博物館",
+    "pinyin": "bówùguǎn",
+    "jyutping": "bok3 mat6 gun2",
+    "meaning": "museum",
+    "deck": "survival",
+    "note": "museums"
+  },
+  {
+    "id": "t-meishuguan",
+    "simplified": "美术馆",
+    "traditional": "美術館",
+    "pinyin": "měishùguǎn",
+    "jyutping": "mei5 seot6 gun2",
+    "meaning": "art museum",
+    "deck": "survival",
+    "note": "Guangzhou Art Museum"
+  },
+  {
+    "id": "t-biaoyan",
+    "simplified": "表演",
+    "traditional": "表演",
+    "pinyin": "biǎoyǎn",
+    "jyutping": "biu2 jin2",
+    "meaning": "show / performance",
+    "deck": "survival",
+    "note": "Macau, Emei, Chongqing"
+  },
+  {
+    "id": "t-guohua",
+    "simplified": "国画",
+    "traditional": "國畫",
+    "pinyin": "guóhuà",
+    "jyutping": "gwok3 waa2",
+    "meaning": "Chinese painting",
+    "deck": "survival",
+    "note": "Lingnan painting"
+  },
+  {
+    "id": "t-huaniaohua",
+    "simplified": "花鸟画",
+    "traditional": "花鳥畫",
+    "pinyin": "huāniǎo huà",
+    "jyutping": "faa1 niu5 waa2",
+    "meaning": "bird-and-flower painting",
+    "deck": "survival",
+    "note": "Lingnan painting"
+  },
+  {
+    "id": "t-huahua",
+    "simplified": "画画",
+    "traditional": "畫畫",
+    "pinyin": "huà huà",
+    "jyutping": "waak6 waa2",
+    "meaning": "to paint / draw",
+    "deck": "survival",
+    "note": "painting lessons"
+  },
+  {
+    "id": "t-shufa",
+    "simplified": "书法",
+    "traditional": "書法",
+    "pinyin": "shūfǎ",
+    "jyutping": "syu1 faat3",
+    "meaning": "calligraphy",
+    "deck": "survival",
+    "note": "HK courses"
+  },
+  {
+    "id": "t-xingshu",
+    "simplified": "行书",
+    "traditional": "行書",
+    "pinyin": "xíngshū",
+    "jyutping": "hang4 syu1",
+    "meaning": "running script",
+    "deck": "survival",
+    "note": "HK calligraphy"
+  },
+  {
+    "id": "t-maobi",
+    "simplified": "毛笔",
+    "traditional": "毛筆",
+    "pinyin": "máobǐ",
+    "jyutping": "mou4 bat1",
+    "meaning": "brush",
+    "deck": "survival",
+    "note": "painting"
+  },
+  {
+    "id": "t-laoshi",
+    "simplified": "老师",
+    "traditional": "老師",
+    "pinyin": "lǎoshī",
+    "jyutping": "lou5 si1",
+    "meaning": "teacher",
+    "deck": "survival",
+    "note": "painting lessons"
+  },
+  {
+    "id": "t-shangke",
+    "simplified": "上课",
+    "traditional": "上課",
+    "pinyin": "shàngkè",
+    "jyutping": "soeng5 fo3",
+    "meaning": "have class",
+    "deck": "survival",
+    "note": "lessons"
+  },
+  {
+    "id": "t-taoci",
+    "simplified": "陶瓷",
+    "traditional": "陶瓷",
+    "pinyin": "táocí",
+    "jyutping": "tou4 ci4",
+    "meaning": "ceramics",
+    "deck": "survival",
+    "note": "Foshan, antiques"
+  },
+  {
+    "id": "t-hunsha",
+    "simplified": "婚纱",
+    "traditional": "婚紗",
+    "pinyin": "hūnshā",
+    "jyutping": "fan1 saa1",
+    "meaning": "wedding dress",
+    "deck": "survival",
+    "note": "Guangzhou Wedding Street"
+  },
+  {
+    "id": "t-hunshazhao",
+    "simplified": "婚纱照",
+    "traditional": "婚紗照",
+    "pinyin": "hūnshā zhào",
+    "jyutping": "fan1 saa1 ziu3",
+    "meaning": "wedding photos",
+    "deck": "survival",
+    "note": "Shanghai photoshoot"
+  },
+  {
+    "id": "t-sheyingshi",
+    "simplified": "摄影师",
+    "traditional": "攝影師",
+    "pinyin": "shèyǐngshī",
+    "jyutping": "sip3 jing2 si1",
+    "meaning": "photographer",
+    "deck": "survival",
+    "note": "photoshoot"
+  },
+  {
+    "id": "t-jiehun",
+    "simplified": "结婚",
+    "traditional": "結婚",
+    "pinyin": "jiéhūn",
+    "jyutping": "git3 fan1",
+    "meaning": "get married",
+    "deck": "survival",
+    "note": "wedding trip"
+  },
+  {
+    "id": "t-jiezhi",
+    "simplified": "戒指",
+    "traditional": "戒指",
+    "pinyin": "jièzhi",
+    "jyutping": "gaai3 zi2",
+    "meaning": "ring",
+    "deck": "survival",
+    "note": "Shuibei jewelry"
+  },
+  {
+    "id": "t-zuanshi",
+    "simplified": "钻石",
+    "traditional": "鑽石",
+    "pinyin": "zuànshí",
+    "jyutping": "zyun3 sek6",
+    "meaning": "diamond",
+    "deck": "survival",
+    "note": "Shuibei jewelry"
+  },
+  {
+    "id": "t-huangjin",
+    "simplified": "黄金",
+    "traditional": "黃金",
+    "pinyin": "huángjīn",
+    "jyutping": "wong4 gam1",
+    "meaning": "gold",
+    "deck": "survival",
+    "note": "Shuibei jewelry"
+  },
+  {
+    "id": "t-zhubao",
+    "simplified": "珠宝",
+    "traditional": "珠寶",
+    "pinyin": "zhūbǎo",
+    "jyutping": "zyu1 bou2",
+    "meaning": "jewelry",
+    "deck": "survival",
+    "note": "Shuibei"
+  },
+  {
+    "id": "t-pifa",
+    "simplified": "批发",
+    "traditional": "批發",
+    "pinyin": "pīfā",
+    "jyutping": "pai1 faat3",
+    "meaning": "wholesale",
+    "deck": "survival",
+    "note": "Shenzhen markets, APM"
+  },
+  {
+    "id": "t-shichuan",
+    "simplified": "试穿",
+    "traditional": "試穿",
+    "pinyin": "shìchuān",
+    "jyutping": "si3 cyun1",
+    "meaning": "try on",
+    "deck": "survival",
+    "note": "shopping, dress"
+  },
+  {
+    "id": "t-caifeng",
+    "simplified": "裁缝",
+    "traditional": "裁縫",
+    "pinyin": "cáifeng",
+    "jyutping": "coi4 fung2",
+    "meaning": "tailor",
+    "deck": "survival",
+    "note": "dress alterations"
+  },
+  {
+    "id": "t-kuaidi",
+    "simplified": "快递",
+    "traditional": "快遞",
+    "pinyin": "kuàidì",
+    "jyutping": "faai3 dai6",
+    "meaning": "courier delivery",
+    "deck": "survival",
+    "note": "dress shipping"
+  },
+  {
+    "id": "t-pianyidian",
+    "simplified": "便宜点",
+    "traditional": "便宜點",
+    "pinyin": "piányi diǎn",
+    "jyutping": "pin4 ji4 dim2",
+    "meaning": "a bit cheaper?",
+    "deck": "survival",
+    "note": "bargaining"
+  },
+  {
+    "id": "t-taiguile",
+    "simplified": "太贵了",
+    "traditional": "太貴了",
+    "pinyin": "tài guì le",
+    "jyutping": "taai3 gwai3 liu5",
+    "meaning": "too expensive",
+    "deck": "survival",
+    "note": "bargaining"
+  },
+  {
+    "id": "t-dazhe",
+    "simplified": "打折",
+    "traditional": "打折",
+    "pinyin": "dǎzhé",
+    "jyutping": "daa2 zit3",
+    "meaning": "discount",
+    "deck": "survival",
+    "note": "shopping"
+  },
+  {
+    "id": "t-fapiao",
+    "simplified": "发票",
+    "traditional": "發票",
+    "pinyin": "fāpiào",
+    "jyutping": "faat3 piu3",
+    "meaning": "receipt / invoice",
+    "deck": "survival",
+    "note": "shopping"
+  },
+  {
+    "id": "t-saoma",
+    "simplified": "扫码",
+    "traditional": "掃碼",
+    "pinyin": "sǎomǎ",
+    "jyutping": "sou3 maa5",
+    "meaning": "scan QR code",
+    "deck": "survival",
+    "note": "payment"
+  },
+  {
+    "id": "t-fukuan",
+    "simplified": "付款",
+    "traditional": "付款",
+    "pinyin": "fùkuǎn",
+    "jyutping": "fu6 fun2",
+    "meaning": "pay",
+    "deck": "survival",
+    "note": "payment"
+  },
+  {
+    "id": "t-xianjin",
+    "simplified": "现金",
+    "traditional": "現金",
+    "pinyin": "xiànjīn",
+    "jyutping": "jin6 gam1",
+    "meaning": "cash",
+    "deck": "survival",
+    "note": "payment"
+  },
+  {
+    "id": "t-renminbi",
+    "simplified": "人民币",
+    "traditional": "人民幣",
+    "pinyin": "rénmínbì",
+    "jyutping": "jan4 man4 bai6",
+    "meaning": "RMB",
+    "deck": "survival",
+    "note": "money"
+  },
+  {
+    "id": "t-gangbi",
+    "simplified": "港币",
+    "traditional": "港幣",
+    "pinyin": "Gǎngbì",
+    "jyutping": "gong2 bai6",
+    "meaning": "HK dollar",
+    "deck": "survival",
+    "note": "HK money"
+  },
+  {
+    "id": "t-chongdianbao",
+    "simplified": "充电宝",
+    "traditional": "充電寶",
+    "pinyin": "chōngdiànbǎo",
+    "jyutping": "cung1 din6 bou2",
+    "meaning": "power bank",
+    "deck": "survival",
+    "note": "phone, rentals"
+  },
+  {
+    "id": "t-gaodeditu",
+    "simplified": "高德地图",
+    "traditional": "高德地圖",
+    "pinyin": "Gāodé Dìtú",
+    "jyutping": "gou1 dak1 dei6 tou4",
+    "meaning": "Amap",
+    "deck": "survival",
+    "note": "maps app"
+  },
+  {
+    "id": "t-dazhongdianping",
+    "simplified": "大众点评",
+    "traditional": "大眾點評",
+    "pinyin": "Dàzhòng Diǎnpíng",
+    "jyutping": "daai6 zung3 dim2 ping4",
+    "meaning": "Dianping",
+    "deck": "survival",
+    "note": "food app"
+  },
+  {
+    "id": "t-gaotie",
+    "simplified": "高铁",
+    "traditional": "高鐵",
+    "pinyin": "gāotiě",
+    "jyutping": "gou1 tit3",
+    "meaning": "high-speed rail",
+    "deck": "survival",
+    "note": "trains"
+  },
+  {
+    "id": "t-huochezhan",
+    "simplified": "火车站",
+    "traditional": "火車站",
+    "pinyin": "huǒchē zhàn",
+    "jyutping": "fo2 ce1 zaam6",
+    "meaning": "train station",
+    "deck": "survival",
+    "note": "trains"
+  },
+  {
+    "id": "t-chepiao",
+    "simplified": "车票",
+    "traditional": "車票",
+    "pinyin": "chēpiào",
+    "jyutping": "ce1 piu3",
+    "meaning": "train/bus ticket",
+    "deck": "survival",
+    "note": "trains"
+  },
+  {
+    "id": "t-huzhao",
+    "simplified": "护照",
+    "traditional": "護照",
+    "pinyin": "hùzhào",
+    "jyutping": "wu6 ziu3",
+    "meaning": "passport",
+    "deck": "survival",
+    "note": "trains, hotels, border"
+  },
+  {
+    "id": "t-jianpiaokou",
+    "simplified": "检票口",
+    "traditional": "檢票口",
+    "pinyin": "jiǎnpiàokǒu",
+    "jyutping": "gim2 piu3 hau2",
+    "meaning": "ticket gate",
+    "deck": "survival",
+    "note": "train station signs"
+  },
+  {
+    "id": "t-houcheshi",
+    "simplified": "候车室",
+    "traditional": "候車室",
+    "pinyin": "hòuchēshì",
+    "jyutping": "hau6 ce1 sat1",
+    "meaning": "waiting hall",
+    "deck": "survival",
+    "note": "train station signs"
+  },
+  {
+    "id": "t-zuowei",
+    "simplified": "座位",
+    "traditional": "座位",
+    "pinyin": "zuòwèi",
+    "jyutping": "zo6 wai2",
+    "meaning": "seat",
+    "deck": "survival",
+    "note": "trains"
+  },
+  {
+    "id": "t-haoxian",
+    "simplified": "号线",
+    "traditional": "號線",
+    "pinyin": "hàoxiàn",
+    "jyutping": "hou6 sin3",
+    "meaning": "metro line no.",
+    "deck": "survival",
+    "note": "metro, e.g. 2号线"
+  },
+  {
+    "id": "t-huancheng",
+    "simplified": "换乘",
+    "traditional": "換乘",
+    "pinyin": "huànchéng",
+    "jyutping": "wun6 sing4",
+    "meaning": "transfer",
+    "deck": "survival",
+    "note": "metro signs"
+  },
+  {
+    "id": "t-hangzhanlou",
+    "simplified": "航站楼",
+    "traditional": "航站樓",
+    "pinyin": "hángzhànlóu",
+    "jyutping": "hong4 zaam6 lau4",
+    "meaning": "airport terminal",
+    "deck": "survival",
+    "note": "flights"
+  },
+  {
+    "id": "t-dengjikou",
+    "simplified": "登机口",
+    "traditional": "登機口",
+    "pinyin": "dēngjīkǒu",
+    "jyutping": "dang1 gei1 hau2",
+    "meaning": "boarding gate",
+    "deck": "survival",
+    "note": "flights"
+  },
+  {
+    "id": "t-hangban",
+    "simplified": "航班",
+    "traditional": "航班",
+    "pinyin": "hángbān",
+    "jyutping": "hong4 baan1",
+    "meaning": "flight",
+    "deck": "survival",
+    "note": "flights"
+  },
+  {
+    "id": "t-xingli",
+    "simplified": "行李",
+    "traditional": "行李",
+    "pinyin": "xíngli",
+    "jyutping": "hang4 lei5",
+    "meaning": "luggage",
+    "deck": "survival",
+    "note": "flights, hotels"
+  },
+  {
+    "id": "t-anjian",
+    "simplified": "安检",
+    "traditional": "安檢",
+    "pinyin": "ānjiǎn",
+    "jyutping": "on1 gim2",
+    "meaning": "security check",
+    "deck": "survival",
+    "note": "airports, metro"
+  },
+  {
+    "id": "t-chufa",
+    "simplified": "出发",
+    "traditional": "出發",
+    "pinyin": "chūfā",
+    "jyutping": "ceot1 faat3",
+    "meaning": "departures",
+    "deck": "survival",
+    "note": "airport signs"
+  },
+  {
+    "id": "t-daoda",
+    "simplified": "到达",
+    "traditional": "到達",
+    "pinyin": "dàodá",
+    "jyutping": "dou3 daat6",
+    "meaning": "arrivals",
+    "deck": "survival",
+    "note": "airport signs"
+  },
+  {
+    "id": "t-chuzuche",
+    "simplified": "出租车",
+    "traditional": "出租車",
+    "pinyin": "chūzūchē",
+    "jyutping": "ceot1 zou1 ce1",
+    "meaning": "taxi",
+    "deck": "survival",
+    "note": "transport"
+  },
+  {
+    "id": "t-dishi",
+    "simplified": "的士",
+    "traditional": "的士",
+    "pinyin": "díshì",
+    "jyutping": "dik1 si2",
+    "meaning": "taxi (HK/Canto)",
+    "deck": "survival",
+    "note": "HK, Macau, Guangzhou"
+  },
+  {
+    "id": "t-siji",
+    "simplified": "司机",
+    "traditional": "司機",
+    "pinyin": "sījī",
+    "jyutping": "si1 gei1",
+    "meaning": "driver",
+    "deck": "survival",
+    "note": "transport"
+  },
+  {
+    "id": "t-baoche",
+    "simplified": "包车",
+    "traditional": "包車",
+    "pinyin": "bāochē",
+    "jyutping": "baau1 ce1",
+    "meaning": "hire car + driver",
+    "deck": "survival",
+    "note": "Love Ladder day"
+  },
+  {
+    "id": "t-bashi",
+    "simplified": "巴士",
+    "traditional": "巴士",
+    "pinyin": "bāshì",
+    "jyutping": "baa1 si2",
+    "meaning": "bus (HK/Macau)",
+    "deck": "survival",
+    "note": "HZMB Golden Bus"
+  },
+  {
+    "id": "t-matou",
+    "simplified": "码头",
+    "traditional": "碼頭",
+    "pinyin": "mǎtou",
+    "jyutping": "maa5 tau4",
+    "meaning": "pier",
+    "deck": "survival",
+    "note": "ferries"
+  },
+  {
+    "id": "t-dulun",
+    "simplified": "渡轮",
+    "traditional": "渡輪",
+    "pinyin": "dùlún",
+    "jyutping": "dou6 leon4",
+    "meaning": "ferry",
+    "deck": "survival",
+    "note": "Shamian, HK, Macau"
+  },
+  {
+    "id": "t-suodao",
+    "simplified": "索道",
+    "traditional": "索道",
+    "pinyin": "suǒdào",
+    "jyutping": "sok3 dou6",
+    "meaning": "cable car",
+    "deck": "survival",
+    "note": "Chongqing, mountains"
+  },
+  {
+    "id": "t-guoguan",
+    "simplified": "过关",
+    "traditional": "過關",
+    "pinyin": "guòguān",
+    "jyutping": "gwo3 gwaan1",
+    "meaning": "cross the border",
+    "deck": "survival",
+    "note": "HK / Macau / Shenzhen"
+  },
+  {
+    "id": "t-haiguan",
+    "simplified": "海关",
+    "traditional": "海關",
+    "pinyin": "hǎiguān",
+    "jyutping": "hoi2 gwaan1",
+    "meaning": "customs",
+    "deck": "survival",
+    "note": "border"
+  },
+  {
+    "id": "t-qianzheng",
+    "simplified": "签证",
+    "traditional": "簽證",
+    "pinyin": "qiānzhèng",
+    "jyutping": "cim1 zing3",
+    "meaning": "visa",
+    "deck": "survival",
+    "note": "border"
+  },
+  {
+    "id": "t-zuozhuan",
+    "simplified": "左转",
+    "traditional": "左轉",
+    "pinyin": "zuǒ zhuǎn",
+    "jyutping": "zo2 zyun2",
+    "meaning": "turn left",
+    "deck": "survival",
+    "note": "directions"
+  },
+  {
+    "id": "t-youzhuan",
+    "simplified": "右转",
+    "traditional": "右轉",
+    "pinyin": "yòu zhuǎn",
+    "jyutping": "jau6 zyun2",
+    "meaning": "turn right",
+    "deck": "survival",
+    "note": "directions"
+  },
+  {
+    "id": "t-zhizou",
+    "simplified": "直走",
+    "traditional": "直走",
+    "pinyin": "zhí zǒu",
+    "jyutping": "zik6 zau2",
+    "meaning": "go straight",
+    "deck": "survival",
+    "note": "directions"
+  },
+  {
+    "id": "t-fujin",
+    "simplified": "附近",
+    "traditional": "附近",
+    "pinyin": "fùjìn",
+    "jyutping": "fu6 gan6",
+    "meaning": "nearby",
+    "deck": "survival",
+    "note": "directions"
+  },
+  {
+    "id": "t-zainali",
+    "simplified": "在哪里",
+    "traditional": "在哪裡",
+    "pinyin": "zài nǎlǐ",
+    "jyutping": "zoi6 naa5 leoi5",
+    "meaning": "where is it?",
+    "deck": "survival",
+    "note": "directions (Canto 喺邊度)"
+  },
+  {
+    "id": "t-dianti",
+    "simplified": "电梯",
+    "traditional": "電梯",
+    "pinyin": "diàntī",
+    "jyutping": "din6 tai1",
+    "meaning": "elevator",
+    "deck": "survival",
+    "note": "buildings, metro"
+  },
+  {
+    "id": "t-louti",
+    "simplified": "楼梯",
+    "traditional": "樓梯",
+    "pinyin": "lóutī",
+    "jyutping": "lau4 tai1",
+    "meaning": "stairs",
+    "deck": "survival",
+    "note": "Chongqing, buildings"
+  },
+  {
+    "id": "t-pashan",
+    "simplified": "爬山",
+    "traditional": "爬山",
+    "pinyin": "páshān",
+    "jyutping": "paa4 saan1",
+    "meaning": "hike / climb",
+    "deck": "survival",
+    "note": "Emei, Love Ladder"
+  },
+  {
+    "id": "t-simiao",
+    "simplified": "寺庙",
+    "traditional": "寺廟",
+    "pinyin": "sìmiào",
+    "jyutping": "zi6 miu6",
+    "meaning": "temple",
+    "deck": "survival",
+    "note": "Emei, Nanjing"
+  },
+  {
+    "id": "t-pubu",
+    "simplified": "瀑布",
+    "traditional": "瀑布",
+    "pinyin": "pùbù",
+    "jyutping": "buk6 bou3",
+    "meaning": "waterfall",
+    "deck": "survival",
+    "note": "Jiuzhaigou (check jyutping)"
+  },
+  {
+    "id": "t-hu",
+    "simplified": "湖",
+    "traditional": "湖",
+    "pinyin": "hú",
+    "jyutping": "wu4",
+    "meaning": "lake",
+    "deck": "survival",
+    "note": "Jiuzhaigou, West Lake"
+  },
+  {
+    "id": "t-leng",
+    "simplified": "冷",
+    "traditional": "冷",
+    "pinyin": "lěng",
+    "jyutping": "laang5",
+    "meaning": "cold",
+    "deck": "survival",
+    "note": "Jiuzhaigou"
+  },
+  {
+    "id": "t-yurongfu",
+    "simplified": "羽绒服",
+    "traditional": "羽絨服",
+    "pinyin": "yǔróngfú",
+    "jyutping": "jyu5 jung4 fuk6",
+    "meaning": "down jacket",
+    "deck": "survival",
+    "note": "Jiuzhaigou cold"
+  },
+  {
+    "id": "t-ruzhu",
+    "simplified": "入住",
+    "traditional": "入住",
+    "pinyin": "rùzhù",
+    "jyutping": "jap6 zyu6",
+    "meaning": "check in",
+    "deck": "survival",
+    "note": "hotels"
+  },
+  {
+    "id": "t-tuifang",
+    "simplified": "退房",
+    "traditional": "退房",
+    "pinyin": "tuìfáng",
+    "jyutping": "teoi3 fong2",
+    "meaning": "check out",
+    "deck": "survival",
+    "note": "hotels"
+  },
+  {
+    "id": "t-fangka",
+    "simplified": "房卡",
+    "traditional": "房卡",
+    "pinyin": "fángkǎ",
+    "jyutping": "fong4 kaat1",
+    "meaning": "room key card",
+    "deck": "survival",
+    "note": "hotels"
+  },
+  {
+    "id": "t-dachuangfang",
+    "simplified": "大床房",
+    "traditional": "大床房",
+    "pinyin": "dàchuáng fáng",
+    "jyutping": "daai6 cong4 fong2",
+    "meaning": "double-bed room",
+    "deck": "survival",
+    "note": "hotels"
+  },
+  {
+    "id": "t-shuangchuangfang",
+    "simplified": "双床房",
+    "traditional": "雙床房",
+    "pinyin": "shuāngchuáng fáng",
+    "jyutping": "soeng1 cong4 fong2",
+    "meaning": "twin room",
+    "deck": "survival",
+    "note": "hotels"
+  },
+  {
+    "id": "t-zaocan",
+    "simplified": "早餐",
+    "traditional": "早餐",
+    "pinyin": "zǎocān",
+    "jyutping": "zou2 caan1",
+    "meaning": "breakfast",
+    "deck": "survival",
+    "note": "hotels"
+  },
+  {
+    "id": "t-waiguoren",
+    "simplified": "外国人",
+    "traditional": "外國人",
+    "pinyin": "wàiguórén",
+    "jyutping": "ngoi6 gwok3 jan4",
+    "meaning": "foreigner",
+    "deck": "survival",
+    "note": "hotels accept foreigners"
+  },
+  {
+    "id": "t-xishoujian",
+    "simplified": "洗手间",
+    "traditional": "洗手間",
+    "pinyin": "xǐshǒujiān",
+    "jyutping": "sai2 sau2 gaan1",
+    "meaning": "restroom",
+    "deck": "survival",
+    "note": "bathrooms"
+  },
+  {
+    "id": "t-nan",
+    "simplified": "男",
+    "traditional": "男",
+    "pinyin": "nán",
+    "jyutping": "naam4",
+    "meaning": "men",
+    "deck": "survival",
+    "note": "bathroom signs"
+  },
+  {
+    "id": "t-nu",
+    "simplified": "女",
+    "traditional": "女",
+    "pinyin": "nǚ",
+    "jyutping": "neoi5",
+    "meaning": "women",
+    "deck": "survival",
+    "note": "bathroom signs"
+  },
+  {
+    "id": "t-weishengzhi",
+    "simplified": "卫生纸",
+    "traditional": "衛生紙",
+    "pinyin": "wèishēngzhǐ",
+    "jyutping": "wai6 sang1 zi2",
+    "meaning": "toilet paper",
+    "deck": "survival",
+    "note": "bathrooms, bring your own"
+  },
+  {
+    "id": "t-jiuming",
+    "simplified": "救命",
+    "traditional": "救命",
+    "pinyin": "jiùmìng",
+    "jyutping": "gau3 meng6",
+    "meaning": "help!",
+    "deck": "survival",
+    "note": "emergency"
+  },
+  {
+    "id": "t-bangbangwo",
+    "simplified": "帮帮我",
+    "traditional": "幫幫我",
+    "pinyin": "bāngbang wǒ",
+    "jyutping": "bong1 bong1 ngo5",
+    "meaning": "please help me",
+    "deck": "survival",
+    "note": "emergency"
+  },
+  {
+    "id": "t-yiyuan",
+    "simplified": "医院",
+    "traditional": "醫院",
+    "pinyin": "yīyuàn",
+    "jyutping": "ji1 jyun2",
+    "meaning": "hospital",
+    "deck": "survival",
+    "note": "emergency"
+  },
+  {
+    "id": "t-jizhen",
+    "simplified": "急诊",
+    "traditional": "急診",
+    "pinyin": "jízhěn",
+    "jyutping": "gap1 can2",
+    "meaning": "emergency room",
+    "deck": "survival",
+    "note": "emergency"
+  },
+  {
+    "id": "t-yaodian",
+    "simplified": "药店",
+    "traditional": "藥店",
+    "pinyin": "yàodiàn",
+    "jyutping": "joek6 dim3",
+    "meaning": "pharmacy",
+    "deck": "survival",
+    "note": "emergency"
+  },
+  {
+    "id": "t-jingcha",
+    "simplified": "警察",
+    "traditional": "警察",
+    "pinyin": "jǐngchá",
+    "jyutping": "ging2 caat3",
+    "meaning": "police",
+    "deck": "survival",
+    "note": "emergency"
+  },
+  {
+    "id": "t-baojing",
+    "simplified": "报警",
+    "traditional": "報警",
+    "pinyin": "bàojǐng",
+    "jyutping": "bou3 ging2",
+    "meaning": "call the police",
+    "deck": "survival",
+    "note": "emergency"
+  },
+  {
+    "id": "t-wobushufu",
+    "simplified": "我不舒服",
+    "traditional": "我不舒服",
+    "pinyin": "wǒ bù shūfu",
+    "jyutping": "ngo5 bat1 syu1 fuk6",
+    "meaning": "I feel sick",
+    "deck": "survival",
+    "note": "emergency (Canto 我唔舒服)"
+  },
+  {
+    "id": "t-touteng",
+    "simplified": "头疼",
+    "traditional": "頭疼",
+    "pinyin": "tóuténg",
+    "jyutping": "tau4 tung3",
+    "meaning": "headache",
+    "deck": "survival",
+    "note": "altitude, health"
+  },
+  {
+    "id": "t-fashao",
+    "simplified": "发烧",
+    "traditional": "發燒",
+    "pinyin": "fāshāo",
+    "jyutping": "faat3 siu1",
+    "meaning": "fever",
+    "deck": "survival",
+    "note": "health"
+  },
+  {
+    "id": "t-guomin",
+    "simplified": "过敏",
+    "traditional": "過敏",
+    "pinyin": "guòmǐn",
+    "jyutping": "gwo3 man5",
+    "meaning": "allergic",
+    "deck": "survival",
+    "note": "health, food"
+  },
+  {
+    "id": "t-laduzi",
+    "simplified": "拉肚子",
+    "traditional": "拉肚子",
+    "pinyin": "lā dùzi",
+    "jyutping": "laai1 tou5 zi2",
+    "meaning": "diarrhea",
+    "deck": "survival",
+    "note": "health"
+  },
+  {
+    "id": "t-milu",
+    "simplified": "迷路",
+    "traditional": "迷路",
+    "pinyin": "mílù",
+    "jyutping": "mai4 lou6",
+    "meaning": "lost (the way)",
+    "deck": "survival",
+    "note": "emergency"
+  },
+  {
+    "id": "t-diule",
+    "simplified": "丢了",
+    "traditional": "丟了",
+    "pinyin": "diū le",
+    "jyutping": "diu1 liu5",
+    "meaning": "lost (an item)",
+    "deck": "survival",
+    "note": "emergency"
+  },
+  {
+    "id": "t-tijian",
+    "simplified": "体检",
+    "traditional": "體檢",
+    "pinyin": "tǐjiǎn",
+    "jyutping": "tai2 gim2",
+    "meaning": "health checkup",
+    "deck": "survival",
+    "note": "Meinian checkup"
+  },
+  {
+    "id": "t-zhongyi",
+    "simplified": "中医",
+    "traditional": "中醫",
+    "pinyin": "Zhōngyī",
+    "jyutping": "zung1 ji1",
+    "meaning": "TCM doctor",
+    "deck": "survival",
+    "note": "AI TCM, Shanghai"
+  },
+  {
+    "id": "t-zhongyao",
+    "simplified": "中药",
+    "traditional": "中藥",
+    "pinyin": "zhōngyào",
+    "jyutping": "zung1 joek6",
+    "meaning": "herbal medicine",
+    "deck": "survival",
+    "note": "Tibetan medicine stop"
+  },
+  {
+    "id": "t-anmo",
+    "simplified": "按摩",
+    "traditional": "按摩",
+    "pinyin": "ànmó",
+    "jyutping": "on3 mo1",
+    "meaning": "massage",
+    "deck": "survival",
+    "note": "spas"
+  },
+  {
+    "id": "t-jiwei",
+    "simplified": "几位",
+    "traditional": "幾位",
+    "pinyin": "jǐ wèi",
+    "jyutping": "gei2 wai2",
+    "meaning": "how many people?",
+    "deck": "survival",
+    "note": "restaurants"
+  },
+  {
+    "id": "t-siwei",
+    "simplified": "四位",
+    "traditional": "四位",
+    "pinyin": "sì wèi",
+    "jyutping": "sei3 wai2",
+    "meaning": "four people",
+    "deck": "survival",
+    "note": "restaurants, party of 4"
+  },
+  {
+    "id": "t-paidui",
+    "simplified": "排队",
+    "traditional": "排隊",
+    "pinyin": "páiduì",
+    "jyutping": "paai4 deoi2",
+    "meaning": "queue up",
+    "deck": "survival",
+    "note": "restaurants, HK queues"
+  },
+  {
+    "id": "t-yuding",
+    "simplified": "预订",
+    "traditional": "預訂",
+    "pinyin": "yùdìng",
+    "jyutping": "jyu6 deng6",
+    "meaning": "reservation",
+    "deck": "survival",
+    "note": "restaurants, theatre"
+  },
+  {
+    "id": "t-tuijian",
+    "simplified": "推荐",
+    "traditional": "推薦",
+    "pinyin": "tuījiàn",
+    "jyutping": "teoi1 zin3",
+    "meaning": "recommend",
+    "deck": "survival",
+    "note": "ordering"
+  },
+  {
+    "id": "t-zhaopaicai",
+    "simplified": "招牌菜",
+    "traditional": "招牌菜",
+    "pinyin": "zhāopái cài",
+    "jyutping": "ziu1 paai4 coi3",
+    "meaning": "house specialty",
+    "deck": "menu",
+    "note": "ordering"
+  },
+  {
+    "id": "t-saomadiancan",
+    "simplified": "扫码点餐",
+    "traditional": "掃碼點餐",
+    "pinyin": "sǎomǎ diǎncān",
+    "jyutping": "sou3 maa5 dim2 caan1",
+    "meaning": "scan to order",
+    "deck": "survival",
+    "note": "restaurants"
+  },
+  {
+    "id": "t-dabao",
+    "simplified": "打包",
+    "traditional": "打包",
+    "pinyin": "dǎbāo",
+    "jyutping": "daa2 baau1",
+    "meaning": "to go / doggy bag",
+    "deck": "survival",
+    "note": "restaurants"
+  },
+  {
+    "id": "t-kuaizi",
+    "simplified": "筷子",
+    "traditional": "筷子",
+    "pinyin": "kuàizi",
+    "jyutping": "faai3 zi2",
+    "meaning": "chopsticks",
+    "deck": "survival",
+    "note": "restaurants"
+  },
+  {
+    "id": "t-haochi",
+    "simplified": "好吃",
+    "traditional": "好吃",
+    "pinyin": "hǎochī",
+    "jyutping": "hou2 sik6",
+    "meaning": "delicious",
+    "deck": "survival",
+    "note": "food (Canto 好食)"
+  },
+  {
+    "id": "t-sushi",
+    "simplified": "素食",
+    "traditional": "素食",
+    "pinyin": "sùshí",
+    "jyutping": "sou3 sik6",
+    "meaning": "vegetarian",
+    "deck": "menu",
+    "note": "ordering"
+  },
+  {
+    "id": "t-zaocha",
+    "simplified": "早茶",
+    "traditional": "早茶",
+    "pinyin": "zǎochá",
+    "jyutping": "zou2 caa4",
+    "meaning": "morning dim sum",
+    "deck": "menu",
+    "note": "Guangzhou dim sum"
+  },
+  {
+    "id": "t-dianxin",
+    "simplified": "点心",
+    "traditional": "點心",
+    "pinyin": "diǎnxīn",
+    "jyutping": "dim2 sam1",
+    "meaning": "dim sum",
+    "deck": "menu",
+    "note": "Guangzhou, HK"
+  },
+  {
+    "id": "t-xiajiao",
+    "simplified": "虾饺",
+    "traditional": "蝦餃",
+    "pinyin": "xiājiǎo",
+    "jyutping": "haa1 gaau2",
+    "meaning": "shrimp dumpling",
+    "deck": "menu",
+    "note": "dim sum"
+  },
+  {
+    "id": "t-shaomai",
+    "simplified": "烧卖",
+    "traditional": "燒賣",
+    "pinyin": "shāomài",
+    "jyutping": "siu1 maai2",
+    "meaning": "siu mai",
+    "deck": "menu",
+    "note": "dim sum"
+  },
+  {
+    "id": "t-changfen",
+    "simplified": "肠粉",
+    "traditional": "腸粉",
+    "pinyin": "chángfěn",
+    "jyutping": "coeng2 fan2",
+    "meaning": "rice noodle roll",
+    "deck": "menu",
+    "note": "dim sum"
+  },
+  {
+    "id": "t-fengzhao",
+    "simplified": "凤爪",
+    "traditional": "鳳爪",
+    "pinyin": "fèngzhǎo",
+    "jyutping": "fung6 zaau2",
+    "meaning": "chicken feet",
+    "deck": "menu",
+    "note": "dim sum"
+  },
+  {
+    "id": "t-chashaobao",
+    "simplified": "叉烧包",
+    "traditional": "叉燒包",
+    "pinyin": "chāshāo bāo",
+    "jyutping": "caa1 siu1 baau1",
+    "meaning": "BBQ pork bun",
+    "deck": "menu",
+    "note": "dim sum"
+  },
+  {
+    "id": "t-luobogao",
+    "simplified": "萝卜糕",
+    "traditional": "蘿蔔糕",
+    "pinyin": "luóbo gāo",
+    "jyutping": "lo4 baak6 gou1",
+    "meaning": "turnip cake",
+    "deck": "menu",
+    "note": "dim sum"
+  },
+  {
+    "id": "t-danta",
+    "simplified": "蛋挞",
+    "traditional": "蛋撻",
+    "pinyin": "dàntà",
+    "jyutping": "daan6 taat1",
+    "meaning": "egg tart",
+    "deck": "menu",
+    "note": "dim sum, HK"
+  },
+  {
+    "id": "t-puta",
+    "simplified": "葡挞",
+    "traditional": "葡撻",
+    "pinyin": "pútà",
+    "jyutping": "pou4 taat1",
+    "meaning": "Portuguese egg tart",
+    "deck": "menu",
+    "note": "Macau, Lord Stow's"
+  },
+  {
+    "id": "t-zhupabao",
+    "simplified": "猪扒包",
+    "traditional": "豬扒包",
+    "pinyin": "zhūpá bāo",
+    "jyutping": "zyu1 paa2 baau1",
+    "meaning": "pork chop bun",
+    "deck": "menu",
+    "note": "Macau"
+  },
+  {
+    "id": "t-puer",
+    "simplified": "普洱",
+    "traditional": "普洱",
+    "pinyin": "pǔ'ěr",
+    "jyutping": "pou2 nei2",
+    "meaning": "pu'er tea",
+    "deck": "menu",
+    "note": "dim sum tea (check jyutping)"
+  },
+  {
+    "id": "t-juhuacha",
+    "simplified": "菊花茶",
+    "traditional": "菊花茶",
+    "pinyin": "júhuā chá",
+    "jyutping": "guk1 faa1 caa4",
+    "meaning": "chrysanthemum tea",
+    "deck": "menu",
+    "note": "dim sum tea"
+  },
+  {
+    "id": "t-tieguanyin",
+    "simplified": "铁观音",
+    "traditional": "鐵觀音",
+    "pinyin": "tiěguānyīn",
+    "jyutping": "tit3 gun1 jam1",
+    "meaning": "Tieguanyin oolong",
+    "deck": "menu",
+    "note": "tea"
+  },
+  {
+    "id": "t-jiashui",
+    "simplified": "加水",
+    "traditional": "加水",
+    "pinyin": "jiā shuǐ",
+    "jyutping": "gaa1 seoi2",
+    "meaning": "refill (teapot)",
+    "deck": "survival",
+    "note": "dim sum, lift the lid"
+  },
+  {
+    "id": "t-shaoe",
+    "simplified": "烧鹅",
+    "traditional": "燒鵝",
+    "pinyin": "shāo'é",
+    "jyutping": "siu1 ngo2",
+    "meaning": "roast goose",
+    "deck": "menu",
+    "note": "Guangzhou, HK"
+  },
+  {
+    "id": "t-baiqieji",
+    "simplified": "白切鸡",
+    "traditional": "白切雞",
+    "pinyin": "báiqiē jī",
+    "jyutping": "baak6 cit3 gai1",
+    "meaning": "poached chicken",
+    "deck": "menu",
+    "note": "Guangzhou"
+  },
+  {
+    "id": "t-baozaifan",
+    "simplified": "煲仔饭",
+    "traditional": "煲仔飯",
+    "pinyin": "bāozǎi fàn",
+    "jyutping": "bou1 zai2 faan6",
+    "meaning": "claypot rice",
+    "deck": "menu",
+    "note": "Guangzhou, HK"
+  },
+  {
+    "id": "t-yuntunmian",
+    "simplified": "云吞面",
+    "traditional": "雲吞麵",
+    "pinyin": "yúntūn miàn",
+    "jyutping": "wan4 tan1 min6",
+    "meaning": "wonton noodles",
+    "deck": "menu",
+    "note": "Guangzhou, HK"
+  },
+  {
+    "id": "t-shuangpinai",
+    "simplified": "双皮奶",
+    "traditional": "雙皮奶",
+    "pinyin": "shuāngpí nǎi",
+    "jyutping": "soeng1 pei4 naai5",
+    "meaning": "milk custard",
+    "deck": "menu",
+    "note": "Guangzhou dessert"
+  },
+  {
+    "id": "t-tangshui",
+    "simplified": "糖水",
+    "traditional": "糖水",
+    "pinyin": "tángshuǐ",
+    "jyutping": "tong4 seoi2",
+    "meaning": "sweet soup dessert",
+    "deck": "menu",
+    "note": "Guangzhou, HK"
+  },
+  {
+    "id": "t-niuza",
+    "simplified": "牛杂",
+    "traditional": "牛雜",
+    "pinyin": "niúzá",
+    "jyutping": "ngau4 zaap6",
+    "meaning": "beef offal",
+    "deck": "menu",
+    "note": "HK, Guangzhou street food"
+  },
+  {
+    "id": "t-boluobao",
+    "simplified": "菠萝包",
+    "traditional": "菠蘿包",
+    "pinyin": "bōluó bāo",
+    "jyutping": "bo1 lo4 baau1",
+    "meaning": "pineapple bun",
+    "deck": "menu",
+    "note": "HK"
+  },
+  {
+    "id": "t-jidanzai",
+    "simplified": "鸡蛋仔",
+    "traditional": "雞蛋仔",
+    "pinyin": "jīdàn zǎi",
+    "jyutping": "gai1 daan6 zai2",
+    "meaning": "egg waffle",
+    "deck": "menu",
+    "note": "HK street eats"
+  },
+  {
+    "id": "t-yudan",
+    "simplified": "鱼蛋",
+    "traditional": "魚蛋",
+    "pinyin": "yúdàn",
+    "jyutping": "jyu4 daan2",
+    "meaning": "fish balls",
+    "deck": "menu",
+    "note": "HK street eats"
+  },
+  {
+    "id": "t-chacanting",
+    "simplified": "茶餐厅",
+    "traditional": "茶餐廳",
+    "pinyin": "chá cāntīng",
+    "jyutping": "caa4 caan1 teng1",
+    "meaning": "HK-style diner",
+    "deck": "menu",
+    "note": "HK"
+  },
+  {
+    "id": "t-dongningcha",
+    "simplified": "冻柠茶",
+    "traditional": "凍檸茶",
+    "pinyin": "dòng níng chá",
+    "jyutping": "dung3 ning4 caa4",
+    "meaning": "iced lemon tea",
+    "deck": "menu",
+    "note": "HK"
+  },
+  {
+    "id": "t-huoguo",
+    "simplified": "火锅",
+    "traditional": "火鍋",
+    "pinyin": "huǒguō",
+    "jyutping": "fo2 wo1",
+    "meaning": "hotpot",
+    "deck": "menu",
+    "note": "Chongqing, Chengdu"
+  },
+  {
+    "id": "t-mala",
+    "simplified": "麻辣",
+    "traditional": "麻辣",
+    "pinyin": "málà",
+    "jyutping": "maa4 laat6",
+    "meaning": "numbing-spicy",
+    "deck": "menu",
+    "note": "Sichuan"
+  },
+  {
+    "id": "t-yuanyangguo",
+    "simplified": "鸳鸯锅",
+    "traditional": "鴛鴦鍋",
+    "pinyin": "yuānyāng guō",
+    "jyutping": "jyun1 joeng1 wo1",
+    "meaning": "split hotpot",
+    "deck": "menu",
+    "note": "hotpot, spicy + mild"
+  },
+  {
+    "id": "t-qingtang",
+    "simplified": "清汤",
+    "traditional": "清湯",
+    "pinyin": "qīngtāng",
+    "jyutping": "cing1 tong1",
+    "meaning": "clear broth",
+    "deck": "menu",
+    "note": "hotpot"
+  },
+  {
+    "id": "t-weila",
+    "simplified": "微辣",
+    "traditional": "微辣",
+    "pinyin": "wēi là",
+    "jyutping": "mei4 laat6",
+    "meaning": "mildly spicy",
+    "deck": "menu",
+    "note": "hotpot, ordering"
+  },
+  {
+    "id": "t-tela",
+    "simplified": "特辣",
+    "traditional": "特辣",
+    "pinyin": "tè là",
+    "jyutping": "dak6 laat6",
+    "meaning": "extra spicy",
+    "deck": "menu",
+    "note": "hotpot"
+  },
+  {
+    "id": "t-maodu",
+    "simplified": "毛肚",
+    "traditional": "毛肚",
+    "pinyin": "máodǔ",
+    "jyutping": "mou4 tou5",
+    "meaning": "beef tripe",
+    "deck": "menu",
+    "note": "hotpot"
+  },
+  {
+    "id": "t-xiangcai",
+    "simplified": "香菜",
+    "traditional": "香菜",
+    "pinyin": "xiāngcài",
+    "jyutping": "hoeng1 coi3",
+    "meaning": "cilantro",
+    "deck": "menu",
+    "note": "ordering"
+  },
+  {
+    "id": "t-buyaoxiangcai",
+    "simplified": "不要香菜",
+    "traditional": "不要香菜",
+    "pinyin": "bú yào xiāngcài",
+    "jyutping": "bat1 jiu3 hoeng1 coi3",
+    "meaning": "no cilantro",
+    "deck": "menu",
+    "note": "ordering"
+  },
+  {
+    "id": "t-xiaomian",
+    "simplified": "小面",
+    "traditional": "小麵",
+    "pinyin": "xiǎo miàn",
+    "jyutping": "siu2 min6",
+    "meaning": "Chongqing noodles",
+    "deck": "menu",
+    "note": "Chongqing"
+  },
+  {
+    "id": "t-suanlafen",
+    "simplified": "酸辣粉",
+    "traditional": "酸辣粉",
+    "pinyin": "suānlà fěn",
+    "jyutping": "syun1 laat6 fan2",
+    "meaning": "hot-sour noodles",
+    "deck": "menu",
+    "note": "Chongqing"
+  },
+  {
+    "id": "t-mapodoufu",
+    "simplified": "麻婆豆腐",
+    "traditional": "麻婆豆腐",
+    "pinyin": "mápó dòufu",
+    "jyutping": "maa4 po4 dau6 fu6",
+    "meaning": "mapo tofu",
+    "deck": "menu",
+    "note": "Chengdu"
+  },
+  {
+    "id": "t-huiguorou",
+    "simplified": "回锅肉",
+    "traditional": "回鍋肉",
+    "pinyin": "huíguō ròu",
+    "jyutping": "wui4 wo1 juk6",
+    "meaning": "twice-cooked pork",
+    "deck": "menu",
+    "note": "Chengdu"
+  },
+  {
+    "id": "t-dandanmian",
+    "simplified": "担担面",
+    "traditional": "擔擔麵",
+    "pinyin": "dàndàn miàn",
+    "jyutping": "daam1 daam1 min6",
+    "meaning": "dan dan noodles",
+    "deck": "menu",
+    "note": "Chengdu (check jyutping)"
+  },
+  {
+    "id": "t-chaoshou",
+    "simplified": "抄手",
+    "traditional": "抄手",
+    "pinyin": "chāoshǒu",
+    "jyutping": "caau1 sau2",
+    "meaning": "Sichuan wontons",
+    "deck": "menu",
+    "note": "Chengdu"
+  },
+  {
+    "id": "t-beijingkaoya",
+    "simplified": "北京烤鸭",
+    "traditional": "北京烤鴨",
+    "pinyin": "Běijīng kǎoyā",
+    "jyutping": "bak1 ging1 haau1 aap3",
+    "meaning": "Peking duck",
+    "deck": "menu",
+    "note": "Chengdu tour dinner Dec 23"
+  },
+  {
+    "id": "t-xiaolongbao",
+    "simplified": "小笼包",
+    "traditional": "小籠包",
+    "pinyin": "xiǎolóngbāo",
+    "jyutping": "siu2 lung4 baau1",
+    "meaning": "soup dumplings",
+    "deck": "menu",
+    "note": "Shanghai, Lai Lai"
+  },
+  {
+    "id": "t-shengjianbao",
+    "simplified": "生煎包",
+    "traditional": "生煎包",
+    "pinyin": "shēngjiān bāo",
+    "jyutping": "saang1 zin1 baau1",
+    "meaning": "pan-fried bun",
+    "deck": "menu",
+    "note": "Shanghai, Shu Cai Ji"
+  },
+  {
+    "id": "t-majiangmian",
+    "simplified": "麻酱面",
+    "traditional": "麻醬麵",
+    "pinyin": "májiàng miàn",
+    "jyutping": "maa4 zoeng3 min6",
+    "meaning": "sesame noodles",
+    "deck": "menu",
+    "note": "Shanghai, Wei Xiang Zhai"
+  },
+  {
+    "id": "t-congyoubanmian",
+    "simplified": "葱油拌面",
+    "traditional": "蔥油拌麵",
+    "pinyin": "cōngyóu bàn miàn",
+    "jyutping": "cung1 jau4 bun6 min6",
+    "meaning": "scallion oil noodles",
+    "deck": "menu",
+    "note": "Shanghai"
+  },
+  {
+    "id": "t-liulianqianceng",
+    "simplified": "榴莲千层",
+    "traditional": "榴槤千層",
+    "pinyin": "liúlián qiāncéng",
+    "jyutping": "lau4 lin4 cin1 cang4",
+    "meaning": "durian mille crepe",
+    "deck": "menu",
+    "note": "Shanghai Hema"
+  },
+  {
+    "id": "t-dongporou",
+    "simplified": "东坡肉",
+    "traditional": "東坡肉",
+    "pinyin": "Dōngpō ròu",
+    "jyutping": "dung1 bo1 juk6",
+    "meaning": "Dongpo braised pork",
+    "deck": "menu",
+    "note": "Hangzhou lunch Dec 25"
+  },
+  {
+    "id": "t-xihucuyu",
+    "simplified": "西湖醋鱼",
+    "traditional": "西湖醋魚",
+    "pinyin": "Xīhú cù yú",
+    "jyutping": "sai1 wu4 cou3 jyu2",
+    "meaning": "West Lake vinegar fish",
+    "deck": "menu",
+    "note": "Hangzhou"
+  },
+  {
+    "id": "t-longjingcha",
+    "simplified": "龙井茶",
+    "traditional": "龍井茶",
+    "pinyin": "Lóngjǐng chá",
+    "jyutping": "lung4 zeng2 caa4",
+    "meaning": "Longjing green tea",
+    "deck": "menu",
+    "note": "Hangzhou tea village"
+  },
+  {
+    "id": "t-yanshuiya",
+    "simplified": "盐水鸭",
+    "traditional": "鹽水鴨",
+    "pinyin": "yánshuǐ yā",
+    "jyutping": "jim4 seoi2 aap3",
+    "meaning": "salted duck",
+    "deck": "menu",
+    "note": "Nanjing"
+  },
+  {
+    "id": "t-yaxiefensitang",
+    "simplified": "鸭血粉丝汤",
+    "traditional": "鴨血粉絲湯",
+    "pinyin": "yāxiě fěnsī tāng",
+    "jyutping": "aap3 hyut3 fan2 si1 tong1",
+    "meaning": "duck blood noodle soup",
+    "deck": "menu",
+    "note": "Nanjing snacks"
+  },
+  {
+    "id": "t-yangzhouchaofan",
+    "simplified": "扬州炒饭",
+    "traditional": "揚州炒飯",
+    "pinyin": "Yángzhōu chǎofàn",
+    "jyutping": "joeng4 zau1 caau2 faan6",
+    "meaning": "Yangzhou fried rice",
+    "deck": "menu",
+    "note": "Yangzhou"
+  },
+  {
+    "id": "t-naicha",
+    "simplified": "奶茶",
+    "traditional": "奶茶",
+    "pinyin": "nǎichá",
+    "jyutping": "naai5 caa4",
+    "meaning": "milk tea",
+    "deck": "menu",
+    "note": "Shanghai, everywhere"
+  },
+  {
+    "id": "t-shaobing",
+    "simplified": "少冰",
+    "traditional": "少冰",
+    "pinyin": "shǎo bīng",
+    "jyutping": "siu2 bing1",
+    "meaning": "less ice",
+    "deck": "menu",
+    "note": "milk tea order"
+  },
+  {
+    "id": "t-qubing",
+    "simplified": "去冰",
+    "traditional": "去冰",
+    "pinyin": "qù bīng",
+    "jyutping": "heoi3 bing1",
+    "meaning": "no ice",
+    "deck": "menu",
+    "note": "milk tea order"
+  },
+  {
+    "id": "t-bantang",
+    "simplified": "半糖",
+    "traditional": "半糖",
+    "pinyin": "bàn táng",
+    "jyutping": "bun3 tong4",
+    "meaning": "half sugar",
+    "deck": "menu",
+    "note": "milk tea order"
+  },
+  {
+    "id": "t-wutang",
+    "simplified": "无糖",
+    "traditional": "無糖",
+    "pinyin": "wú táng",
+    "jyutping": "mou4 tong4",
+    "meaning": "no sugar",
+    "deck": "menu",
+    "note": "milk tea order"
+  },
+  {
+    "id": "t-xicha",
+    "simplified": "喜茶",
+    "traditional": "喜茶",
+    "pinyin": "Xǐchá",
+    "jyutping": "hei2 caa4",
+    "meaning": "HeyTea",
+    "deck": "menu",
+    "note": "milk tea chain"
+  },
+  {
+    "id": "t-bawangchaji",
+    "simplified": "霸王茶姬",
+    "traditional": "霸王茶姬",
+    "pinyin": "Bàwáng Chájī",
+    "jyutping": "baa3 wong4 caa4 gei1",
+    "meaning": "Chagee",
+    "deck": "menu",
+    "note": "milk tea chain"
+  },
+  {
+    "id": "t-chaguan",
+    "simplified": "茶馆",
+    "traditional": "茶館",
+    "pinyin": "cháguǎn",
+    "jyutping": "caa4 gun2",
+    "meaning": "teahouse",
+    "deck": "survival",
+    "note": "Chengdu, Chongqing"
+  },
+  {
+    "id": "t-gaiwancha",
+    "simplified": "盖碗茶",
+    "traditional": "蓋碗茶",
+    "pinyin": "gàiwǎn chá",
+    "jyutping": "goi3 wun2 caa4",
+    "meaning": "lidded-bowl tea",
+    "deck": "menu",
+    "note": "Sichuan teahouses"
+  },
+  {
+    "id": "t-molihuacha",
+    "simplified": "茉莉花茶",
+    "traditional": "茉莉花茶",
+    "pinyin": "mòlìhuā chá",
+    "jyutping": "mut6 lei6 faa1 caa4",
+    "meaning": "jasmine tea",
+    "deck": "menu",
+    "note": "Muji jasmine line"
+  },
+  {
+    "id": "t-chaye",
+    "simplified": "茶叶",
+    "traditional": "茶葉",
+    "pinyin": "cháyè",
+    "jyutping": "caa4 jip6",
+    "meaning": "tea leaves",
+    "deck": "survival",
+    "note": "tea shopping"
+  },
+  {
+    "id": "t-caier",
+    "simplified": "采耳",
+    "traditional": "採耳",
+    "pinyin": "cǎi'ěr",
+    "jyutping": "coi2 ji5",
+    "meaning": "ear cleaning",
+    "deck": "survival",
+    "note": "Chengdu teahouses"
+  }
+]

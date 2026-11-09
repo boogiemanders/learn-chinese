@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>H retro sign, golden ratio</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&family=Yellowtail&family=Bodoni+Moda:wght@600&family=Oswald:wght@500&display=swap" rel="stylesheet">
+<style>
+  /* Golden scale: S 15 · M 24 · B 39 · hero 102. Space: 8 13 21 34 55 89 */
+  body { margin: 0; }
+  .screen { width: 390px; height: 844px; box-sizing: border-box; background: #F8F5EE; color: #23485C; position: relative; overflow: hidden; font-family: 'Oswald', sans-serif; }
+  .S { font-size: 15px; } .M { font-size: 24px; } .B { font-size: 39px; }
+  .red { color: #C43A2F; text-shadow: 3px 3px 0 #2D5F7C; font-family: 'Noto Serif SC', serif; font-weight: 900; }
+  .caps { font-family: 'Bodoni Moda', serif; letter-spacing: 3px; }
+  .script { font-family: 'Yellowtail', cursive; }
+  .opt { flex: 1; min-height: 55px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px solid #2D5F7C; }
+</style>
+</head>
+<body>
+<div class="screen">
+  <div style="position:absolute;left:0;right:0;top:55px;text-align:center">
+    <span class="script B" style="color:#2D5F7C">Heard It</span>
+    <div class="S" style="letter-spacing:3px;margin-top:0">Today · 6 cards left</div>
+  </div>
+
+  <!-- sign centred on the 0.382 line -->
+  <div style="position:absolute;left:21px;right:21px;top:178px;height:288px;background:#FDFBF6;border:8px solid #2D5F7C;box-shadow:inset 0 0 0 3px #FDFBF6, inset 0 0 0 5px #C43A2F;">
+    <div class="S" style="position:absolute;left:13px;top:0;bottom:0;writing-mode:vertical-rl;display:flex;justify-content:center;letter-spacing:5px">ESTD</div>
+    <div class="S" style="position:absolute;right:13px;top:0;bottom:0;writing-mode:vertical-rl;display:flex;justify-content:center;letter-spacing:5px">2026</div>
+    <svg aria-hidden="true" width="332" height="89" viewBox="0 0 332 89" style="position:absolute;left:0;top:13px">
+      <path id="arc" d="M55 78 Q166 18 277 78" fill="none"/>
+      <text font-family="Bodoni Moda" font-weight="600" font-size="15" letter-spacing="4" fill="#2D5F7C"><textPath href="#arc" startOffset="50%" text-anchor="middle">MENU DECODER</textPath></text>
+    </svg>
+    <div class="red" style="position:absolute;left:0;right:0;top:89px;text-align:center;font-size:102px;line-height:1">叉烧</div>
+    <div class="caps S" style="position:absolute;left:0;right:0;bottom:21px;text-align:center">CHAR SIU · BARBECUED PORK</div>
+  </div>
+
+  <div class="M" style="position:absolute;left:21px;right:21px;top:500px;display:flex;flex-direction:column;gap:13px">
+    <div style="display:flex;justify-content:space-between;border-bottom:1.5px dashed #2D5F7C;padding-bottom:8px"><span>普 Mandarin</span><span>chāshāo</span></div>
+    <div style="display:flex;justify-content:space-between;border-bottom:1.5px dashed #2D5F7C;padding-bottom:8px"><span>粵 Cantonese</span><span>caa1 siu1</span></div>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <span class="script" style="color:#C43A2F">You already say this one.</span>
+      <span style="display:inline-flex;width:34px;height:34px;border-radius:17px;background:#C43A2F;color:#FDFBF6;align-items:center;justify-content:center;font-size:15px" aria-label="Hear it">▶</span>
+    </div>
+  </div>
+
+  <div style="position:absolute;left:21px;right:21px;bottom:89px;display:flex;flex-direction:column;gap:13px">
+    <div style="display:flex;gap:8px">
+      <div class="opt"><span class="S" style="font-family:'Noto Serif SC';font-weight:900">不记得</span><span class="M">Missed</span></div>
+      <div class="opt"><span class="S" style="font-family:'Noto Serif SC';font-weight:900">不确定</span><span class="M">Not sure</span></div>
+      <div class="opt" style="background:#C43A2F;border-color:#C43A2F;color:#FDFBF6"><span class="S" style="font-family:'Noto Serif SC';font-weight:900">记得</span><span class="M">Got it</span></div>
+    </div>
+  </div>
+
+  <div class="S" style="position:absolute;left:21px;right:21px;bottom:34px;display:flex;justify-content:space-between;letter-spacing:2px">
+    <span>Today</span><span>Words</span><span>Settings</span>
+  </div>
+</div>
+</body>
+</html>

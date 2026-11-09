@@ -1,0 +1,95 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>Tear-off widget directions</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;900&family=Noto+Sans+SC:wght@900&family=Oswald:wght@500;700&family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+<style>
+body{margin:0}.screen{width:390px;height:844px;background:#3B6E8F;box-sizing:border-box;padding:28px 13px;font-family:'Noto Serif SC',serif;color:#fff}
+h1{font-size:20px;font-weight:400;margin:0 0 4px}.lbl{font-size:12px;opacity:.85;margin:12px 0 6px}
+.row{display:flex;gap:8px;align-items:flex-start}
+.w{position:relative;overflow:hidden;border-radius:20px;flex-shrink:0}
+.s{width:96px;height:96px}.m{width:268px;height:96px}
+.abs{position:absolute}.v{writing-mode:vertical-rl;letter-spacing:1px}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><filter id="grain" x="0" y="0" width="100%" height="100%">
+<feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="3" result="n"/>
+<feColorMatrix in="n" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2.6 0 0 0 2.1" result="m"/>
+<feComposite in="SourceGraphic" in2="m" operator="in"/></filter></svg>
+<div class="screen"><h1>Tear-off widget · C/D type, four layouts</h1>
+<div style="font-size:12px;opacity:.85">All in the riso type you liked. 56% of real size.</div>
+<div class="lbl">A2 · Almanac layout, brand blue</div><div class="row">
+ <div class="w s" style="background:#F4F1EA"><div class="abs" style="inset:0;color:#2D5F7C">
+  <div class="abs" style="left:0;right:0;top:7px;text-align:center;font:500 7px Oswald;letter-spacing:2px">CHĀSHĀO</div>
+  <div class="abs" style="left:0;right:0;top:17px;text-align:center;font:900 42px/1 'Noto Sans SC'">叉烧</div>
+  <div class="abs" style="left:7px;right:7px;bottom:7px;height:20px;border:1.5px solid #2D5F7C;display:grid;place-items:center;font:700 9px Oswald;letter-spacing:1px">BBQ PORK</div>
+ </div></div>
+ <div class="w m" style="background:#F4F1EA"><div class="abs" style="inset:0;color:#2D5F7C">
+  <div class="abs" style="left:10px;top:7px;font:500 8px Oswald;letter-spacing:2px">普 CHĀSHĀO</div>
+  <div class="abs" style="right:10px;top:7px;font:500 8px Oswald;letter-spacing:2px">粵 CAA1 SIU1</div>
+  <div class="abs" style="left:0;right:0;top:6px;text-align:center;font:900 9px 'Noto Sans SC';letter-spacing:3px">菜单解码</div>
+  <div class="abs v" style="left:12px;top:20px;font:900 10px 'Noto Sans SC'">繁叉燒</div>
+  <div class="abs v" style="right:12px;top:20px;font:900 10px 'Noto Sans SC'">今日一詞</div>
+  <div class="abs" style="left:0;right:0;top:17px;text-align:center;font:900 48px/1 'Noto Sans SC'">叉烧</div>
+  <div class="abs" style="left:8px;right:8px;bottom:6px;height:22px;border:1.5px solid #2D5F7C;display:flex;align-items:center;padding:0 2px">
+   <span style="width:18px"></span><span style="flex:1;text-align:center;font:700 12px Oswald;letter-spacing:1px;border-left:1.5px solid #2D5F7C">BARBECUED PORK</span><span style="width:18px"></span></div>
+ </div>
+ <div class="abs" style="left:12px;bottom:8px"><span style="flex-shrink:0;width:18px;height:18px;border-radius:4.0px;background:#C1352B;color:#F4F0E6;display:grid;place-items:center;font:14px/1 'Zhi Mang Xing'">中</span></div></div>
+</div>
+<div class="lbl">B2 · Red page layout, red</div><div class="row">
+ <div class="w s" style="background:#F4F1EA"><div class="abs" style="inset:0;color:#E0473A">
+  <div class="abs" style="left:0;right:0;top:7px;text-align:center;font:700 8px Oswald;letter-spacing:2px">CHĀSHĀO</div>
+  <div class="abs" style="left:0;right:0;top:18px;text-align:center;font:900 44px/1 'Noto Sans SC'">叉烧</div>
+  <div class="abs" style="left:0;right:0;bottom:9px;text-align:center;font:700 10px Oswald;letter-spacing:1px">BBQ PORK</div>
+ </div></div>
+ <div class="w m" style="background:#F4F1EA"><div class="abs" style="inset:0;color:#E0473A">
+  <div class="abs v" style="left:9px;top:7px;font:900 16px/1 'Noto Sans SC';letter-spacing:2px">菜單</div>
+  <div class="abs v" style="right:9px;top:7px;font:900 16px/1 'Noto Sans SC';letter-spacing:2px">叉燒</div>
+  <div class="abs" style="left:36px;top:7px;font:700 8px Oswald;letter-spacing:2px">普 CHĀSHĀO</div>
+  <div class="abs" style="right:36px;top:7px;font:700 8px Oswald;letter-spacing:2px">粵 CAA1 SIU1</div>
+  <div class="abs" style="left:0;right:0;top:15px;text-align:center;font:900 54px/1 'Noto Sans SC'">叉烧</div>
+  <div class="abs" style="left:40px;right:40px;bottom:8px;text-align:center;font:700 12px Oswald;letter-spacing:1px">BARBECUED PORK</div>
+ </div>
+ <div class="abs" style="left:10px;bottom:7px"><span style="flex-shrink:0;width:18px;height:18px;border-radius:4.0px;background:#C1352B;color:#F4F0E6;display:grid;place-items:center;font:14px/1 'Zhi Mang Xing'">中</span></div></div>
+</div>
+<!-- C · Riso stamp red -->
+<div class="lbl">C · Riso stamp, red</div>
+<div class="row">
+ <div class="w s" style="background:#F4F1EA">
+  <div class="abs" style="inset:0;color:#E0473A">
+   <div class="abs" style="left:0;right:0;top:8px;text-align:center;font:500 8px Oswald;letter-spacing:2px">CHĀ · SHĀO</div>
+   <div class="abs" style="left:0;right:0;top:20px;text-align:center;font:900 40px/1 'Noto Sans SC'">叉烧</div>
+   <div class="abs" style="left:0;right:0;bottom:10px;text-align:center;font:700 10px Oswald;letter-spacing:1px">✱ BBQ PORK ✱</div>
+  </div>
+ </div>
+ <div class="w m" style="background:#F4F1EA">
+  <div class="abs" style="inset:0;color:#E0473A">
+   <div class="abs" style="left:0;right:0;top:7px;text-align:center;font:500 9px Oswald;letter-spacing:3px">CHĀSHĀO · CAA1 SIU1</div>
+   <div class="abs" style="left:0;right:0;top:18px;text-align:center;font:900 48px/1 'Noto Sans SC'">叉烧</div>
+   <div class="abs" style="left:0;right:0;bottom:8px;text-align:center;font:700 13px Oswald;letter-spacing:1px">✱ BARBECUED PORK ✱</div>
+   <div class="abs v" style="left:12px;top:16px;font:900 11px 'Noto Sans SC'">菜單</div>
+   <div class="abs v" style="right:12px;top:16px;font:900 11px 'Noto Sans SC'">叉燒</div>
+  </div>
+  <div class="abs" style="left:10px;bottom:7px"><span style="flex-shrink:0;width:18px;height:18px;border-radius:4.0px;background:#C1352B;color:#F4F0E6;display:grid;place-items:center;font:14px/1 'Zhi Mang Xing'">中</span></div>
+ </div>
+</div>
+
+<!-- D · Riso brand blue -->
+<div class="lbl">D · Riso stamp, brand blue + red seal</div>
+<div class="row">
+ <div class="w s" style="background:#F4F1EA">
+  <div class="abs" style="inset:0;color:#2D5F7C">
+   <div class="abs" style="left:0;right:0;top:8px;text-align:center;font:500 8px Oswald;letter-spacing:2px">CHĀ · SHĀO</div>
+   <div class="abs" style="left:0;right:0;top:20px;text-align:center;font:900 40px/1 'Noto Sans SC'">叉烧</div>
+   <div class="abs" style="left:0;right:0;bottom:10px;text-align:center;font:700 10px Oswald;letter-spacing:1px">BBQ PORK</div>
+  </div>
+  
+ </div>
+ <div class="w m" style="background:#F4F1EA">
+  <div class="abs" style="inset:0;color:#2D5F7C">
+   <div class="abs" style="left:0;right:0;top:7px;text-align:center;font:500 9px Oswald;letter-spacing:3px">CHĀSHĀO · CAA1 SIU1</div>
+   <div class="abs" style="left:0;right:0;top:18px;text-align:center;font:900 48px/1 'Noto Sans SC'">叉烧</div>
+   <div class="abs" style="left:0;right:0;bottom:8px;text-align:center;font:700 13px Oswald;letter-spacing:1px">BARBECUED PORK</div>
+   <div class="abs v" style="left:12px;top:16px;font:900 11px 'Noto Sans SC'">菜單</div>
+   <div class="abs v" style="right:12px;top:16px;font:900 11px 'Noto Sans SC'">叉燒</div>
+  </div>
+  <div class="abs" style="left:10px;bottom:7px"><span style="flex-shrink:0;width:18px;height:18px;border-radius:4.0px;background:#C1352B;color:#F4F0E6;display:grid;place-items:center;font:14px/1 'Zhi Mang Xing'">中</span></div>
+ </div>
+</div>
+</div></body></html>

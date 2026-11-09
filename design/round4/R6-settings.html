@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>R6 Settings</title>
+<link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+<style>
+  :root{--page:#FAFAF8;--panel:#2D5F7C;--ink:#23485C;--ink2:#FAFAF8;--muted:#4F6F82;--line:#BFCBD3;--red:#C1352B;--brush:'Zhi Mang Xing',cursive;}
+  body { margin: 0; }
+  .screen { width: 390px; height: 844px; background: var(--page); color: var(--ink); position: relative; overflow: hidden; font-family: 'Songti SC', serif; }
+  .S { font-size: 15px; letter-spacing: 2px; } .M { font-size: 24px; }
+  .abs { position: absolute !important; }
+  .vert { writing-mode: vertical-rl; letter-spacing: 6px; }
+  .circ { border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; }
+  .row { display: flex; align-items: center; justify-content: space-between; min-height: 55px; border-bottom: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="stamp" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="4" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -5 0 0 0 4.4" result="m"/>
+    <feComposite in="SourceGraphic" in2="m" operator="in" result="s"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="9" result="w"/>
+    <feDisplacementMap in="s" in2="w" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+<div class="screen">
+
+  <div class="abs" style="left:26px;top:55px"><span role="img" aria-label="Heard It" style="width:30px;height:30px;border-radius:50%;border:2px solid var(--red);color:var(--red);display:flex;align-items:center;justify-content:center;font-family:var(--brush);font-size:24px;filter:url(#stamp)">听</span></div>
+  <div class="S abs" style="right:26px;top:63px;color:var(--muted)"></div>
+  <div class="abs" style="left:26px;top:110px;font-family:var(--brush);font-size:55px;line-height:1">设定</div>
+  <div class="abs" style="left:26px;right:26px;top:199px;border-top:1px solid var(--line)">
+    <div class="row"><span class="S">Characters</span><span style="display:flex;border:1px solid var(--ink)"><span class="M" style="padding:0 13px;background:var(--ink);color:#fff">简</span><span class="M" style="padding:0 13px">繁</span></span></div>
+    <div class="row"><span class="S">普 Mandarin pinyin</span><span style="width:44px;height:26px;border-radius:13px;background:var(--ink);position:relative"><span class="abs" style="right:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff"></span></span></div>
+    <div class="row"><span class="S">粵 Cantonese jyutping</span><span style="width:44px;height:26px;border-radius:13px;background:var(--ink);position:relative"><span class="abs" style="right:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff"></span></span></div>
+    <div class="row"><span class="S">Play sound when shown</span><span style="width:44px;height:26px;border-radius:13px;background:var(--ink);position:relative"><span class="abs" style="right:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff"></span></span></div>
+    <div class="row"><span class="S">Cards a day</span><span style="display:flex;align-items:center;gap:13px"><span class="circ" style="width:30px;height:30px;border:1px solid var(--line)"><svg width="13" height="13" viewBox="0 0 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 10.5 L18 10.5"/></svg></span><span class="M">6</span><span class="circ" style="width:30px;height:30px;border:1px solid var(--line)"><svg width="13" height="13" viewBox="0 0 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 10.5 L18 10.5 M10.5 3 L10.5 18"/></svg></span></span></div>
+  </div>
+  <div class="S abs" style="left:26px;top:504px;color:var(--muted)">Decks</div>
+  <div class="abs" style="left:26px;right:26px;top:534px;border-top:1px solid var(--line)">
+    <div class="row"><span class="S">Menu</span><span style="width:44px;height:26px;border-radius:13px;background:var(--ink);position:relative"><span class="abs" style="right:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff"></span></span></div><div class="row"><span class="S">Travel</span><span style="width:44px;height:26px;border-radius:13px;background:var(--ink);position:relative"><span class="abs" style="right:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff"></span></span></div><div class="row"><span class="S">Essentials</span><span style="width:44px;height:26px;border-radius:13px;background:var(--ink);position:relative"><span class="abs" style="right:3px;top:3px;width:20px;height:20px;border-radius:50%;background:#fff"></span></span></div><div class="row"><span class="S">Canto pairs</span><span style="width:44px;height:26px;border-radius:13px;border:1px solid var(--line);box-sizing:border-box;position:relative"><span class="abs" style="left:3px;top:2px;width:20px;height:20px;border-radius:50%;background:var(--line)"></span></span></div>
+  </div>
+  <div class="S abs" style="left:55px;right:55px;bottom:34px;display:flex;justify-content:space-between;color:var(--muted)"><span style="">Today</span><span style="">Words</span><span style="color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px">Settings</span></div>
+</div>
+</body>
+</html>

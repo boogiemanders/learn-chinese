@@ -1,0 +1,19 @@
+<!doctype html><html><head><meta charset="utf-8"><link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+<style>html,body{margin:0;background:#F4F0E6}canvas{display:block}</style></head><body><canvas id="c" width="1024" height="1024"></canvas>
+<script>
+const PAPER="#F4F0E6",BLUE="#2D5F7C",RED="#C1352B",PHI=1-0.236068;  // paper = 1 − 1/φ³
+// each design: brush glyph placements (x,y in 0..1, size factor) and a small red mark
+const D={
+ "A · Cascade, red chop": {g:[["学",.23,.22],["中",.5,.5],["文",.77,.78]], red:(c,S)=>{c.fillStyle=RED;const w=S*.07;c.fillRect(S*.14,S*.76,w,w*1.3);}},
+ "B · Column, red dot": {g:[["学",.5,.2],["中",.5,.5],["文",.5,.8]], red:(c,S)=>{c.fillStyle=RED;c.beginPath();c.arc(S*.79,S*.2,S*.035,0,7);c.fill();}},
+ "C · Row, red line": {g:[["学",.2,.5],["中",.5,.5],["文",.8,.5]], red:(c,S)=>{c.strokeStyle=RED;c.lineWidth=S*.03;c.lineCap="round";c.beginPath();c.moveTo(S*.38,S*.8);c.lineTo(S*.62,S*.8);c.stroke();}},
+};
+function draw(c,S,d,k){c.fillStyle=PAPER;c.fillRect(0,0,S,S);c.fillStyle=BLUE;c.textAlign="center";c.textBaseline="middle";c.font=`${S*k}px "Zhi Mang Xing"`;
+  for(const[t,x,y]of d.g)c.fillText(t,S*x,S*y);d.red(c,S);}
+function frac(d,k){const S=200,o=new OffscreenCanvas(S,S),c=o.getContext("2d");draw(c,S,d,k);const p=c.getImageData(0,0,S,S).data;let b=0,r=0;
+  for(let i=0;i<p.length;i+=4){if(p[i]<120&&p[i+2]>100)b++;else if(p[i]>170&&p[i+1]<90)r++;}return{blue:b/(S*S),red:r/(S*S)};}
+function solve(d){let lo=.2,hi=.9;for(let i=0;i<30;i++){const m=(lo+hi)/2,f=frac(d,m);(1-f.blue-f.red>PHI)?lo=m:hi=m;}return lo;}
+function icon(d,k,S){const cv=document.createElement("canvas");cv.width=S*2;cv.height=S*2;cv.style.width=cv.style.height=S+"px";draw(cv.getContext("2d"),S*2,d,k);return cv;}
+
+document.fonts.load('100px "Zhi Mang Xing"',"学中文").then(()=>{const d=D["A · Cascade, red chop"];draw(document.getElementById("c").getContext("2d"),1024,d,solve(d));});
+</script></body></html>

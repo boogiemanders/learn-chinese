@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>R6 Done for today</title>
+<link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap" rel="stylesheet">
+<style>
+  :root{--page:#FAFAF8;--panel:#2D5F7C;--ink:#23485C;--ink2:#FAFAF8;--muted:#4F6F82;--line:#BFCBD3;--red:#C1352B;--brush:'Zhi Mang Xing',cursive;}
+  body { margin: 0; }
+  .screen { width: 390px; height: 844px; background: var(--page); color: var(--ink); position: relative; overflow: hidden; font-family: 'Songti SC', serif; }
+  .S { font-size: 15px; letter-spacing: 2px; } .M { font-size: 24px; }
+  .abs { position: absolute !important; }
+  .vert { writing-mode: vertical-rl; letter-spacing: 6px; }
+  .circ { border-radius: 50%; display: flex; align-items: center; justify-content: center; position: relative; }
+  .row { display: flex; align-items: center; justify-content: space-between; min-height: 55px; border-bottom: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="stamp" x="-10%" y="-10%" width="120%" height="120%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="2" seed="4" result="n"/>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -5 0 0 0 4.4" result="m"/>
+    <feComposite in="SourceGraphic" in2="m" operator="in" result="s"/>
+    <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="9" result="w"/>
+    <feDisplacementMap in="s" in2="w" scale="3.5" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+<div class="screen">
+
+  <div class="abs" style="left:26px;top:55px"><span role="img" aria-label="Heard It" style="width:30px;height:30px;border-radius:50%;border:2px solid var(--red);color:var(--red);display:flex;align-items:center;justify-content:center;font-family:var(--brush);font-size:24px;filter:url(#stamp)">听</span></div>
+  <div class="S abs" style="right:26px;top:63px;color:var(--muted)">0 left</div>
+
+  <div class="abs" style="left:26px;right:26px;top:123px;height:338px;background:var(--panel)"></div>
+  <div class="S abs vert" style="left:42px;top:144px;color:var(--ink2)">今日</div>
+  <div class="S abs vert" style="right:42px;top:144px;color:var(--ink2)">五天连续</div>
+  <div class="abs" style="left:0;right:0;top:183px;text-align:center;font-family:var(--brush);font-size:146px;line-height:1;color:var(--ink2)">好了</div>
+  <div class="M abs" style="left:0;right:0;top:364px;text-align:center;color:var(--ink2);letter-spacing:8px">今日完成</div>
+  <div class="S abs" style="left:0;right:0;top:410px;text-align:center;color:var(--ink2)">[ done for today ]</div>
+  <div aria-hidden="true" style="position:absolute;left:306px;top:372px;width:20px;padding:4px 0;border:2px solid var(--red);color:var(--red);display:flex;flex-direction:column;align-items:center;font-size:15px;line-height:17px;font-weight:700;filter:url(#stamp)"><span>听</span><span>过</span></div>
+  <div class="M abs" style="left:0;right:0;top:495px;text-align:center">6 words · 5 got it</div>
+  <div class="abs" style="left:34px;right:34px;top:576px;display:flex;justify-content:space-between"><div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:34px"><span style="height:34px;display:flex;align-items:center"><span class="circ" style="width:30px;height:30px;border:2px solid var(--red);filter:url(#stamp)"></span></span><span class="S" style="color:var(--muted);letter-spacing:0">M</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:34px"><span style="height:34px;display:flex;align-items:center"><span class="circ" style="width:30px;height:30px;border:2px solid var(--red);filter:url(#stamp)"></span></span><span class="S" style="color:var(--muted);letter-spacing:0">T</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:34px"><span style="height:34px;display:flex;align-items:center"><span class="circ" style="width:30px;height:30px;border:2px solid var(--red);filter:url(#stamp)"></span></span><span class="S" style="color:var(--muted);letter-spacing:0">W</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:34px"><span style="height:34px;display:flex;align-items:center"><span class="circ" style="width:30px;height:30px;border:2px solid var(--red);filter:url(#stamp)"></span></span><span class="S" style="color:var(--muted);letter-spacing:0">T</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:34px"><span style="height:34px;display:flex;align-items:center"><span class="circ" style="width:34px;height:34px;color:#fff"><span class="abs" style="inset:0;border-radius:50%;background:var(--red);filter:url(#stamp)"></span><span style="position:relative;display:flex"><svg width="15" height="15" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 L9 17 L21 4"/></svg></span></span></span><span class="S" style="color:var(--muted);letter-spacing:0">F</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:34px"><span style="height:34px;display:flex;align-items:center"><span class="circ" style="width:32px;height:32px;border:1px solid var(--line)"></span></span><span class="S" style="color:var(--muted);letter-spacing:0">S</span></div><div style="display:flex;flex-direction:column;align-items:center;gap:8px;width:34px"><span style="height:34px;display:flex;align-items:center"><span class="circ" style="width:32px;height:32px;border:1px solid var(--line)"></span></span><span class="S" style="color:var(--muted);letter-spacing:0">S</span></div></div>
+  <div class="S abs" style="left:0;right:0;bottom:123px;text-align:center;color:var(--muted)">Next cards tomorrow at 8:00</div>
+  <div class="S abs" style="left:55px;right:55px;bottom:34px;display:flex;justify-content:space-between;color:var(--muted)"><span style="color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px">Today</span><span style="">Words</span><span style="">Settings</span></div>
+</div>
+</body>
+</html>

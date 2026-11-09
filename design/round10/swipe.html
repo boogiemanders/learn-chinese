@@ -1,0 +1,275 @@
+<title>Heard It Swipe</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&family=Noto+Serif+SC:wght@400;700&display=swap">
+<style>
+  /* Layout: one phone-sized card stage centred on a quiet field; the card is a canvas, controls float over it. */
+  :root {
+    --field: #E6EAEC;  /* outside the phone */
+    --page: #FAFAF8;   /* paper */
+    --blue: #2D5F7C;   /* brush + panel */
+    --ink: #23485C;    /* text on paper */
+    --muted: #4F6F82;  /* secondary text */
+    --line: #BFCBD3;   /* hairlines, quiet circles */
+    --red: #C1352B;    /* the one solid red: Got it */
+    --serif: "Songti SC", "Noto Serif SC", "Songti TC", serif;
+    --brush: "Zhi Mang Xing", "Kaiti SC", cursive;
+    color-scheme: light;
+  }
+  [hidden] { display: none !important; }
+  html, body { height: 100%; }
+  body { background: var(--field); color: var(--ink); font-family: var(--serif); display: flex; justify-content: center; align-items: center;
+         padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 12px; box-sizing: border-box; }
+  .wrap { display: flex; flex-direction: column; align-items: center; gap: 13px; width: min(390px, 100%); min-width: 0; }
+  .phone { position: relative; width: min(100%, calc((100dvh - 80px) * 390 / 844)); aspect-ratio: 390 / 844;
+           background: var(--page); border-radius: 34px; overflow: hidden; box-shadow: 0 1px 0 #fff inset, 0 21px 55px rgba(35,72,92,.18);
+           touch-action: none; user-select: none; -webkit-user-select: none; }
+  canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; }
+  canvas:active { cursor: grabbing; }
+  /* overlay positions are in the 390×844 design grid, scaled with --k */
+  .ui { position: absolute; inset: 0; pointer-events: none; transform-origin: 0 0; width: 390px; height: 844px; transform: scale(var(--k, 1)); }
+  .ui > * { pointer-events: auto; }
+  .seal { position: absolute; left: 26px; top: 55px; width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--red); color: var(--red);
+          display: grid; place-items: center; font: 24px/1 var(--brush); background: var(--page); box-shadow: 0 0 0 4px var(--page); }
+  .mode { position: absolute; left: 50%; top: 58px; transform: translateX(-50%); display: flex; border: 1px solid var(--ink); background: var(--page); }
+  .mode button { font: 15px/1 var(--serif); letter-spacing: 1px; padding: 6px 13px; border: 0; background: transparent; color: var(--ink); cursor: pointer; }
+  .mode button[aria-pressed="true"] { background: var(--ink); color: var(--page); }
+  .left { position: absolute; right: 26px; top: 63px; font: 15px/1 var(--serif); letter-spacing: 2px; color: var(--muted); background: var(--page); box-shadow: 0 0 0 5px var(--page); }
+  .circ { position: absolute; width: 55px; height: 55px; border-radius: 50%; display: grid; place-items: center; border: 1px solid var(--line);
+          background: var(--page); color: var(--ink); cursor: pointer; padding: 0; }
+  .circ:focus-visible, .mode button:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+  .hear { left: 167px; top: 595px; border-color: var(--ink); }
+  .miss { left: 76px; top: 666px; } .unsure { left: 167px; top: 666px; }
+  .got { left: 258px; top: 666px; border: 0; background: var(--red); color: #fff; box-shadow: 0 0 0 4px var(--page); }
+  .hint { font: 13px/1.5 var(--serif); color: var(--muted); text-align: center; max-width: 390px; text-wrap: balance; }
+  .done { position: absolute; inset: 0; display: grid; place-items: center; align-content: center; gap: 21px; background: var(--page); text-align: center; }
+  .done .big { font: 146px/1 var(--brush); color: var(--blue); }
+  .done p { margin: 0; font: 24px/1.3 var(--serif); }
+  .done button { font: 15px/1 var(--serif); letter-spacing: 2px; padding: 13px 21px; border: 1px solid var(--ink); background: var(--page); color: var(--ink); cursor: pointer; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <div class="phone" id="phone">
+    <canvas id="cv" aria-label="Flashcard. Swipe right if you knew it, left if you did not. The answer shows after you swipe."></canvas>
+    <div class="ui" id="ui">
+      <span class="seal" role="img" aria-label="Heard It">听</span>
+      <div class="mode" role="group" aria-label="Card style">
+        <button id="mPoster" aria-pressed="true">Poster</button><button id="mPanel" aria-pressed="false">Panel</button>
+      </div>
+      <span class="left" id="left">10 left</span>
+      <button class="circ hear" id="hear" aria-label="Hear it"><svg width="21" height="18" viewBox="0 0 16 14" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M2 5 L5 5 L8 2 L8 12 L5 9 L2 9 Z"/><path d="M11 4 C13 6 13 8 11 10"/></svg></button>
+      <button class="circ miss" id="miss" aria-label="Missed"><svg width="21" height="21" viewBox="0 0 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4 L17 17 M17 4 L4 17"/></svg></button>
+      <button class="circ unsure" id="unsure" aria-label="Not sure"><svg width="21" height="21" viewBox="0 0 21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 10.5 L18 10.5"/></svg></button>
+      <button class="circ got" id="got" aria-label="Got it"><svg width="24" height="21" viewBox="0 0 24 21" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 L9 17 L21 4"/></svg></button>
+      <div class="done" id="done" hidden>
+        <div class="big">好了</div>
+        <p id="score">10 words · 7 got it</p>
+        <button id="again">Go again</button>
+      </div>
+    </div>
+  </div>
+  <p class="hint">Read the word and say it. Drag right if you knew it, left if you didn't. The brush zooms in as you drag, then the answer shows.</p>
+</div>
+
+<script>
+const WORDS = [
+  { c: "叉烧", py: "chāshāo", jp: "caa1 siu1", en: "barbecued pork", deck: "菜单解码" },
+  { c: "点心", py: "diǎnxīn", jp: "dim2 sam1", en: "dim sum", deck: "菜单解码" },
+  { c: "买单", py: "mǎidān", jp: "maai5 daan1", en: "the bill", deck: "菜单解码" },
+  { c: "出口", py: "chūkǒu", jp: "ceot1 hau2", en: "exit", deck: "旅行必备" },
+  { c: "虾饺", py: "xiājiǎo", jp: "haa1 gaau2", en: "shrimp dumpling", deck: "菜单解码" },
+  { c: "人", py: "rén", jp: "jan4", en: "person", deck: "基本词" },
+  { c: "谢谢", py: "xièxie", jp: "ze6 ze6", en: "thank you", deck: "基本词" },
+  { c: "云吞面", py: "yúntūnmiàn", jp: "wan4 tan1 min6", en: "wonton noodles", deck: "菜单解码" },
+  { c: "洗手间", py: "xǐshǒujiān", jp: "sai2 sau2 gaan1", en: "restroom", deck: "旅行必备" },
+  { c: "一", py: "yī", jp: "jat1", en: "one", deck: "基本词" },
+];
+const W = 390, H = 844, PHI = 0.6180339887, S0 = 618, SMAX = 618 * 1.6180339887; // zoom capped one golden step above R8a2
+const css = getComputedStyle(document.documentElement);
+const C = n => css.getPropertyValue(n).trim();
+const BLUE = C("--blue"), PAGE = C("--page"), INK = C("--ink"), MUTED = C("--muted"), RED = C("--red");
+const SERIF = C("--serif"), BRUSH = C("--brush");
+
+const cv = document.getElementById("cv"), ctx = cv.getContext("2d");
+const phone = document.getElementById("phone"), ui = document.getElementById("ui");
+let DPR = 1, K = 1;
+function resize() {
+  const r = phone.getBoundingClientRect(); K = r.width / W; DPR = Math.min(3, (window.devicePixelRatio || 1) * K);
+  cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR); ui.style.setProperty("--k", K); draw();
+}
+
+/* ---------- layout ---------- */
+const lines = w => [[w.c, 39, 418, 8], ["普 " + w.py + " · 粵 " + w.jp, 24, 472, 0], [w.en, 24, 516, 1]];
+function brushGlyphs(w, s, dx, dy, cy = 345) {
+  const ch = [...w.c], n = ch.length, p = 0.63 * s;
+  return ch.map((c, i) => ({ c, x: 195 + dx, y: cy + dy + (i - (n - 1) / 2) * p }));
+}
+function paintBrush(c, w, s, dx, dy, col, cy) {
+  c.fillStyle = c.strokeStyle = col; c.lineWidth = s * 0.055; c.lineJoin = "round";
+  c.textAlign = "center"; c.textBaseline = "middle"; if ("letterSpacing" in c) c.letterSpacing = "0px";
+  c.font = `${s}px ${BRUSH}`;
+  for (const g of brushGlyphs(w, s, dx, dy, cy)) { c.fillText(g.c, g.x, g.y); c.strokeText(g.c, g.x, g.y); }
+}
+function paintLines(c, items) {
+  c.textAlign = "center"; c.textBaseline = "middle";
+  for (const [t, fs, y, ls] of items) { c.font = `${fs}px ${SERIF}`; if ("letterSpacing" in c) c.letterSpacing = ls + "px"; c.fillText(t, 195, y); }
+}
+
+/* ---------- the fit: smallest brush (618 → 618φ) that puts 100% of the text on blue,
+   then the offset whose blue is closest to 1/φ of the screen ---------- */
+function fit(w) {
+  const G = 6, gw = W / G, gh = Math.ceil(H / G);
+  const tc = new OffscreenCanvas(W, gh * G), tx = tc.getContext("2d"); tx.fillStyle = "#000"; paintLines(tx, lines(w));
+  const td = tx.getImageData(0, 0, W, gh * G).data, need = [];
+  const seen = new Uint8Array(gw * gh);
+  for (let y = 0; y < gh * G; y++) for (let x = 0; x < W; x++) if (td[(y * W + x) * 4 + 3] > 40) { const i = ((y / G) | 0) * gw + ((x / G) | 0); if (!seen[i]) { seen[i] = 1; need.push(i); } }
+  const bc = new OffscreenCanvas(gw, gh), bx = bc.getContext("2d", { willReadFrequently: true });
+  const offs = []; for (let dy = -420; dy <= 420; dy += 21) for (let dx = -156; dx <= 156; dx += 26) offs.push([dx, dy]);
+  offs.sort((a, b) => Math.hypot(...a) - Math.hypot(...b));
+  let fallback = null;
+  for (let s = S0; s <= SMAX + 1; s *= 1.05) {
+    let best = null;
+    for (const [dx, dy] of offs) {
+      bx.setTransform(1, 0, 0, 1, 0, 0); bx.clearRect(0, 0, gw, gh); bx.setTransform(1 / G, 0, 0, 1 / G, 0, 0);
+      paintBrush(bx, w, s, dx, dy, "#000");
+      const d = bx.getImageData(0, 0, gw, gh).data; let ok = 0; for (const i of need) if (d[i * 4 + 3] > 200) ok++;
+      const cov = ok / need.length;
+      let blue = 0; for (let i = 3; i < d.length; i += 4) if (d[i] > 128) blue++;
+      const frac = blue / (gw * gh), cand = { s, dx, dy, cov, frac };
+      if (!fallback || cov > fallback.cov + 0.001 || (Math.abs(cov - fallback.cov) <= 0.001 && Math.abs(frac - PHI) < Math.abs(fallback.frac - PHI))) fallback = cand;
+      if (cov >= 0.999 && (!best || Math.abs(frac - PHI) < Math.abs(best.frac - PHI))) best = cand;
+    }
+    if (best) return best;
+  }
+  return fallback;
+}
+
+/* ---------- state ---------- */
+let mode = "poster", deck = [], idx = 0, revealed = false, phase = "front", lastKind = null, timer = 0, drag = { x: 0, y: 0, on: false, moved: false, sx: 0, sy: 0 }, tally = { got: 0, miss: 0, unsure: 0 };
+const fits = new Map();
+function fitFor(w) { if (!fits.has(w.c)) fits.set(w.c, fit(w)); return fits.get(w.c); }
+function start() { deck = WORDS.slice(); idx = 0; revealed = false; phase = "front"; clearTimeout(timer); tally = { got: 0, miss: 0, unsure: 0 }; document.getElementById("done").hidden = true; updateLeft(); draw(); }
+function updateLeft() { document.getElementById("left").textContent = `${deck.length - idx} left`; }
+
+/* ---------- drawing ---------- */
+const ease = t => 1 - Math.pow(1 - t, 3);
+function wholeView(w) { const n = [...w.c].length; const s = Math.min(0.7 * W, 0.48 * H / (0.63 * (n - 1) + 1)); return { s, cy: 300 }; }
+
+// z = 0: the whole word (the question). z = 1: the fitted poster (the answer).
+function drawPoster(c, w, z, show) {
+  const f = fitFor(w), v = wholeView(w), e = ease(z);
+  const s = v.s + (f.s - v.s) * e, dx = f.dx * e, dy = f.dy * e, cy = v.cy + (345 - v.cy) * e;
+  c.fillStyle = PAGE; c.fillRect(0, 0, W, H);
+  const thin = 0.02 + (0.055 - 0.02) * e;
+  c.fillStyle = c.strokeStyle = BLUE; c.lineWidth = s * thin; c.lineJoin = "round"; c.textAlign = "center"; c.textBaseline = "middle";
+  if ("letterSpacing" in c) c.letterSpacing = "0px"; c.font = `${s}px ${BRUSH}`;
+  for (const g of brushGlyphs(w, s, dx, dy, cy)) { c.fillText(g.c, g.x, g.y); c.strokeText(g.c, g.x, g.y); }
+  if (!show) {            // the question: the printed characters on the paper below the brush
+    c.save(); c.globalAlpha = Math.max(0, 1 - z * 2); c.fillStyle = INK; paintLines(c, [[w.c, 39, 548, 8]]); c.restore(); return;
+  }
+  const items = lines(w);
+  c.fillStyle = BLUE; paintLines(c, items);
+  const o = new OffscreenCanvas(c.canvas.width, c.canvas.height), ox = o.getContext("2d"); ox.setTransform(c.getTransform());
+  ox.fillStyle = "#fff"; paintLines(ox, items);
+  const m = new OffscreenCanvas(c.canvas.width, c.canvas.height), mx = m.getContext("2d"); mx.setTransform(c.getTransform());
+  paintBrush(mx, w, s, dx, dy, "#000", cy);
+  ox.setTransform(1, 0, 0, 1, 0, 0); ox.globalCompositeOperation = "destination-in"; ox.drawImage(m, 0, 0);
+  c.save(); c.setTransform(1, 0, 0, 1, 0, 0); c.drawImage(o, 0, 0); c.restore();
+}
+function drawPanel(c, w, show) {
+  c.fillStyle = PAGE; c.fillRect(0, 0, W, H);
+  c.fillStyle = BLUE; c.fillRect(26, 123, 338, 338);
+  const n = [...w.c].length, s = Math.min(146, 300 / n);
+  c.fillStyle = PAGE; c.textAlign = "center"; c.textBaseline = "middle"; if ("letterSpacing" in c) c.letterSpacing = "0px";
+  c.font = `${s}px ${BRUSH}`; c.fillText(w.c, 195, 250);
+  c.fillStyle = PAGE;
+  if (show) {
+    // Chinese lives in the blue; the English meaning sits on the paper below
+    paintLines(c, [[w.c, 39, 362, 8], ["普 " + w.py + " · 粵 " + w.jp, w.jp.length + w.py.length > 22 ? 15 : 24, 414, 0]]);
+    c.fillStyle = INK; paintLines(c, [[w.en, 24, 507, 1]]);
+  }
+}
+function drawCard(c, w, t, show) { if (mode === "poster") drawPoster(c, w, t, show); else drawPanel(c, w, show); }
+
+function drawStamp(c, kind, a) {
+  if (a <= 0) return;
+  c.save(); c.globalAlpha = Math.min(1, a);
+  if (kind === "got") { c.translate(96, 236); c.rotate(-0.2); c.fillStyle = RED; c.beginPath(); c.arc(0, 0, 40, 0, Math.PI * 2); c.fill();
+    c.strokeStyle = "#fff"; c.lineWidth = 6; c.lineCap = c.lineJoin = "round"; c.beginPath(); c.moveTo(-18, 2); c.lineTo(-5, 15); c.lineTo(20, -14); c.stroke(); }
+  else { c.translate(294, 236); c.rotate(0.2); c.fillStyle = PAGE; c.strokeStyle = INK; c.lineWidth = 3; c.beginPath(); c.arc(0, 0, 40, 0, Math.PI * 2); c.fill(); c.stroke();
+    c.lineWidth = 5; c.lineCap = "round"; c.beginPath(); c.moveTo(-15, -15); c.lineTo(15, 15); c.moveTo(15, -15); c.lineTo(-15, 15); c.stroke(); }
+  c.restore();
+}
+
+function draw() {
+  if (!deck.length) return;
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  const cur = deck[idx], next = deck[idx + 1];
+  if (!cur) return;
+  // the next challenge waits underneath: zoomed in, no text
+  if (next && drag.x) drawCard(ctx, next, 0, false); else { ctx.fillStyle = PAGE; ctx.fillRect(0, 0, W, H); }
+  const t = Math.min(1, Math.abs(drag.x) / 170);
+  ctx.save();
+  ctx.translate(195 + drag.x, 600 + drag.y * 0.3); ctx.rotate(drag.x / W * 0.22); ctx.translate(-195, -600);
+  ctx.beginPath(); ctx.rect(0, 0, W, H); ctx.clip();
+  const answer = phase !== "front";
+  drawCard(ctx, cur, answer ? 1 : t, answer);
+  if (answer) { if (lastKind !== "unsure") drawStamp(ctx, lastKind, 1); }
+  else drawStamp(ctx, drag.x > 0 ? "got" : "miss", Math.abs(drag.x) / 110);
+  ctx.restore();
+}
+
+/* ---------- grading + motion ---------- */
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function animate(to, ms, done) {
+  const from = drag.x, t0 = performance.now();
+  if (reduce) { drag.x = to; draw(); done && done(); return; }
+  (function step(now) { const k = Math.min(1, (now - t0) / ms); drag.x = from + (to - from) * ease(k); draw(); if (k < 1) requestAnimationFrame(step); else done && done(); })(t0);
+}
+function next() {
+  clearTimeout(timer); if (phase !== "answer") return; phase = "leaving";
+  const dir = lastKind === "miss" ? -1 : 1;
+  animate(dir * 620, 320, () => { idx++; phase = "front"; drag.x = drag.y = 0; updateLeft();
+    if (idx >= deck.length) { document.getElementById("score").textContent = `${deck.length} words · ${tally.got} got it`; document.getElementById("done").hidden = false; }
+    draw(); });
+}
+function grade(kind) {
+  if (!deck[idx] || phase !== "front") return;
+  tally[kind]++; lastKind = kind; phase = "answer";
+  // settle back into the fitted poster with the answer showing, hold a beat, then fly off
+  animate(0, 260, () => { drag.y = 0; draw(); timer = setTimeout(next, 1500); });
+}
+
+/* pointer: drag to grade; tap during the answer to move on */
+const toLocal = e => { const r = phone.getBoundingClientRect(); return { x: (e.clientX - r.left) / K, y: (e.clientY - r.top) / K }; };
+cv.addEventListener("pointerdown", e => { if (phase === "leaving") return; if (phase === "answer") { drag = { x: 0, y: 0, on: true, moved: false, sx: 0, sy: 0 }; return; } const p = toLocal(e); drag = { x: 0, y: 0, on: true, moved: false, sx: p.x, sy: p.y }; cv.setPointerCapture(e.pointerId); });
+cv.addEventListener("pointermove", e => { if (!drag.on || phase !== "front") return; const p = toLocal(e); drag.x = p.x - drag.sx; drag.y = p.y - drag.sy;
+  if (Math.hypot(drag.x, drag.y) > 6) drag.moved = true; if (drag.moved) draw(); });
+cv.addEventListener("pointerup", () => { if (!drag.on) return; drag.on = false;
+  if (!drag.moved) { drag.x = drag.y = 0; if (phase === "answer") next(); else draw(); return; }
+  if (drag.x > 110) grade("got"); else if (drag.x < -110) grade("miss"); else animate(0, 220, () => { drag.y = 0; draw(); }); });
+document.getElementById("got").onclick = () => grade("got");
+document.getElementById("miss").onclick = () => grade("miss");
+document.getElementById("unsure").onclick = () => grade("unsure");
+document.getElementById("again").onclick = start;
+document.addEventListener("keydown", e => { if (e.key === "ArrowRight") grade("got"); else if (e.key === "ArrowLeft") grade("miss");
+  else if (e.key === " " && e.target === document.body) { e.preventDefault(); next(); } });
+
+/* sound: Mandarin, then Cantonese */
+document.getElementById("hear").onclick = () => {
+  const w = deck[idx]; if (!w || !("speechSynthesis" in window)) return; speechSynthesis.cancel();
+  const vs = speechSynthesis.getVoices(), say = (lang) => { const u = new SpeechSynthesisUtterance(w.c); u.lang = lang; u.rate = 0.85;
+    const v = vs.find(v => v.lang.replace("_", "-") === lang); if (v) u.voice = v; speechSynthesis.speak(u); };
+  say("zh-CN"); say("zh-HK");
+};
+
+/* modes */
+function setMode(m) { mode = m; document.getElementById("mPoster").setAttribute("aria-pressed", m === "poster"); document.getElementById("mPanel").setAttribute("aria-pressed", m === "panel"); draw(); }
+document.getElementById("mPoster").onclick = () => setMode("poster");
+document.getElementById("mPanel").onclick = () => setMode("panel");
+
+/* boot: wait for both faces, then fit and draw */
+const glyphs = WORDS.map(w => w.c).join("") + "好了听过普粵";
+Promise.all([document.fonts.load(`100px "Zhi Mang Xing"`, glyphs), document.fonts.load(`24px "Noto Serif SC"`, glyphs).catch(() => {})])
+  .then(() => document.fonts.ready).then(() => { addEventListener("resize", resize); start(); resize(); });
+</script>
