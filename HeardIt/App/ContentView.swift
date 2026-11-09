@@ -24,36 +24,62 @@ struct ContentView: View {
         } else {
         ZStack(alignment: .bottom) {
             Theme.page.ignoresSafeArea()
-            Group {
-                switch model.selectedTab {
-                case 1: WordsView()
-                case 2: SettingsView()
-                default: TodayView()
-                }
+            // All three pages stay alive (scroll positions survive) and dissolve through
+            // a soft blur: the new page settles in from a hair larger, the old one lifts away.
+            ZStack {
+                page(0) { TodayView() }
+                page(1) { WordsView() }
+                page(2) { SettingsView() }
             }
             TabBar(selection: $model.selectedTab)
         }
         .foregroundStyle(Theme.ink)
         }
     }
+
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
+
+    private func page<V: View>(_ i: Int, @ViewBuilder _ content: () -> V) -> some View {
+        let on = model.selectedTab == i
+        return content()
+            .opacity(on ? 1 : 0)
+            .blur(radius: on || reduceMotion ? 0 : 8)
+            .scaleEffect(on || reduceMotion ? 1 : 1.015)
+            .allowsHitTesting(on)
+            .accessibilityHidden(!on)
+            .zIndex(on ? 1 : 0)
+    }
 }
 
 struct TabBar: View {
     @Binding var selection: Int
     private let tabs = ["Today", "Words", "Settings"]
+    @Namespace private var underline
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
         HStack {
             ForEach(tabs.indices, id: \.self) { i in
-                Button { selection = i } label: {
+                Button {
+                    guard selection != i else { return }
+                    UISelectionFeedbackGenerator().selectionChanged()
+                    withAnimation(reduceMotion ? .easeInOut(duration: 0.2) : .spring(response: 0.42, dampingFraction: 0.9)) {
+                        selection = i
+                    }
+                } label: {
                     Text(tabs[i])
                         .font(Theme.serif(15)).tracking(2)
                         .foregroundStyle(selection == i ? Theme.ink : Theme.muted)
                         .padding(.vertical, 8)
                         .overlay(alignment: .bottom) {
-                            if selection == i { Rectangle().fill(Theme.ink).frame(height: 1) }
+                            if selection == i {
+                                Rectangle().fill(Theme.ink).frame(height: 1)
+                                    .matchedGeometryEffect(id: "underline", in: underline)
+                            }
                         }
+                        .contentShape(Rectangle())
                 }
+                .buttonStyle(.plain)
                 .frame(maxWidth: .infinity)
                 .accessibilityAddTraits(selection == i ? .isSelected : [])
             }
@@ -68,13 +94,16 @@ struct TabBar: View {
 /// The app's mark, top left: the brush 中 in blue, no ring and no background,
 /// so it sinks into the poster when the oversized brush runs under it.
 struct Seal: View {
+    /// true: just the blue brush 中, no tile (every page). false: the red app-icon tile.
+    var plain = true
+
     var body: some View {
         // the app icon in miniature: paper-white brush 中 at 80.9% on the red tile
         Text("中")
             .font(Theme.brush(33))
-            .foregroundStyle(Color(hex: 0xF4F0E6))
+            .foregroundStyle(plain ? Theme.blue : Color(hex: 0xF4F0E6))
             .frame(width: 32, height: 32)
-            .background(Theme.red, in: RoundedRectangle(cornerRadius: 32 * 0.2237, style: .continuous))
+            .background(plain ? .clear : Theme.red, in: RoundedRectangle(cornerRadius: 32 * 0.2237, style: .continuous))
             .accessibilityLabel("Hear to Read")
     }
 }
@@ -101,6 +130,8 @@ struct TodayView: View {
     /// 0 → 1 as a graded card lifts away and the next one settles in
     @State private var exit: CGFloat = 0
     @State private var exitDir: CGFloat = 1
+    /// 0 → 1: the next card settling in underneath, on its own quicker curve
+    @State private var incoming: CGFloat = 0
     @State private var pastLine = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
@@ -112,15 +143,17 @@ struct TodayView: View {
         ZStack {
             if let current {
                 if let next, exit > 0 {
-                    card(next, zoom: 0, reveal: 0, press: 0, stamp: nil, amount: 0)
-                        .opacity(Double(exit))
-                        .scaleEffect(0.96 + 0.04 * exit)
+                    card(next, zoom: 0, reveal: 0, press: 0, stamp: nil, amount: 0, overhang: false)
+                        .opacity(Double(incoming))
+                        .scaleEffect(0.96 + 0.04 * incoming)
                 }
                 card(current, zoom: zoom, reveal: reveal, press: press, stamp: stampKind, amount: stampAmount)
-                    .offset(x: dragX * 0.6 + exitDir * 55 * exit, y: dragY * 0.15)
-                    .rotationEffect(.radians(Double(dragX / 390 * 0.08)), anchor: UnitPoint(x: 0.5, y: 0.6))
-                    .scaleEffect(1 + 0.09 * exit)
-                    .opacity(Double(1 - exit))
+                    // graded: slides straight off past the poster's overhang, no shrink, no fade
+                    .offset(x: dragX * 0.8 + exitDir * (reduceMotion ? 0 : UIScreen.main.bounds.width * 2.4) * exit, y: dragY * 0.15)
+                    .rotationEffect(.radians(Double(dragX / 390 * 0.1)), anchor: UnitPoint(x: 0.5, y: 0.6))
+                    .opacity(reduceMotion ? Double(1 - exit) : 1)
+                    // a new word is a new card: it never inherits the old one's slide
+                    .id(current.id)
                     .gesture(drag(current))
                     .onTapGesture {
                         switch phase {
@@ -204,11 +237,12 @@ struct TodayView: View {
     }
 
     @ViewBuilder
-    private func card(_ word: Word, zoom: CGFloat, reveal: CGFloat, press: CGFloat, stamp: Grade?, amount: CGFloat) -> some View {
+    private func card(_ word: Word, zoom: CGFloat, reveal: CGFloat, press: CGFloat, stamp: Grade?, amount: CGFloat, overhang: Bool = true) -> some View {
         let hanzi = word.hanzi(settings.script)
         if settings.cardStyle == .poster {
             PosterCard(hanzi: hanzi, lines: lines(word), fit: fits[key(word)] ?? .resting,
-                       zoom: zoom, reveal: reveal, press: press, stamp: stamp, stampAmount: amount)
+                       zoom: zoom, reveal: reveal, press: press, stamp: stamp, stampAmount: amount,
+                       overhang: overhang ? PosterCard.overhang : 0)
         } else {
             PanelCard(word: word, hanzi: hanzi, readings: word.labelledReadings(settings.readings),
                       reveal: reveal, press: press, stamp: stamp, stampAmount: amount)
@@ -221,9 +255,11 @@ struct TodayView: View {
     private var phaseIsLeaving: Bool { if case .leaving = phase { return true }; return false }
 
     /// 0 shows the whole word (the question); 1 is the oversized poster (the answer).
+    /// The size never changes while a card is in your hand or on its way out:
+    /// it slides, and the poster draws past the screen edges so it slides out whole.
     private var zoom: CGFloat {
         switch phase {
-        case .question: return currentFitReady ? min(1, abs(dragX) / 170) : 0
+        case .question: return 0
         case .revealed, .answer, .leaving: return 1
         }
     }
@@ -352,13 +388,14 @@ struct TodayView: View {
     private func leave(_ word: Word) {
         guard case .answer(let g) = phase else { return }
         holdTask?.cancel()
-        phase = .leaving(g)
         exitDir = g == .missed ? -1 : 1
-        // the ink lifts: a short drift in the swipe direction, a slight bloom, a dissolve
-        withAnimation(reduceMotion ? .easeOut(duration: 0.2) : .easeInOut(duration: 0.5)) { exit = 1 } completion: {
+        phase = .leaving(g)
+        // the card slides off in the swipe direction: a quick start, then gone
+        withAnimation(reduceMotion ? .easeOut(duration: 0.2) : .easeOut(duration: 0.4).delay(0.08)) { incoming = 1 }
+        withAnimation(reduceMotion ? .easeOut(duration: 0.2) : .timingCurve(0.4, 0, 0.9, 0.6, duration: 0.5)) { exit = 1 } completion: {
             model.grade(word, g)
             var t = Transaction(); t.disablesAnimations = true
-            withTransaction(t) { exit = 0; dragX = 0; dragY = 0; reveal = 0; press = 0; phase = .question }
+            withTransaction(t) { exit = 0; incoming = 0; dragX = 0; dragY = 0; reveal = 0; press = 0; phase = .question }
         }
     }
 }
@@ -402,16 +439,23 @@ struct PosterCard: View, Animatable {
     var press: CGFloat
     let stamp: Grade?
     var stampAmount: CGFloat
+    /// the card that slides gets the overhang; the one waiting underneath doesn't need it
+    var overhang: CGFloat = PosterCard.overhang
 
     var animatableData: AnimatablePair<AnimatablePair<CGFloat, CGFloat>, AnimatablePair<CGFloat, CGFloat>> {
         get { AnimatablePair(AnimatablePair(zoom, reveal), AnimatablePair(press, stampAmount)) }
         set { zoom = newValue.first.first; reveal = newValue.first.second; press = newValue.second.first; stampAmount = newValue.second.second }
     }
 
+    /// How far the canvas reaches past each side of the screen, so the oversized brush
+    /// is drawn whole and a card sliding sideways never shows a hard cropped edge.
+    static let overhang: CGFloat = 420
+
     var body: some View {
         Canvas { ctx, size in
-            let k = size.width / Brush.design.width
-            ctx.translateBy(x: 0, y: (size.height - Brush.design.height * k) / 2)
+            let pad = overhang
+            let k = (size.width - 2 * pad) / Brush.design.width
+            ctx.translateBy(x: pad, y: (size.height - Brush.design.height * k) / 2)
             ctx.scaleBy(x: k, y: k)
 
             let whole = Brush.wholeView(hanzi)
@@ -445,6 +489,7 @@ struct PosterCard: View, Animatable {
             knockout(lines[2], opacity: a2, dy: (1 - a2) * 13, outside: Theme.blue)
             drawStamp(&ctx, stamp, stampAmount, press: press)
         }
+        .padding(.horizontal, -overhang)
         .ignoresSafeArea()
     }
 
@@ -543,7 +588,8 @@ struct WordsView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 0) {
+            // lazy: Core holds 3,000+ rows and this page stays alive behind Today
+            LazyVStack(alignment: .leading, spacing: 0) {
                 HStack { Seal(); Spacer()
                     Text("\(model.store.words.count) words").font(Theme.serif(15)).tracking(2).foregroundStyle(Theme.muted) }
                     .padding(.top, 8)
