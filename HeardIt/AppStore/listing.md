@@ -25,13 +25,13 @@ START WITH WHAT YOU KNOW
 Menu words first, then the signs you'll see when you travel, then everyday essentials. Mark the words you already know by ear and they move up the line, because they're the fastest to learn to read.
 
 HOW A CARD WORKS
-Each word appears as large brush calligraphy with the printed characters below. Say it to yourself. Tap to see the pinyin, the jyutping and the English. Swipe right if you knew it, left if you didn't.
+Each word appears as large brush calligraphy with the printed characters below. Say it to yourself. Tap and it zooms in to show the pinyin, the jyutping and the English. Swipe right if you knew it, left if you didn't.
 
 HEAR BOTH LANGUAGES
 Every word plays in Mandarin and in Cantonese, using the voices built into your iPhone. It works with no connection.
 
-ON YOUR LOCK SCREEN
-Add a widget and a word shows up every time you check your phone. There's also a Chinese calendar widget with today's lunar date and a word for the day.
+ON YOUR LOCK SCREEN AND HOME SCREEN
+Add a widget and a word shows up every time you check your phone. On your Home Screen, the tear-off widget sets each word like a page from a Chinese almanac: its readings, where you'll hear it (宜), the look-alike character to watch for (忌), and how many days you've practised.
 
 IT REMEMBERS FOR YOU
 Spaced review brings back the words you swiped left on, right before you'd forget them.
@@ -40,7 +40,7 @@ SIMPLIFIED OR TRADITIONAL
 Switch any time in Settings.
 
 WHAT'S INSIDE (NO HYPE, JUST FACTS)
-• Starter words for people who speak it but can't read it: menu dishes, travel signs, Cantonese→Mandarin pairs.
+• 4,500+ words for people who speak it but can't read it: menu dishes, travel signs, everyday essentials, Cantonese→Mandarin pairs.
 • Every card: pinyin + jyutping + English.
 • Mandarin and Cantonese audio, even offline.
 • No account. No ads. Your progress stays on your iPhone.
@@ -48,7 +48,7 @@ WHAT'S INSIDE (NO HYPE, JUST FACTS)
 Download free and read your first menu word tonight.
 
 ## What's New (version 1.0)
-Version 1.0. Starter words: menu dishes, travel signs, Cantonese→Mandarin pairs. Pinyin + jyutping on every card, audio in both, lock-screen and calendar widgets. Offline, no account, no ads. Tell us which menu word to add next.
+Version 1.0. 4,500+ words: menu dishes, travel signs, Cantonese→Mandarin pairs. Pinyin + jyutping on every card, audio in both, Lock Screen and tear-off widgets. Offline, no account, no ads. Tell us which menu word to add next.
 
 ## Screenshot captions (6.9" display, 1320 × 2868)
 1. Read the menu at family dinner
@@ -60,7 +60,7 @@ Version 1.0. Starter words: menu dishes, travel signs, Cantonese→Mandarin pair
 ## URLs
 - Support URL: https://boogiemanders.github.io/learn-chinese/
 - Privacy Policy URL: https://boogiemanders.github.io/learn-chinese/privacy.html
-  (needs GitHub Pages turned on for the `docs/` folder on the main branch)
+  (GitHub Pages serves `docs/` from the release/1.0 branch)
 
 ## App Privacy (nutrition label)
 Data Not Collected. No tracking.
@@ -78,4 +78,4 @@ Free (version 1.0). A one-time "Full Unlock" in-app purchase comes later, once t
 Uses no non-exempt encryption (`ITSAppUsesNonExemptEncryption = NO` is set in the app).
 
 ## App Review notes
-No sign-in needed. Open the app, tap the large character to see its readings, swipe right if you knew it and left if you didn't. Widgets: add "Hear to Read word" to the Lock Screen and "Chinese calendar" to the Home Screen. All content is bundled; the app makes no network requests.
+No sign-in needed. Open the app, tap the large character to see its readings, swipe right if you knew it and left if you didn't. Widgets: add "Hear to Read word" to the Lock Screen and "Tear-off word" to the Home Screen. All content is bundled; the app makes no network requests.
