@@ -36,6 +36,9 @@ Add a widget and a word shows up every time you check your phone. On your Home S
 IT REMEMBERS FOR YOU
 Spaced review brings back the words you swiped left on, right before you'd forget them.
 
+DECKS FOR WHY YOU'RE LEARNING
+Tell it why you're learning (talking with family, cooking, work, dating, moving there) and a short topic deck joins your daily cards.
+
 SIMPLIFIED OR TRADITIONAL
 Switch any time in Settings.
 
@@ -78,4 +81,30 @@ Free (version 1.0). A one-time "Full Unlock" in-app purchase comes later, once t
 Uses no non-exempt encryption (`ITSAppUsesNonExemptEncryption = NO` is set in the app).
 
 ## App Review notes
-No sign-in needed. Open the app, tap the large character to see its readings, swipe right if you knew it and left if you didn't. Widgets: add "Hear to Read word" to the Lock Screen and "Tear-off word" to the Home Screen. All content is bundled; the app makes no network requests.
+Paste into App Review Information > Notes (limit 4000). Attach the screen recording in the same section, or put its link at the top.
+
+1. SCREEN RECORDING
+Attached, recorded on iPhone running the latest iOS. It starts at launch and shows the first screen, a review session, the Words list, topic decks, Settings and both widgets.
+
+2. PURPOSE AND AUDIENCE
+Hear to Read is for heritage speakers: people who grew up hearing Cantonese or Mandarin at home and can say everyday words but can't read them. Most courses start from zero. This one starts with words the learner already knows by ear (menu dishes, signs, family words) and teaches the missing piece, the characters. Each card shows the word in brush calligraphy and print, with Mandarin pinyin, Cantonese jyutping, English, and audio in both languages.
+
+3. HOW TO USE IT
+No account, login or sample files needed.
+- First launch: "Why are you learning Chinese?" Pick any reasons (for example Talk with family, Food & cooking) and tap Begin, or tap Skip for now. Each reason switches on a small bundled topic deck.
+- Today tab: a card shows a word. Tap it to see the readings and meaning. Tap the speaker to hear Mandarin and Cantonese. Swipe right (or tap the check) if you knew it, left (or X) if you didn't. Spaced review schedules the next showing.
+- Words tab: every word, by deck. Tap a row to hear it, tap the ear to mark it as known by ear. "+ Topic" opens a list of bundled topic decks to switch on or off.
+- Settings tab: simplified or traditional characters, which readings to show, new words per day, decks on or off, "Change why I'm learning", reset progress.
+- Widgets: long-press the Lock Screen > Customize > add "Hear to Read word". On the Home Screen add "Tear-off word".
+
+4. EXTERNAL SERVICES
+None. The app uses no external services, APIs, AI services, analytics, ads, payments or sign-in. All words and fonts ship inside the app, and audio uses the iPhone's built-in speech voices (AVSpeechSynthesizer). The app makes no network requests and collects no data.
+
+5. REGIONAL DIFFERENCES
+None. The app works the same in every region, with or without a connection.
+
+6. REGULATED OR LICENSED MATERIAL
+Not a regulated industry. The bundled fonts (LXGW WenKai TC and Zhi Mang Xing) are under the SIL Open Font License, and their licence files ship in the app. The word lists were compiled for this app.
+
+ALSO: ACCOUNTS, USER CONTENT, PAYMENTS
+No accounts, so there is no account deletion flow. No user-generated content and no sharing between users. No in-app purchases or paid content; the app is free.

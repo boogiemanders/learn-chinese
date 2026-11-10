@@ -32,7 +32,12 @@ struct ContentView: View {
                 page(2) { SettingsView() }
             }
             TabBar(selection: $model.selectedTab)
+            if model.showOnboarding {
+                OnboardingView().transition(.opacity.combined(with: .scale(scale: 1.015)))
+                    .zIndex(2)
+            }
         }
+        .animation(.easeInOut(duration: 0.45), value: model.showOnboarding)
         .foregroundStyle(Theme.ink)
         }
     }
@@ -584,7 +589,22 @@ struct DoneView: View {
 
 struct WordsView: View {
     @EnvironmentObject private var model: AppModel
-    @State private var deck: Deck = .menu
+    /// A base deck's raw value, or "topic:<id>".
+    @State private var tab = Deck.menu.rawValue
+    @State private var adding = false
+    @Namespace private var underline
+
+    private var tabs: [(id: String, title: String)] {
+        Deck.base.map { ($0.rawValue, $0.title) } + model.store.activeTopics.map { ("topic:" + $0.id, $0.title) }
+    }
+
+    private var shown: [Word] {
+        if tab.hasPrefix("topic:") {
+            let id = String(tab.dropFirst(6))
+            return model.store.words.filter { $0.topic == id }
+        }
+        return model.store.words.filter { $0.deck.rawValue == tab }
+    }
 
     var body: some View {
         ScrollView {
@@ -594,24 +614,46 @@ struct WordsView: View {
                     Text("\(model.store.words.count) words").font(Theme.serif(15)).tracking(2).foregroundStyle(Theme.muted) }
                     .padding(.top, 8)
                 Text("词表").font(Theme.brush(55)).padding(.top, 21)
-                HStack {
-                    ForEach(Deck.allCases) { d in
-                        Button { deck = d } label: {
-                            Text(d.title).font(Theme.serif(15)).tracking(1)
-                                .foregroundStyle(deck == d ? Theme.ink : Theme.muted)
-                                .padding(.bottom, 3)
-                                .overlay(alignment: .bottom) { if deck == d { Rectangle().fill(Theme.ink).frame(height: 1) } }
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 26) {
+                        ForEach(tabs, id: \.id) { t in
+                            Button {
+                                withAnimation(.spring(response: 0.35, dampingFraction: 0.9)) { tab = t.id }
+                            } label: {
+                                Text(t.title).font(Theme.serif(15)).tracking(1)
+                                    .foregroundStyle(tab == t.id ? Theme.ink : Theme.muted)
+                                    .padding(.bottom, 3)
+                                    .overlay(alignment: .bottom) {
+                                        if tab == t.id {
+                                            Rectangle().fill(Theme.ink).frame(height: 1)
+                                                .matchedGeometryEffect(id: "tab", in: underline)
+                                        }
+                                    }
+                            }
+                            .buttonStyle(.plain)
                         }
-                        if d != Deck.allCases.last { Spacer() }
+                        Button { adding = true } label: {
+                            Label("Topic", systemImage: "plus").font(Theme.serif(15)).tracking(1)
+                                .foregroundStyle(Theme.blue).padding(.bottom, 3)
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityLabel("Add a topic")
                     }
+                    .padding(.horizontal, 26)
                 }
+                .padding(.horizontal, -26)
                 .padding(.vertical, 21)
                 Rectangle().fill(Theme.line).frame(height: 1)
-                ForEach(model.store.words.filter { $0.deck == deck }) { WordRow(word: $0) }
+                ForEach(shown) { WordRow(word: $0) }
             }
             .padding(.horizontal, 26)
             .padding(.bottom, 89)
             .id(model.version)
+        }
+        .sheet(isPresented: $adding) { TopicPickerView() }
+        .onChange(of: model.settings.topics) { _, on in
+            // a topic just switched off: fall back to a base deck
+            if tab.hasPrefix("topic:"), !on.contains(String(tab.dropFirst(6))) { tab = Deck.menu.rawValue }
         }
     }
 }
@@ -693,7 +735,7 @@ struct SettingsView: View {
                 }
                 Text("Decks").font(Theme.serif(15)).tracking(2).foregroundStyle(Theme.muted).padding(.top, 34).padding(.bottom, 8)
                 Rectangle().fill(Theme.line).frame(height: 1)
-                ForEach(Deck.allCases) { d in
+                ForEach(Deck.base) { d in
                     row(d.title) {
                         Toggle("", isOn: Binding(get: { !model.settings.disabledDecks.contains(d) }, set: { on in
                             model.updateSettings { st in
@@ -703,6 +745,12 @@ struct SettingsView: View {
                         })).labelsHidden().tint(Theme.ink)
                     }
                 }
+                Text("Topics").font(Theme.serif(15)).tracking(2).foregroundStyle(Theme.muted).padding(.top, 34).padding(.bottom, 8)
+                Rectangle().fill(Theme.line).frame(height: 1)
+                ForEach(model.store.topics) { t in TopicToggleRow(topic: t) }
+                Button("Change why I'm learning") { model.updateSettings { $0.onboarded = false } }
+                    .font(Theme.serif(15)).tracking(1).foregroundStyle(Theme.blue)
+                    .padding(.top, 21)
                 Button("Reset progress") { confirmReset = true }
                     .font(Theme.serif(15)).tracking(1).foregroundStyle(Theme.red)
                     .padding(.top, 34)

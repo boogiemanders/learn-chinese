@@ -1,0 +1,65 @@
+import Foundation
+
+/// Asks the topic-deck backend (a Supabase edge function that calls Claude) for the
+/// essential words of a topic the learner typed. The endpoint and its public anon key
+/// come from Info.plist; when they're empty, custom topics are switched off.
+enum TopicGenerator {
+    enum Failure: LocalizedError {
+        case notConfigured, server(String), empty
+        var errorDescription: String? {
+            switch self {
+            case .notConfigured: return "Custom topics aren't switched on in this version yet. Your idea is saved."
+            case .server(let m): return m
+            case .empty: return "No words came back for that topic. Try saying it another way."
+            }
+        }
+    }
+
+    private static func info(_ key: String) -> String {
+        (Bundle.main.object(forInfoDictionaryKey: key) as? String)?.trimmingCharacters(in: .whitespaces) ?? ""
+    }
+
+    static var isConfigured: Bool { URL(string: info("HTRTopicEndpoint"))?.host != nil }
+
+    private struct Request: Encodable { let topic: String }
+    private struct Reply: Decodable {
+        struct Row: Decodable {
+            let simplified, traditional, pinyin, jyutping, meaning: String
+            let note: String?
+        }
+        let title, hanzi, label, tag, line: String
+        let words: [Row]
+    }
+    private struct ErrorReply: Decodable { let error: String }
+
+    static func generate(_ topic: String) async throws -> Topic {
+        guard isConfigured, let url = URL(string: info("HTRTopicEndpoint")) else { throw Failure.notConfigured }
+        var req = URLRequest(url: url, timeoutInterval: 90)
+        req.httpMethod = "POST"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let key = info("HTRTopicKey")
+        if !key.isEmpty {
+            req.setValue("Bearer \(key)", forHTTPHeaderField: "Authorization")
+            req.setValue(key, forHTTPHeaderField: "apikey")
+        }
+        req.httpBody = try JSONEncoder().encode(Request(topic: String(topic.prefix(80))))
+
+        let (raw, response) = try await URLSession.shared.data(for: req)
+        let status = (response as? HTTPURLResponse)?.statusCode ?? 0
+        guard status == 200 else {
+            let message = (try? JSONDecoder().decode(ErrorReply.self, from: raw))?.error
+            throw Failure.server(message ?? "Couldn't reach the word service (\(status)). Try again in a moment.")
+        }
+        let reply = try JSONDecoder().decode(Reply.self, from: raw)
+        guard !reply.words.isEmpty else { throw Failure.empty }
+
+        let id = "c-" + UUID().uuidString.prefix(8).lowercased()
+        let words = reply.words.enumerated().map { i, r in
+            Word(id: "\(id)-\(i)", simplified: r.simplified, traditional: r.traditional, pinyin: r.pinyin,
+                 jyutping: r.jyutping, meaning: r.meaning, deck: .topic, mandarinWord: nil,
+                 note: r.note?.isEmpty == true ? nil : r.note, topic: id)
+        }
+        return Topic(id: id, title: reply.title, hanzi: reply.hanzi, label: reply.label, tag: reply.tag.uppercased(),
+                     line: reply.line.uppercased(), keywords: nil, words: words, generated: true)
+    }
+}

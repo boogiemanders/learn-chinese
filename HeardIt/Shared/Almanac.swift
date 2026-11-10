@@ -4,13 +4,15 @@ import Foundation
 /// and 忌 (the look-alike character not to confuse it with).
 enum Almanac {
     /// Short tag for the 宜 box, and the longer line under the English on the large page.
-    static func goodFor(_ deck: Deck) -> (tag: String, line: String) {
-        switch deck {
+    static func goodFor(_ word: Word) -> (tag: String, line: String) {
+        if word.deck == .topic, let id = word.topic, let t = Store.shared.topic(id: id) { return (t.tag, t.line) }
+        switch word.deck {
         case .menu: return ("ORDERING", "ORDERING · MENUS · RESTAURANTS")
         case .trip: return ("TRAVEL", "TRAVEL · SIGNS · GETTING AROUND")
         case .survival: return ("EVERYDAY", "EVERYDAY · OUT AND ABOUT")
         case .cantoPair: return ("FAMILY", "TALKING WITH FAMILY")
         case .core: return ("READING", "READING · SIGNS · TEXTS")
+        case .topic: return ("TOPIC", "YOUR TOPIC")
         }
     }
 

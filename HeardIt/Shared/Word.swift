@@ -8,6 +8,11 @@ enum Deck: String, Codable, CaseIterable, Identifiable {
     case menu
     case cantoPair
     case core
+    /// A themed deck (see Topic); the word's `topic` says which one.
+    case topic
+
+    /// The decks every learner has; topic decks are listed one by one instead.
+    static let base: [Deck] = [.survival, .trip, .menu, .cantoPair, .core]
 
     var id: String { rawValue }
 
@@ -18,6 +23,7 @@ enum Deck: String, Codable, CaseIterable, Identifiable {
         case .menu: return "Menu"
         case .cantoPair: return "Canto pairs"
         case .core: return "Core"
+        case .topic: return "Topics"
         }
     }
 
@@ -29,6 +35,7 @@ enum Deck: String, Codable, CaseIterable, Identifiable {
         case .menu: return "菜单解码"
         case .cantoPair: return "粤普对照"
         case .core: return "基本词"
+        case .topic: return "专题词汇"
         }
     }
 
@@ -39,6 +46,8 @@ enum Deck: String, Codable, CaseIterable, Identifiable {
         case .menu: return 0.9
         case .cantoPair: return 0.7
         case .core: return 0.6
+        // a deck the learner chose for their own reason comes right after the survival words
+        case .topic: return 0.92
         }
     }
 }
@@ -75,6 +84,8 @@ struct Word: Codable, Identifiable, Hashable {
     let mandarinWord: String?
     /// Short usage note, e.g. how the dish name breaks down.
     let note: String?
+    /// For topic words: the Topic id.
+    var topic: String? = nil
 
     func hanzi(_ script: Script) -> String {
         script == .simplified ? simplified : traditional

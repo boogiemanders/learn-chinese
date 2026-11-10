@@ -72,6 +72,28 @@ final class AppModel: ObservableObject {
         changed()
     }
 
+    // MARK: Topics
+
+    var showOnboarding: Bool {
+        !settings.onboarded && !ProcessInfo.processInfo.arguments.contains { $0.hasPrefix("-demo") }
+    }
+
+    /// The first screen's answers: switch on each picked goal's topic decks.
+    func finishOnboarding(goals: Set<String>) {
+        let picked = Goal.all.filter { goals.contains($0.id) }
+        updateSettings { s in
+            s.goals = picked.map(\.id)
+            for id in picked.flatMap(\.topics) where !s.topics.contains(id) { s.topics.append(id) }
+            s.onboarded = true
+        }
+        selectedTab = 0
+    }
+
+    func setTopic(_ topic: Topic, _ on: Bool) {
+        store.setTopic(topic.id, on: on)
+        changed()
+    }
+
     func resetProgress() {
         store.resetProgress()
         focusedID = nil

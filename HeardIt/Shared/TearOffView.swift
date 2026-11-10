@@ -148,7 +148,7 @@ struct TearOffView: View {
         let cw = band, pad = gap, col = pad * 2 + cw
         let r1 = m + row / 2, r2 = m + row + wordH / 2, ruleY = m + row + wordH + gap, r3 = ruleY + band / 2
         let lx = col / 2, rx = W - col / 2, cx = W / 2, centreW = W - 2 * col - 2 * pad
-        let good = Almanac.goodFor(w.deck)
+        let good = Almanac.goodFor(w)
         return ZStack {
             columnRules(sz, col: col, margin: m)
             ornament("plum", row).position(x: lx, y: r1)
@@ -176,7 +176,7 @@ struct TearOffView: View {
         let r1 = m + row / 2, r2 = (m + row + ruleY) / 2
         let band = (H - m - ruleY - gap) / 2, r3 = ruleY + band / 2, r4 = ruleY + band + gap + band / 2
         let lx = col / 2, rx = W - col / 2, cx = W / 2, centreW = W - 2 * col - 2 * pad
-        let good = Almanac.goodFor(w.deck)
+        let good = Almanac.goodFor(w)
         return ZStack {
             columnRules(sz, col: col, margin: m)
             ornament("plum", row * 0.85).position(x: lx, y: r1)
@@ -189,7 +189,7 @@ struct TearOffView: View {
 
             Rectangle().frame(width: centreW, height: 1.5).position(x: cx, y: ruleY)
 
-            vertical(w.deck.label, size: 13).position(x: lx, y: r3)
+            vertical(w.label, size: 13).position(x: lx, y: r3)
             english(w, size: H * 0.058).frame(width: centreW).position(x: cx, y: r3)
             if w.traditional != w.simplified { traditionalBox(w).position(x: rx, y: r3) }
 
