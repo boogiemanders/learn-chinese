@@ -11,7 +11,7 @@ enum Brush {
     /// The brush starts at R8a2's 618 pt and may zoom one golden step further.
     static let minSize: CGFloat = 618
     static let maxSize: CGFloat = 618 * 1.618_033_988_7
-    static let lineHeightRatio: CGFloat = 0.63
+    static let lineHeightRatio: CGFloat = 0.8
     static let strokeRatio: CGFloat = 0.055
     static let restingCenterY: CGFloat = 345
     /// Where the printed characters sit under the whole brush word (the question).
@@ -213,26 +213,149 @@ enum Brush {
     }
 }
 
+// MARK: Small widget tile
+
+extension Brush {
+    /// The small Home Screen widget is laid out in this square and scaled to the real size.
+    static let tile = CGSize(width: 158, height: 158)
+    static let tileCenter = CGPoint(x: 79, y: 79)
+
+    /// Characters, reading and meaning stacked in the middle of the tile, each shrunk
+    /// (down to a floor) until it fits inside the margins.
+    static func tileLines(hanzi: String, reading: String, meaning: String) -> [Line] {
+        func sized(_ text: String, _ size: CGFloat, kern: CGFloat, floor: CGFloat) -> CGFloat {
+            var s = size
+            while s > floor, width(text, size: s, kern: kern) > 128 { s -= 0.5 }
+            return s
+        }
+        return [
+            Line(text: hanzi, size: sized(hanzi, 24, kern: 4, floor: 15), centerY: 56, kern: 4),
+            Line(text: reading, size: sized(reading, 15, kern: 0, floor: 10), centerY: 83, kern: 0),
+            Line(text: meaning, size: sized(meaning, 15, kern: 0, floor: 10), centerY: 104, kern: 0),
+        ]
+    }
+
+    /// The tile's version of `fit`: the smallest brush that puts all the text on blue,
+    /// placed so the blue covers about 1/φ of the tile. `dx`/`dy` move the brush's
+    /// centre away from the tile's centre. Falls back to the best coverage found.
+    static func tileFit(text: String, lines: [Line]) -> Fit {
+        let g: CGFloat = 3, gw = Int(tile.width / g), gh = Int(tile.height / g)
+        guard let ctx = CGContext(data: nil, width: gw, height: gh, bitsPerComponent: 8, bytesPerRow: 0,
+                                  space: CGColorSpaceCreateDeviceGray(), bitmapInfo: CGImageAlphaInfo.none.rawValue)
+        else { return Fit(size: 240, dx: 0, dy: -27, coverage: 0, blue: 0) }
+        ctx.translateBy(x: 0, y: CGFloat(gh)); ctx.scaleBy(x: 1 / g, y: -1 / g)
+        ctx.setLineJoin(.round); ctx.setLineCap(.round)
+        let rows = ctx.bytesPerRow
+        let clear = CGRect(x: -10, y: -10, width: tile.width + 20, height: tile.height + 20)
+        func pixels() -> UnsafeMutablePointer<UInt8> { ctx.data!.assumingMemoryBound(to: UInt8.self) }
+
+        ctx.setFillColor(gray: 0, alpha: 1); ctx.fill(clear)
+        ctx.setFillColor(gray: 1, alpha: 1)
+        ctx.addPath(textPath(lines, centerX: tileCenter.x)); ctx.fillPath()
+        var need: [Int] = []
+        var px = pixels()
+        for y in 0..<gh { for x in 0..<gw where px[y * rows + x] > 10 { need.append(y * rows + x) } }
+        guard !need.isEmpty else { return Fit(size: 240, dx: 0, dy: -27, coverage: 1, blue: 0) }
+
+        var offsets: [(CGFloat, CGFloat)] = []
+        for dy in stride(from: -120, through: 120, by: 10) { for dx in stride(from: -40, through: 40, by: 10) { offsets.append((CGFloat(dx), CGFloat(dy))) } }
+        offsets.sort { hypot($0.0, $0.1) < hypot($1.0, $1.1) }
+
+        var fallback: Fit?
+        var s: CGFloat = 150
+        while s <= 480 {
+            var best: Fit?
+            for (dx, dy) in offsets {
+                ctx.setFillColor(gray: 0, alpha: 1); ctx.fill(clear)
+                ctx.setFillColor(gray: 1, alpha: 1); ctx.setStrokeColor(gray: 1, alpha: 1)
+                ctx.setLineWidth(s * strokeRatio)
+                ctx.addPath(path(text, size: s, dx: dx, dy: dy, centerY: tileCenter.y, centerX: tileCenter.x))
+                ctx.drawPath(using: .fillStroke)
+                px = pixels()
+                var ok = 0
+                for i in need where px[i] > 200 { ok += 1 }
+                let coverage = Double(ok) / Double(need.count)
+                // only placements that could win are worth counting the blue for
+                if coverage < 0.999, let f = fallback, coverage < f.coverage - 0.001 { continue }
+                var blue = 0
+                for y in 0..<gh { for x in 0..<gw where px[y * rows + x] > 128 { blue += 1 } }
+                let cand = Fit(size: s, dx: dx, dy: dy, coverage: coverage, blue: Double(blue) / Double(gw * gh))
+                let err = abs(cand.blue - Double(phi))
+                if let f = fallback {
+                    if cand.coverage > f.coverage + 0.001 || (abs(cand.coverage - f.coverage) <= 0.001 && err < abs(f.blue - Double(phi))) { fallback = cand }
+                } else { fallback = cand }
+                if cand.coverage >= 0.999, best == nil || err < abs(best!.blue - Double(phi)) { best = cand }
+            }
+            if let best { return best }
+            s *= 1.1
+        }
+        return fallback ?? Fit(size: 240, dx: 0, dy: -27, coverage: 0, blue: 0)
+    }
+}
+
+extension Brush {
+    /// The reading the small widget shows: pinyin, or jyutping when that's all the learner reads.
+    static func tileReading(_ w: Word, _ settings: AppSettings) -> String {
+        settings.readings == .cantonese || w.pinyin.isEmpty ? w.jyutping : w.pinyin
+    }
+
+    /// The small widget's text block and its brush fit, measured once and kept in the App Group.
+    static func tile(_ w: Word, _ settings: AppSettings) -> ([Line], Fit) {
+        let hanzi = w.hanzi(settings.script), reading = tileReading(w, settings)
+        let lines = tileLines(hanzi: hanzi, reading: reading, meaning: w.shortMeaning)
+        let key = "\(hanzi)|\(reading)|\(w.shortMeaning)"
+        if let f = FitCache.tiles.get(key) { return (lines, f) }
+        let f = tileFit(text: hanzi, lines: lines)
+        FitCache.tiles.set(key, f)
+        return (lines, f)
+    }
+}
+
+/// Text outlines from `Brush.textPath` as a SwiftUI shape, scaled exactly like `BrushShape`,
+/// so what is drawn is what the fit measured.
+struct BrushTextShape: Shape {
+    var lines: [Brush.Line]
+    var centerX: CGFloat
+    var designSize: CGSize
+
+    func path(in rect: CGRect) -> Path {
+        let k = max(rect.width / designSize.width, rect.height / designSize.height)
+        let ox = rect.minX + (rect.width - designSize.width * k) / 2, oy = rect.minY + (rect.height - designSize.height * k) / 2
+        return Path(Brush.textPath(lines, centerX: centerX)).applying(CGAffineTransform(a: k, b: 0, c: 0, d: k, tx: ox, ty: oy))
+    }
+}
+
 private final class BundleToken {}
 
 /// Fits are measured once per word and kept on disk, so a card never zooms to a
 /// placeholder and snaps when its real fit arrives.
 final class FitCache {
     static let shared = FitCache()
+    /// Small-widget fits, in the App Group so the app can measure them ahead of the widget.
+    static let tiles = FitCache(url: (FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: Store.appGroupID)
+        ?? FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]).appendingPathComponent("tile-fits-v2.json"))
     private var memory: [String: Brush.Fit] = [:]
     private let lock = NSLock()
-    private let url: URL = {
-        let dir = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
-        return dir.appendingPathComponent("brush-fits-v1.json")
-    }()
+    private let url: URL
 
-    init() {
+    init(url: URL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0].appendingPathComponent("brush-fits-v2.json")) {
+        self.url = url
+        load()
+    }
+
+    private func load() {
         if let data = try? Data(contentsOf: url), let saved = try? JSONDecoder().decode([String: Brush.Fit].self, from: data) {
-            memory = saved
+            memory.merge(saved) { mine, _ in mine }
         }
     }
 
-    func get(_ key: String) -> Brush.Fit? { lock.lock(); defer { lock.unlock() }; return memory[key] }
+    /// On a miss, look on disk once more: another process (app or widget) may have measured it.
+    func get(_ key: String) -> Brush.Fit? {
+        lock.lock(); defer { lock.unlock() }
+        if let f = memory[key] { return f }
+        load()
+        return memory[key]
+    }
 
     func set(_ key: String, _ fit: Brush.Fit) {
         lock.lock(); memory[key] = fit; let snapshot = memory; lock.unlock()

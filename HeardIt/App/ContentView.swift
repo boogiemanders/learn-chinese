@@ -11,6 +11,14 @@ struct ContentView: View {
     }
 
     var body: some View {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("-demoTiles") { TileCheckView() } else { main }
+        #else
+        main
+        #endif
+    }
+
+    @ViewBuilder private var main: some View {
         if ProcessInfo.processInfo.arguments.contains("-demoTearOff") {
             // screenshot hook: preview the tear-off widget at its real sizes
             let w = model.currentCard

@@ -7,6 +7,9 @@ struct CardEntry: TimelineEntry {
     let settings: AppSettings
     var practice = Practice()
     var isNew = true
+    /// Small Home Screen poster: the text block and the brush placed so all of it sits on blue.
+    var tileLines: [Brush.Line] = []
+    var tileFit: Brush.Fit?
 
     static let sample = CardEntry(
         date: .now,
@@ -41,8 +44,11 @@ struct CardProvider: TimelineProvider {
         let practice = store.practice(now: now)
         guard !top.isEmpty else { return [CardEntry(date: now, word: nil, settings: store.settings, practice: practice)] }
         return top.enumerated().map { i, w in
-            CardEntry(date: now.addingTimeInterval(Double(i) * 30 * 60), word: w, settings: store.settings,
-                      practice: practice, isNew: store.state(for: w.id)?.isNew ?? true)
+            var e = CardEntry(date: now.addingTimeInterval(Double(i) * 30 * 60), word: w, settings: store.settings,
+                              practice: practice, isNew: store.state(for: w.id)?.isNew ?? true)
+            // usually measured ahead by the app (AppModel.prepareTiles); measured here only as a fallback
+            if store.settings.cardStyle == .poster { (e.tileLines, e.tileFit) = Brush.tile(w, store.settings) }
+            return e
         }
     }
 }
@@ -73,9 +79,7 @@ struct CardWidgetView: View {
     }
 
     private func hanzi(_ w: Word) -> String { w.hanzi(entry.settings.script) }
-    private func reading(_ w: Word) -> String {
-        entry.settings.readings == .cantonese || w.pinyin.isEmpty ? w.jyutping : w.pinyin
-    }
+    private func reading(_ w: Word) -> String { Brush.tileReading(w, entry.settings) }
 
     /// A soft brush ghost: iOS tints lock screen widgets one colour, so it can't be blue here.
     private func ghost(_ text: String, size: CGFloat, center: CGPoint, canvas: CGSize) -> some View {
@@ -113,20 +117,19 @@ struct CardWidgetView: View {
         .clipShape(Circle())
     }
 
-    /// Home screen: full colour. The brush bleeds off the edges and the words knock out to white on it.
+    /// Home screen: full colour. The brush bleeds off the edges and is sized and placed
+    /// (Brush.tileFit) so every line of text sits on blue and reads white.
     private func small(_ w: Word) -> some View {
-        let words = VStack(spacing: 2) {
-            Text(hanzi(w)).font(Theme.serif(24)).tracking(4)
-            Text(reading(w)).font(Theme.serif(15)).lineLimit(1).minimumScaleFactor(0.7)
-            Text(w.meaning).font(Theme.serif(15)).lineLimit(1).minimumScaleFactor(0.7)
-        }
-        let canvas = CGSize(width: 158, height: 158)
-        let shape = BrushShape(text: hanzi(w), size: poster ? 240 : 96, center: CGPoint(x: 79, y: poster ? 52 : 50), designSize: canvas)
+        let (lines, fit) = entry.tileFit.map { (entry.tileLines, $0) } ?? Brush.tile(w, entry.settings)
+        let c = Brush.tileCenter
+        let shape = BrushShape(text: hanzi(w), size: fit.size, center: CGPoint(x: c.x + fit.dx, y: c.y + fit.dy), designSize: Brush.tile)
+        let words = BrushTextShape(lines: lines, centerX: c.x, designSize: Brush.tile)
         return ZStack {
             if poster {
                 shape.fill(Theme.blue)
-                words.foregroundStyle(Theme.blue)
-                words.foregroundStyle(.white).mask(shape)
+                // any sliver the fit couldn't cover stays blue on paper, never white on paper
+                words.fill(Theme.blue)
+                words.fill(.white).mask(shape)
             } else {
                 VStack(spacing: 6) {
                     Text(hanzi(w)).font(Theme.serif(34)).foregroundStyle(Theme.blue)

@@ -47,6 +47,7 @@ final class AppModel: ObservableObject {
     func refresh() {
         store.reload()
         version += 1
+        prepareTiles()
     }
 
     func open(_ url: URL) {
@@ -118,5 +119,27 @@ final class AppModel: ObservableObject {
     private func changed() {
         version += 1
         WidgetCenter.shared.reloadAllTimelines()
+        prepareTiles()
+    }
+
+    /// Measure the small widget's brush for the words it will show next, off the main
+    /// thread, so the widget finds them ready instead of measuring inside its time budget.
+    private var preparing = false
+    private func prepareTiles() {
+        guard !preparing, settings.cardStyle == .poster else { return }
+        let upcoming = Array(store.queue(now: .now).prefix(8)), settings = settings
+        let missing = upcoming.filter { w in
+            let r = Brush.tileReading(w, settings), h = w.hanzi(settings.script)
+            return FitCache.tiles.get("\(h)|\(r)|\(w.shortMeaning)") == nil
+        }
+        guard !missing.isEmpty else { return }
+        preparing = true
+        Task.detached(priority: .utility) {
+            for w in missing { _ = Brush.tile(w, settings) }
+            await MainActor.run {
+                self.preparing = false
+                WidgetCenter.shared.reloadAllTimelines()
+            }
+        }
     }
 }
