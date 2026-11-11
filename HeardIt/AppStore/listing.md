@@ -84,7 +84,7 @@ Uses no non-exempt encryption (`ITSAppUsesNonExemptEncryption = NO` is set in th
 Paste into App Review Information > Notes (limit 4000). Attach the screen recording in the same section, or put its link at the top.
 
 1. SCREEN RECORDING
-Attached, recorded on iPhone running the latest iOS. It starts at launch and shows the first screen, a review session, the Words list, topic decks, Settings and both widgets.
+Attached: one 1.5-minute video recorded on iPhone with build 5. It starts by opening the app from TestFlight, then shows cards being revealed, heard and swiped, switching simplified and traditional, turning topic decks on in Settings, and adding the Home Screen and Lock Screen widgets. The first-launch "Why are you learning Chinese?" screen only appears once, so it is described in section 3.
 
 2. PURPOSE AND AUDIENCE
 Hear to Read is for heritage speakers: people who grew up hearing Cantonese or Mandarin at home and can say everyday words but can't read them. Most courses start from zero. This one starts with words the learner already knows by ear (menu dishes, signs, family words) and teaches the missing piece, the characters. Each card shows the word in brush calligraphy and print, with Mandarin pinyin, Cantonese jyutping, English, and audio in both languages.
