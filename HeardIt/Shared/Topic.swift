@@ -39,6 +39,14 @@ struct Goal: Identifiable, Hashable {
         Goal(id: "move", hanzi: "生活", title: "Moving there", topics: ["living"]),
         Goal(id: "read", hanzi: "认字", title: "Read signs & menus", topics: []),
         Goal(id: "exam", hanzi: "考试", title: "Exams (HSK)", topics: []),
+        Goal(id: "business", hanzi: "创业", title: "Startups, VC & MBA", topics: ["business"]),
+        Goal(id: "ai", hanzi: "智能", title: "AI & tech", topics: ["ai"]),
+        Goal(id: "dentistry", hanzi: "牙科", title: "Dentistry", topics: ["dentistry"]),
+        Goal(id: "psychology", hanzi: "心理", title: "Psychology", topics: ["psychology"]),
+        Goal(id: "art", hanzi: "陶艺", title: "Art & pottery", topics: ["pottery", "lingnan"]),
+        Goal(id: "dance", hanzi: "跳舞", title: "Dance", topics: ["dance"]),
+        Goal(id: "music", hanzi: "音乐", title: "Music production", topics: ["music"]),
+        Goal(id: "wisdom", hanzi: "经典", title: "Chinese wisdom", topics: ["wisdom"]),
     ]
 }
 

@@ -2077,5 +2077,1666 @@
     "topic": "lingnan"
    }
   ]
+ },
+ {
+  "id": "dentistry",
+  "title": "Dentistry",
+  "hanzi": "牙科",
+  "label": "牙科诊所",
+  "tag": "DENTAL",
+  "line": "TEETH · CHECK-UPS · TREATMENT",
+  "keywords": [
+   "dentist",
+   "dental",
+   "teeth",
+   "tooth",
+   "orthodont",
+   "hygienist",
+   "gum"
+  ],
+  "words": [
+   {
+    "id": "tp-dentistry-yy",
+    "simplified": "牙医",
+    "traditional": "牙醫",
+    "pinyin": "yáyī",
+    "jyutping": "ngaa4 ji1",
+    "meaning": "dentist",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-ych",
+    "simplified": "牙齿",
+    "traditional": "牙齒",
+    "pinyin": "yáchǐ",
+    "jyutping": "ngaa4 ci2",
+    "meaning": "tooth, teeth",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-yyu",
+    "simplified": "预约",
+    "traditional": "預約",
+    "pinyin": "yùyuē",
+    "jyutping": "jyu6 joek3",
+    "meaning": "appointment",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-xy",
+    "simplified": "洗牙",
+    "traditional": "洗牙",
+    "pinyin": "xǐyá",
+    "jyutping": "sai2 ngaa4",
+    "meaning": "teeth cleaning",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-zhngzu",
+    "simplified": "张嘴",
+    "traditional": "張嘴",
+    "pinyin": "zhāngzuǐ",
+    "jyutping": "zoeng1 zeoi2",
+    "meaning": "open your mouth",
+    "deck": "topic",
+    "topic": "dentistry",
+    "note": "In Cantonese: 擘大口 maak3 daai6 hau2."
+   },
+   {
+    "id": "tp-dentistry-tngma",
+    "simplified": "疼吗",
+    "traditional": "疼嗎",
+    "pinyin": "téng ma",
+    "jyutping": "tang4 maa3",
+    "meaning": "does it hurt?",
+    "deck": "topic",
+    "topic": "dentistry",
+    "note": "In Cantonese: 痛唔痛 tung3 m4 tung3."
+   },
+   {
+    "id": "tp-dentistry-shku",
+    "simplified": "漱口",
+    "traditional": "漱口",
+    "pinyin": "shùkǒu",
+    "jyutping": "sau3 hau2",
+    "meaning": "rinse your mouth",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-zhy",
+    "simplified": "蛀牙",
+    "traditional": "蛀牙",
+    "pinyin": "zhùyá",
+    "jyutping": "zyu3 ngaa4",
+    "meaning": "cavity",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-by",
+    "simplified": "补牙",
+    "traditional": "補牙",
+    "pinyin": "bǔyá",
+    "jyutping": "bou2 ngaa4",
+    "meaning": "filling",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-byx",
+    "simplified": "拔牙",
+    "traditional": "拔牙",
+    "pinyin": "báyá",
+    "jyutping": "bat6 ngaa4",
+    "meaning": "pull a tooth",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-zhch",
+    "simplified": "智齿",
+    "traditional": "智齒",
+    "pinyin": "zhìchǐ",
+    "jyutping": "zi3 ci2",
+    "meaning": "wisdom tooth",
+    "deck": "topic",
+    "topic": "dentistry",
+    "note": "In Cantonese: 智慧齒 zi3 wai6 ci2."
+   },
+   {
+    "id": "tp-dentistry-yyn",
+    "simplified": "牙龈",
+    "traditional": "牙齦",
+    "pinyin": "yáyín",
+    "jyutping": "ngaa4 ngan4",
+    "meaning": "gums",
+    "deck": "topic",
+    "topic": "dentistry",
+    "note": "In Cantonese: 牙肉 ngaa4 juk6."
+   },
+   {
+    "id": "tp-dentistry-yzhubng",
+    "simplified": "牙周病",
+    "traditional": "牙周病",
+    "pinyin": "yázhōubìng",
+    "jyutping": "ngaa4 zau1 beng6",
+    "meaning": "gum disease",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-gngunzhlio",
+    "simplified": "根管治疗",
+    "traditional": "根管治療",
+    "pinyin": "gēnguǎn zhìliáo",
+    "jyutping": "gan1 gun2 zi6 liu4",
+    "meaning": "root canal",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-ygun",
+    "simplified": "牙冠",
+    "traditional": "牙冠",
+    "pinyin": "yáguān",
+    "jyutping": "ngaa4 gun1",
+    "meaning": "crown",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-zhngzhy",
+    "simplified": "种植牙",
+    "traditional": "種植牙",
+    "pinyin": "zhòngzhíyá",
+    "jyutping": "zung3 zik6 ngaa4",
+    "meaning": "dental implant",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-yto",
+    "simplified": "牙套",
+    "traditional": "牙套",
+    "pinyin": "yátào",
+    "jyutping": "ngaa4 tou3",
+    "meaning": "braces",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-myo",
+    "simplified": "麻药",
+    "traditional": "麻藥",
+    "pinyin": "máyào",
+    "jyutping": "maa4 joek6",
+    "meaning": "anaesthetic",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-mngn",
+    "simplified": "敏感",
+    "traditional": "敏感",
+    "pinyin": "mǐngǎn",
+    "jyutping": "man5 gam2",
+    "meaning": "sensitive",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-yxin",
+    "simplified": "牙线",
+    "traditional": "牙線",
+    "pinyin": "yáxiàn",
+    "jyutping": "ngaa4 sin3",
+    "meaning": "floss",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-yshu",
+    "simplified": "牙刷",
+    "traditional": "牙刷",
+    "pinyin": "yáshuā",
+    "jyutping": "ngaa4 caat2",
+    "meaning": "toothbrush",
+    "deck": "topic",
+    "topic": "dentistry"
+   },
+   {
+    "id": "tp-dentistry-ygo",
+    "simplified": "牙膏",
+    "traditional": "牙膏",
+    "pinyin": "yágāo",
+    "jyutping": "ngaa4 gou1",
+    "meaning": "toothpaste",
+    "deck": "topic",
+    "topic": "dentistry"
+   }
+  ]
+ },
+ {
+  "id": "pottery",
+  "title": "Pottery",
+  "hanzi": "陶艺",
+  "label": "陶艺工坊",
+  "tag": "POTTERY",
+  "line": "CLAY · WHEEL · KILN",
+  "keywords": [
+   "pottery",
+   "potter",
+   "ceramic",
+   "clay",
+   "kiln",
+   "porcelain",
+   "wheel"
+  ],
+  "words": [
+   {
+    "id": "tp-pottery-toy",
+    "simplified": "陶艺",
+    "traditional": "陶藝",
+    "pinyin": "táoyì",
+    "jyutping": "tou4 ngai6",
+    "meaning": "pottery (the craft)",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-toc",
+    "simplified": "陶瓷",
+    "traditional": "陶瓷",
+    "pinyin": "táocí",
+    "jyutping": "tou4 ci4",
+    "meaning": "ceramics",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-tot",
+    "simplified": "陶土",
+    "traditional": "陶土",
+    "pinyin": "táotǔ",
+    "jyutping": "tou4 tou2",
+    "meaning": "clay",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-run",
+    "simplified": "揉泥",
+    "traditional": "揉泥",
+    "pinyin": "róuní",
+    "jyutping": "jau4 nai4",
+    "meaning": "wedge the clay",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-lp",
+    "simplified": "拉坯",
+    "traditional": "拉坯",
+    "pinyin": "lāpī",
+    "jyutping": "laai1 pui1",
+    "meaning": "throw on the wheel",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-lpj",
+    "simplified": "拉坯机",
+    "traditional": "拉坯機",
+    "pinyin": "lāpījī",
+    "jyutping": "laai1 pui1 gei1",
+    "meaning": "potter's wheel",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-dngzhngxn",
+    "simplified": "定中心",
+    "traditional": "定中心",
+    "pinyin": "dìng zhōngxīn",
+    "jyutping": "ding6 zung1 sam1",
+    "meaning": "center the clay",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-nis",
+    "simplified": "捏塑",
+    "traditional": "捏塑",
+    "pinyin": "niēsù",
+    "jyutping": "nip6 sou3",
+    "meaning": "hand-building",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-xip",
+    "simplified": "修坯",
+    "traditional": "修坯",
+    "pinyin": "xiūpī",
+    "jyutping": "sau1 pui1",
+    "meaning": "trimming",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-ssho",
+    "simplified": "素烧",
+    "traditional": "素燒",
+    "pinyin": "sùshāo",
+    "jyutping": "sou3 siu1",
+    "meaning": "bisque firing",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-shngyu",
+    "simplified": "上釉",
+    "traditional": "上釉",
+    "pinyin": "shàngyòu",
+    "jyutping": "soeng5 jau6",
+    "meaning": "glaze it",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-yo",
+    "simplified": "窑",
+    "traditional": "窯",
+    "pinyin": "yáo",
+    "jyutping": "jiu4",
+    "meaning": "kiln",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-shozh",
+    "simplified": "烧制",
+    "traditional": "燒製",
+    "pinyin": "shāozhì",
+    "jyutping": "siu1 zai3",
+    "meaning": "fire (in the kiln)",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-wn",
+    "simplified": "碗",
+    "traditional": "碗",
+    "pinyin": "wǎn",
+    "jyutping": "wun2",
+    "meaning": "bowl",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-bizi",
+    "simplified": "杯子",
+    "traditional": "杯子",
+    "pinyin": "bēizi",
+    "jyutping": "bui1 zi2",
+    "meaning": "cup",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-pnzi",
+    "simplified": "盘子",
+    "traditional": "盤子",
+    "pinyin": "pánzi",
+    "jyutping": "pun4 zi2",
+    "meaning": "plate",
+    "deck": "topic",
+    "topic": "pottery",
+    "note": "In Cantonese: 碟 dip6."
+   },
+   {
+    "id": "tp-pottery-hupng",
+    "simplified": "花瓶",
+    "traditional": "花瓶",
+    "pinyin": "huāpíng",
+    "jyutping": "faa1 ping4",
+    "meaning": "vase",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-lile",
+    "simplified": "裂了",
+    "traditional": "裂了",
+    "pinyin": "liè le",
+    "jyutping": "lit6 liu5",
+    "meaning": "it cracked",
+    "deck": "topic",
+    "topic": "pottery",
+    "note": "In Cantonese: 爆咗 baau3 zo2."
+   },
+   {
+    "id": "tp-pottery-shugng",
+    "simplified": "手工",
+    "traditional": "手工",
+    "pinyin": "shǒugōng",
+    "jyutping": "sau2 gung1",
+    "meaning": "handmade",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-qnghuc",
+    "simplified": "青花瓷",
+    "traditional": "青花瓷",
+    "pinyin": "qīnghuācí",
+    "jyutping": "cing1 faa1 ci4",
+    "meaning": "blue-and-white porcelain",
+    "deck": "topic",
+    "topic": "pottery"
+   },
+   {
+    "id": "tp-pottery-jngdzhn",
+    "simplified": "景德镇",
+    "traditional": "景德鎮",
+    "pinyin": "Jǐngdézhèn",
+    "jyutping": "ging2 dak1 zan3",
+    "meaning": "Jingdezhen, the porcelain capital",
+    "deck": "topic",
+    "topic": "pottery"
+   }
+  ]
+ },
+ {
+  "id": "dance",
+  "title": "Dance",
+  "hanzi": "街舞",
+  "label": "舞室常用",
+  "tag": "DANCE",
+  "line": "HIP HOP · AFRO · HOUSE · KRUMP · JAZZ",
+  "keywords": [
+   "dance",
+   "dancer",
+   "dancing",
+   "hip hop",
+   "hiphop",
+   "afro",
+   "house",
+   "krump",
+   "jazz",
+   "breaking",
+   "popping",
+   "choreo"
+  ],
+  "words": [
+   {
+    "id": "tp-dance-tiow",
+    "simplified": "跳舞",
+    "traditional": "跳舞",
+    "pinyin": "tiàowǔ",
+    "jyutping": "tiu3 mou5",
+    "meaning": "dance",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-jiw",
+    "simplified": "街舞",
+    "traditional": "街舞",
+    "pinyin": "jiēwǔ",
+    "jyutping": "gaai1 mou5",
+    "meaning": "street dance",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-xh",
+    "simplified": "嘻哈",
+    "traditional": "嘻哈",
+    "pinyin": "xīhā",
+    "jyutping": "hei1 haa1",
+    "meaning": "hip hop",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-fizhuw",
+    "simplified": "非洲舞",
+    "traditional": "非洲舞",
+    "pinyin": "Fēizhōuwǔ",
+    "jyutping": "fei1 zau1 mou5",
+    "meaning": "Afro dance",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-hoshw",
+    "simplified": "浩室舞",
+    "traditional": "浩室舞",
+    "pinyin": "hàoshìwǔ",
+    "jyutping": "hou6 sat1 mou5",
+    "meaning": "house dance",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-jitujush",
+    "simplified": "街头爵士",
+    "traditional": "街頭爵士",
+    "pinyin": "jiētóu juéshì",
+    "jyutping": "gaai1 tau4 zoek3 si6",
+    "meaning": "street jazz",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-plw",
+    "simplified": "霹雳舞",
+    "traditional": "霹靂舞",
+    "pinyin": "pīlìwǔ",
+    "jyutping": "pik1 lik1 mou5",
+    "meaning": "breaking",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-jxiw",
+    "simplified": "机械舞",
+    "traditional": "機械舞",
+    "pinyin": "jīxièwǔ",
+    "jyutping": "gei1 haai6 mou5",
+    "meaning": "popping",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-suw",
+    "simplified": "锁舞",
+    "traditional": "鎖舞",
+    "pinyin": "suǒwǔ",
+    "jyutping": "so2 mou5",
+    "meaning": "locking",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-duw",
+    "simplified": "斗舞",
+    "traditional": "鬥舞",
+    "pinyin": "dòuwǔ",
+    "jyutping": "dau3 mou5",
+    "meaning": "dance battle",
+    "deck": "topic",
+    "topic": "dance",
+    "note": "Krump is usually just called Krump, even in Chinese."
+   },
+   {
+    "id": "tp-dance-jizu",
+    "simplified": "节奏",
+    "traditional": "節奏",
+    "pinyin": "jiézòu",
+    "jyutping": "zit3 zau3",
+    "meaning": "rhythm",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-jipi",
+    "simplified": "节拍",
+    "traditional": "節拍",
+    "pinyin": "jiépāi",
+    "jyutping": "zit3 paak3",
+    "meaning": "beat, count",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-ldng",
+    "simplified": "律动",
+    "traditional": "律動",
+    "pinyin": "lǜdòng",
+    "jyutping": "leot6 dung6",
+    "meaning": "groove",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-dngzu",
+    "simplified": "动作",
+    "traditional": "動作",
+    "pinyin": "dòngzuò",
+    "jyutping": "dung6 zok3",
+    "meaning": "move",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-binw",
+    "simplified": "编舞",
+    "traditional": "編舞",
+    "pinyin": "biānwǔ",
+    "jyutping": "pin1 mou5",
+    "meaning": "choreography",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-jxng",
+    "simplified": "即兴",
+    "traditional": "即興",
+    "pinyin": "jíxìng",
+    "jyutping": "zik1 hing3",
+    "meaning": "freestyle",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-pilin",
+    "simplified": "排练",
+    "traditional": "排練",
+    "pinyin": "páiliàn",
+    "jyutping": "paai4 lin6",
+    "meaning": "rehearse",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-wsh",
+    "simplified": "舞室",
+    "traditional": "舞室",
+    "pinyin": "wǔshì",
+    "jyutping": "mou5 sat1",
+    "meaning": "dance studio",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-wti",
+    "simplified": "舞台",
+    "traditional": "舞台",
+    "pinyin": "wǔtái",
+    "jyutping": "mou5 toi4",
+    "meaning": "stage",
+    "deck": "topic",
+    "topic": "dance"
+   },
+   {
+    "id": "tp-dance-ziliybin",
+    "simplified": "再来一遍",
+    "traditional": "再來一遍",
+    "pinyin": "zài lái yī biàn",
+    "jyutping": "zoi3 loi4 jat1 pin3",
+    "meaning": "one more time",
+    "deck": "topic",
+    "topic": "dance"
+   }
+  ]
+ },
+ {
+  "id": "music",
+  "title": "Music production",
+  "hanzi": "音乐",
+  "label": "音乐制作",
+  "tag": "MUSIC",
+  "line": "ABLETON · HOUSE · R&B · EDM",
+  "keywords": [
+   "music",
+   "producer",
+   "production",
+   "ableton",
+   "beat",
+   "edm",
+   "house",
+   "r&b",
+   "rnb",
+   "dj",
+   "mixing"
+  ],
+  "words": [
+   {
+    "id": "tp-music-zhzurn",
+    "simplified": "制作人",
+    "traditional": "製作人",
+    "pinyin": "zhìzuòrén",
+    "jyutping": "zai3 zok3 jan4",
+    "meaning": "producer",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-zuq",
+    "simplified": "作曲",
+    "traditional": "作曲",
+    "pinyin": "zuòqǔ",
+    "jyutping": "zok3 kuk1",
+    "meaning": "compose",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-binq",
+    "simplified": "编曲",
+    "traditional": "編曲",
+    "pinyin": "biānqǔ",
+    "jyutping": "pin1 kuk1",
+    "meaning": "arrangement",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-lyn",
+    "simplified": "录音",
+    "traditional": "錄音",
+    "pinyin": "lùyīn",
+    "jyutping": "luk6 jam1",
+    "meaning": "record",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-yngu",
+    "simplified": "音轨",
+    "traditional": "音軌",
+    "pinyin": "yīnguǐ",
+    "jyutping": "jam1 gwai2",
+    "meaning": "track",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-gdin",
+    "simplified": "鼓点",
+    "traditional": "鼓點",
+    "pinyin": "gǔdiǎn",
+    "jyutping": "gu2 dim2",
+    "meaning": "drum pattern",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-ciyng",
+    "simplified": "采样",
+    "traditional": "採樣",
+    "pinyin": "cǎiyàng",
+    "jyutping": "coi2 joeng6",
+    "meaning": "sample",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-hchngq",
+    "simplified": "合成器",
+    "traditional": "合成器",
+    "pinyin": "héchéngqì",
+    "jyutping": "hap6 sing4 hei3",
+    "meaning": "synthesizer",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-yns",
+    "simplified": "音色",
+    "traditional": "音色",
+    "pinyin": "yīnsè",
+    "jyutping": "jam1 sik1",
+    "meaning": "sound, timbre",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-dyn",
+    "simplified": "低音",
+    "traditional": "低音",
+    "pinyin": "dīyīn",
+    "jyutping": "dai1 jam1",
+    "meaning": "bass",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-xunl",
+    "simplified": "旋律",
+    "traditional": "旋律",
+    "pinyin": "xuánlǜ",
+    "jyutping": "syun4 leot6",
+    "meaning": "melody",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-hxin",
+    "simplified": "和弦",
+    "traditional": "和弦",
+    "pinyin": "héxián",
+    "jyutping": "wo4 jin4",
+    "meaning": "chord",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-sd",
+    "simplified": "速度",
+    "traditional": "速度",
+    "pinyin": "sùdù",
+    "jyutping": "cuk1 dou6",
+    "meaning": "tempo (BPM)",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-xioguq",
+    "simplified": "效果器",
+    "traditional": "效果器",
+    "pinyin": "xiàoguǒqì",
+    "jyutping": "haau6 gwo2 hei3",
+    "meaning": "effects",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-hnxing",
+    "simplified": "混响",
+    "traditional": "混響",
+    "pinyin": "hùnxiǎng",
+    "jyutping": "wan6 hoeng2",
+    "meaning": "reverb",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-ysu",
+    "simplified": "压缩",
+    "traditional": "壓縮",
+    "pinyin": "yāsuō",
+    "jyutping": "aat3 suk1",
+    "meaning": "compression",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-hnyn",
+    "simplified": "混音",
+    "traditional": "混音",
+    "pinyin": "hùnyīn",
+    "jyutping": "wan6 jam1",
+    "meaning": "mixing",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-mdi",
+    "simplified": "母带",
+    "traditional": "母帶",
+    "pinyin": "mǔdài",
+    "jyutping": "mou5 daai3",
+    "meaning": "mastering",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-dinzynyu",
+    "simplified": "电子音乐",
+    "traditional": "電子音樂",
+    "pinyin": "diànzǐ yīnyuè",
+    "jyutping": "din6 zi2 jam1 ngok6",
+    "meaning": "electronic music, EDM",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-hoshynyu",
+    "simplified": "浩室音乐",
+    "traditional": "浩室音樂",
+    "pinyin": "hàoshì yīnyuè",
+    "jyutping": "hou6 sat1 jam1 ngok6",
+    "meaning": "house music",
+    "deck": "topic",
+    "topic": "music"
+   },
+   {
+    "id": "tp-music-jizubls",
+    "simplified": "节奏布鲁斯",
+    "traditional": "節奏布魯斯",
+    "pinyin": "jiézòu bùlǔsī",
+    "jyutping": "zit3 zau3 bou3 lou5 si1",
+    "meaning": "R&B",
+    "deck": "topic",
+    "topic": "music"
+   }
+  ]
+ },
+ {
+  "id": "business",
+  "title": "Business",
+  "hanzi": "商业",
+  "label": "创业投资",
+  "tag": "BUSINESS",
+  "line": "STARTUPS · VC · MBA",
+  "keywords": [
+   "business",
+   "startup",
+   "founder",
+   "vc",
+   "venture",
+   "investor",
+   "mba",
+   "entrepreneur",
+   "fundrais"
+  ],
+  "words": [
+   {
+    "id": "tp-business-chungy",
+    "simplified": "创业",
+    "traditional": "創業",
+    "pinyin": "chuàngyè",
+    "jyutping": "cong3 jip6",
+    "meaning": "start a company",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-chungshrn",
+    "simplified": "创始人",
+    "traditional": "創始人",
+    "pinyin": "chuàngshǐrén",
+    "jyutping": "cong3 ci2 jan4",
+    "meaning": "founder",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-shngymsh",
+    "simplified": "商业模式",
+    "traditional": "商業模式",
+    "pinyin": "shāngyè móshì",
+    "jyutping": "soeng1 jip6 mou4 sik1",
+    "meaning": "business model",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-shngyjhush",
+    "simplified": "商业计划书",
+    "traditional": "商業計劃書",
+    "pinyin": "shāngyè jìhuàshū",
+    "jyutping": "soeng1 jip6 gai3 waak6 syu1",
+    "meaning": "business plan, pitch deck",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-lyn",
+    "simplified": "路演",
+    "traditional": "路演",
+    "pinyin": "lùyǎn",
+    "jyutping": "lou6 jin2",
+    "meaning": "pitch (to investors)",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-fngxintuz",
+    "simplified": "风险投资",
+    "traditional": "風險投資",
+    "pinyin": "fēngxiǎn tóuzī",
+    "jyutping": "fung1 him2 tau4 zi1",
+    "meaning": "venture capital",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-tuzrn",
+    "simplified": "投资人",
+    "traditional": "投資人",
+    "pinyin": "tóuzīrén",
+    "jyutping": "tau4 zi1 jan4",
+    "meaning": "investor",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-tinshln",
+    "simplified": "天使轮",
+    "traditional": "天使輪",
+    "pinyin": "tiānshǐlún",
+    "jyutping": "tin1 si3 leon4",
+    "meaning": "angel round",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-rngz",
+    "simplified": "融资",
+    "traditional": "融資",
+    "pinyin": "róngzī",
+    "jyutping": "jung4 zi1",
+    "meaning": "raise money",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-gzh",
+    "simplified": "估值",
+    "traditional": "估值",
+    "pinyin": "gūzhí",
+    "jyutping": "gu2 zik6",
+    "meaning": "valuation",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-gqun",
+    "simplified": "股权",
+    "traditional": "股權",
+    "pinyin": "gǔquán",
+    "jyutping": "gu2 kyun4",
+    "meaning": "equity",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-tuch",
+    "simplified": "退出",
+    "traditional": "退出",
+    "pinyin": "tuìchū",
+    "jyutping": "teoi3 ceot1",
+    "meaning": "exit",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-shngsh",
+    "simplified": "上市",
+    "traditional": "上市",
+    "pinyin": "shàngshì",
+    "jyutping": "soeng5 si5",
+    "meaning": "go public, IPO",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-shur",
+    "simplified": "收入",
+    "traditional": "收入",
+    "pinyin": "shōurù",
+    "jyutping": "sau1 jap6",
+    "meaning": "revenue",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-lrn",
+    "simplified": "利润",
+    "traditional": "利潤",
+    "pinyin": "lìrùn",
+    "jyutping": "lei6 jeon6",
+    "meaning": "profit",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-xinjnli",
+    "simplified": "现金流",
+    "traditional": "現金流",
+    "pinyin": "xiànjīnliú",
+    "jyutping": "jin6 gam1 lau4",
+    "meaning": "cash flow",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-shchng",
+    "simplified": "市场",
+    "traditional": "市場",
+    "pinyin": "shìchǎng",
+    "jyutping": "si5 coeng4",
+    "meaning": "market",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-jngzhngdushu",
+    "simplified": "竞争对手",
+    "traditional": "競爭對手",
+    "pinyin": "jìngzhēng duìshǒu",
+    "jyutping": "ging6 zang1 deoi3 sau2",
+    "meaning": "competitor",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-htong",
+    "simplified": "合同",
+    "traditional": "合同",
+    "pinyin": "hétong",
+    "jyutping": "hap6 tung4",
+    "meaning": "contract",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-tnpn",
+    "simplified": "谈判",
+    "traditional": "談判",
+    "pinyin": "tánpàn",
+    "jyutping": "taam4 pun3",
+    "meaning": "negotiate",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-gngshnggunlshush",
+    "simplified": "工商管理硕士",
+    "traditional": "工商管理碩士",
+    "pinyin": "gōngshāng guǎnlǐ shuòshì",
+    "jyutping": "gung1 soeng1 gun2 lei5 sek6 si6",
+    "meaning": "MBA",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-nlfnx",
+    "simplified": "案例分析",
+    "traditional": "案例分析",
+    "pinyin": "ànlì fēnxī",
+    "jyutping": "on3 lai6 fan1 sik1",
+    "meaning": "case study",
+    "deck": "topic",
+    "topic": "business"
+   },
+   {
+    "id": "tp-business-lngdol",
+    "simplified": "领导力",
+    "traditional": "領導力",
+    "pinyin": "lǐngdǎolì",
+    "jyutping": "ling5 dou6 lik6",
+    "meaning": "leadership",
+    "deck": "topic",
+    "topic": "business"
+   }
+  ]
+ },
+ {
+  "id": "ai",
+  "title": "AI",
+  "hanzi": "智能",
+  "label": "人工智能",
+  "tag": "AI",
+  "line": "MODELS · DATA · AGENTS",
+  "keywords": [
+   "ai",
+   "artificial",
+   "machine learning",
+   "llm",
+   "tech",
+   "engineer",
+   "coding",
+   "programm",
+   "software"
+  ],
+  "words": [
+   {
+    "id": "tp-ai-rngngzhnng",
+    "simplified": "人工智能",
+    "traditional": "人工智能",
+    "pinyin": "réngōng zhìnéng",
+    "jyutping": "jan4 gung1 zi3 nang4",
+    "meaning": "artificial intelligence",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-jqxux",
+    "simplified": "机器学习",
+    "traditional": "機器學習",
+    "pinyin": "jīqì xuéxí",
+    "jyutping": "gei1 hei3 hok6 zaap6",
+    "meaning": "machine learning",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-shndxux",
+    "simplified": "深度学习",
+    "traditional": "深度學習",
+    "pinyin": "shēndù xuéxí",
+    "jyutping": "sam1 dou6 hok6 zaap6",
+    "meaning": "deep learning",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-shnjngwnglu",
+    "simplified": "神经网络",
+    "traditional": "神經網絡",
+    "pinyin": "shénjīng wǎngluò",
+    "jyutping": "san4 ging1 mong5 lok3",
+    "meaning": "neural network",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-dyynmxng",
+    "simplified": "大语言模型",
+    "traditional": "大語言模型",
+    "pinyin": "dà yǔyán móxíng",
+    "jyutping": "daai6 jyu5 jin4 mou4 jing4",
+    "meaning": "large language model",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-shngchngsh",
+    "simplified": "生成式",
+    "traditional": "生成式",
+    "pinyin": "shēngchéngshì",
+    "jyutping": "sang1 sing4 sik1",
+    "meaning": "generative",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-liotinjqrn",
+    "simplified": "聊天机器人",
+    "traditional": "聊天機器人",
+    "pinyin": "liáotiān jīqìrén",
+    "jyutping": "liu4 tin1 gei1 hei3 jan4",
+    "meaning": "chatbot",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-zhnngt",
+    "simplified": "智能体",
+    "traditional": "智能體",
+    "pinyin": "zhìnéngtǐ",
+    "jyutping": "zi3 nang4 tai2",
+    "meaning": "AI agent",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-tshc",
+    "simplified": "提示词",
+    "traditional": "提示詞",
+    "pinyin": "tíshìcí",
+    "jyutping": "tai4 si6 ci4",
+    "meaning": "prompt",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-sunf",
+    "simplified": "算法",
+    "traditional": "算法",
+    "pinyin": "suànfǎ",
+    "jyutping": "syun3 faat3",
+    "meaning": "algorithm",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-shj",
+    "simplified": "数据",
+    "traditional": "數據",
+    "pinyin": "shùjù",
+    "jyutping": "sou3 geoi3",
+    "meaning": "data",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-xnlin",
+    "simplified": "训练",
+    "traditional": "訓練",
+    "pinyin": "xùnliàn",
+    "jyutping": "fan3 lin6",
+    "meaning": "train (a model)",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-tul",
+    "simplified": "推理",
+    "traditional": "推理",
+    "pinyin": "tuīlǐ",
+    "jyutping": "teoi1 lei5",
+    "meaning": "reasoning, inference",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-hunju",
+    "simplified": "幻觉",
+    "traditional": "幻覺",
+    "pinyin": "huànjué",
+    "jyutping": "waan6 gok3",
+    "meaning": "hallucination",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-sunl",
+    "simplified": "算力",
+    "traditional": "算力",
+    "pinyin": "suànlì",
+    "jyutping": "syun3 lik6",
+    "meaning": "compute",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-xnpin",
+    "simplified": "芯片",
+    "traditional": "芯片",
+    "pinyin": "xīnpiàn",
+    "jyutping": "sam1 pin2",
+    "meaning": "chip",
+    "deck": "topic",
+    "topic": "ai",
+    "note": "In Taiwan: 晶片 jīngpiàn."
+   },
+   {
+    "id": "tp-ai-kiyun",
+    "simplified": "开源",
+    "traditional": "開源",
+    "pinyin": "kāiyuán",
+    "jyutping": "hoi1 jyun4",
+    "meaning": "open source",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-binchng",
+    "simplified": "编程",
+    "traditional": "編程",
+    "pinyin": "biānchéng",
+    "jyutping": "pin1 cing4",
+    "meaning": "programming",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-dim",
+    "simplified": "代码",
+    "traditional": "代碼",
+    "pinyin": "dàimǎ",
+    "jyutping": "doi6 maa5",
+    "meaning": "code",
+    "deck": "topic",
+    "topic": "ai"
+   },
+   {
+    "id": "tp-ai-zdnghu",
+    "simplified": "自动化",
+    "traditional": "自動化",
+    "pinyin": "zìdònghuà",
+    "jyutping": "zi6 dung6 faa3",
+    "meaning": "automation",
+    "deck": "topic",
+    "topic": "ai"
+   }
+  ]
+ },
+ {
+  "id": "wisdom",
+  "title": "Chinese wisdom",
+  "hanzi": "经典",
+  "label": "先贤名句",
+  "tag": "WISDOM",
+  "line": "SUN TZU · CONFUCIUS · LAOZI",
+  "keywords": [
+   "wisdom",
+   "sun tzu",
+   "suntzu",
+   "art of war",
+   "confucius",
+   "analects",
+   "laozi",
+   "lao tzu",
+   "lao tsu",
+   "tao",
+   "dao",
+   "philosoph",
+   "classic"
+  ],
+  "words": [
+   {
+    "id": "tp-wisdom-zhbzhjbizhnbdi",
+    "simplified": "知彼知己百战不殆",
+    "traditional": "知彼知己百戰不殆",
+    "pinyin": "zhī bǐ zhī jǐ, bǎi zhàn bù dài",
+    "jyutping": "zi1 bei2 zi1 gei2 baak3 zin3 bat1 toi5",
+    "meaning": "know them and yourself: no danger in 100 battles",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Sun Tzu, The Art of War, ch. 3 (谋攻)."
+   },
+   {
+    "id": "tp-wisdom-bzhnrqrnzhbng",
+    "simplified": "不战而屈人之兵",
+    "traditional": "不戰而屈人之兵",
+    "pinyin": "bù zhàn ér qū rén zhī bīng",
+    "jyutping": "bat1 zin3 ji4 wat1 jan4 zi1 bing1",
+    "meaning": "win without fighting",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Sun Tzu, The Art of War, ch. 3: to subdue the enemy without battle is the highest skill."
+   },
+   {
+    "id": "tp-wisdom-bngzhgudoy",
+    "simplified": "兵者诡道也",
+    "traditional": "兵者詭道也",
+    "pinyin": "bīng zhě guǐ dào yě",
+    "jyutping": "bing1 ze2 gwai2 dou6 jaa5",
+    "meaning": "all war is deception",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Sun Tzu, The Art of War, ch. 1 (计)."
+   },
+   {
+    "id": "tp-wisdom-gngqwbi",
+    "simplified": "攻其无备",
+    "traditional": "攻其無備",
+    "pinyin": "gōng qí wú bèi",
+    "jyutping": "gung1 kei4 mou4 bei6",
+    "meaning": "attack where they're unprepared",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Sun Tzu, The Art of War, ch. 1; paired with 出其不意."
+   },
+   {
+    "id": "tp-wisdom-chqby",
+    "simplified": "出其不意",
+    "traditional": "出其不意",
+    "pinyin": "chū qí bù yì",
+    "jyutping": "ceot1 kei4 bat1 ji3",
+    "meaning": "appear where you're not expected",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Sun Tzu, The Art of War, ch. 1."
+   },
+   {
+    "id": "tp-wisdom-bnggushngbguji",
+    "simplified": "兵贵胜不贵久",
+    "traditional": "兵貴勝不貴久",
+    "pinyin": "bīng guì shèng bù guì jiǔ",
+    "jyutping": "bing1 gwai3 sing3 bat1 gwai3 gau2",
+    "meaning": "in war, prize victory, not length",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Sun Tzu, The Art of War, ch. 2 (作战)."
+   },
+   {
+    "id": "tp-wisdom-xurshxzh",
+    "simplified": "学而时习之",
+    "traditional": "學而時習之",
+    "pinyin": "xué ér shí xí zhī",
+    "jyutping": "hok6 ji4 si4 zaap6 zi1",
+    "meaning": "learn, and practise it often",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Confucius, Analects 1.1, which goes on: 不亦说乎, isn't that a joy?"
+   },
+   {
+    "id": "tp-wisdom-yupngzyunfngli",
+    "simplified": "有朋自远方来",
+    "traditional": "有朋自遠方來",
+    "pinyin": "yǒu péng zì yuǎnfāng lái",
+    "jyutping": "jau5 pang4 zi6 jyun5 fong1 loi4",
+    "meaning": "a friend comes from afar",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Confucius, Analects 1.1, which goes on: 不亦乐乎, isn't that a delight?"
+   },
+   {
+    "id": "tp-wisdom-wngrzhxn",
+    "simplified": "温故而知新",
+    "traditional": "溫故而知新",
+    "pinyin": "wēn gù ér zhī xīn",
+    "jyutping": "wan1 gu3 ji4 zi1 san1",
+    "meaning": "revisit the old to learn the new",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Confucius, Analects 2.11."
+   },
+   {
+    "id": "tp-wisdom-xurbszwng",
+    "simplified": "学而不思则罔",
+    "traditional": "學而不思則罔",
+    "pinyin": "xué ér bù sī zé wǎng",
+    "jyutping": "hok6 ji4 bat1 si1 zak1 mong5",
+    "meaning": "learning without thinking is lost",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Confucius, Analects 2.15, which goes on: 思而不学则殆, thinking without learning is dangerous."
+   },
+   {
+    "id": "tp-wisdom-snrnxngbyuwsh",
+    "simplified": "三人行必有我师",
+    "traditional": "三人行必有我師",
+    "pinyin": "sān rén xíng bì yǒu wǒ shī",
+    "jyutping": "saam1 jan4 hang4 bit1 jau5 ngo5 si1",
+    "meaning": "among any three, one is my teacher",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Confucius, Analects 7.22."
+   },
+   {
+    "id": "tp-wisdom-jsubywshyrn",
+    "simplified": "己所不欲勿施于人",
+    "traditional": "己所不欲勿施於人",
+    "pinyin": "jǐ suǒ bù yù wù shī yú rén",
+    "jyutping": "gei2 so2 bat1 juk6 mat6 si1 jyu1 jan4",
+    "meaning": "don't do to others what you wouldn't want",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Confucius, Analects 15.24."
+   },
+   {
+    "id": "tp-wisdom-dokdofichngdo",
+    "simplified": "道可道非常道",
+    "traditional": "道可道非常道",
+    "pinyin": "dào kě dào fēi cháng dào",
+    "jyutping": "dou6 ho2 dou6 fei1 soeng4 dou6",
+    "meaning": "the Way that can be told is not the eternal Way",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Laozi, Dao De Jing, ch. 1."
+   },
+   {
+    "id": "tp-wisdom-shngshnrushu",
+    "simplified": "上善若水",
+    "traditional": "上善若水",
+    "pinyin": "shàng shàn ruò shuǐ",
+    "jyutping": "soeng6 sin6 joek6 seoi2",
+    "meaning": "the highest good is like water",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Laozi, Dao De Jing, ch. 8."
+   },
+   {
+    "id": "tp-wisdom-zhrnzhzh",
+    "simplified": "知人者智",
+    "traditional": "知人者智",
+    "pinyin": "zhī rén zhě zhì",
+    "jyutping": "zi1 jan4 ze2 zi3",
+    "meaning": "knowing others is wisdom",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Laozi, Dao De Jing, ch. 33."
+   },
+   {
+    "id": "tp-wisdom-zzhzhmng",
+    "simplified": "自知者明",
+    "traditional": "自知者明",
+    "pinyin": "zì zhī zhě míng",
+    "jyutping": "zi6 zi1 ze2 ming4",
+    "meaning": "knowing yourself is clarity",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Laozi, Dao De Jing, ch. 33."
+   },
+   {
+    "id": "tp-wisdom-zhzzhf",
+    "simplified": "知足者富",
+    "traditional": "知足者富",
+    "pinyin": "zhī zú zhě fù",
+    "jyutping": "zi1 zuk1 ze2 fu3",
+    "meaning": "knowing enough is wealth",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Laozi, Dao De Jing, ch. 33."
+   },
+   {
+    "id": "tp-wisdom-rurushnggngqing",
+    "simplified": "柔弱胜刚强",
+    "traditional": "柔弱勝剛強",
+    "pinyin": "róu ruò shèng gāng qiáng",
+    "jyutping": "jau4 joek6 sing3 gong1 koeng4",
+    "meaning": "the soft overcomes the hard",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Laozi, Dao De Jing, ch. 36."
+   },
+   {
+    "id": "tp-wisdom-dqwnchng",
+    "simplified": "大器晚成",
+    "traditional": "大器晚成",
+    "pinyin": "dà qì wǎn chéng",
+    "jyutping": "daai6 hei3 maan5 sing4",
+    "meaning": "great talents mature late",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Laozi, Dao De Jing, ch. 41."
+   },
+   {
+    "id": "tp-wisdom-huxfzhsuy",
+    "simplified": "祸兮福之所倚",
+    "traditional": "禍兮福之所倚",
+    "pinyin": "huò xī fú zhī suǒ yǐ",
+    "jyutping": "wo6 hai4 fuk1 zi1 so2 ji2",
+    "meaning": "fortune leans on misfortune",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Laozi, Dao De Jing, ch. 58."
+   },
+   {
+    "id": "tp-wisdom-qinlzhxngshyzxi",
+    "simplified": "千里之行始于足下",
+    "traditional": "千里之行始於足下",
+    "pinyin": "qiān lǐ zhī xíng, shǐ yú zú xià",
+    "jyutping": "cin1 lei5 zi1 hang4 ci2 jyu1 zuk1 haa6",
+    "meaning": "a journey of 1,000 li starts underfoot",
+    "deck": "topic",
+    "topic": "wisdom",
+    "note": "Laozi, Dao De Jing, ch. 64."
+   }
+  ]
  }
 ]

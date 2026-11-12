@@ -37,7 +37,7 @@ IT REMEMBERS FOR YOU
 Spaced review brings back the words you swiped left on, right before you'd forget them.
 
 DECKS FOR WHY YOU'RE LEARNING
-Tell it why you're learning (talking with family, cooking, work, dating, moving there) and a short topic deck joins your daily cards.
+Tell it why you're learning (family, cooking, dating, dentistry, pottery, dance, music production, startups and VC, AI, Chinese classics) and a short topic deck joins your daily cards.
 
 SIMPLIFIED OR TRADITIONAL
 Switch any time in Settings.
@@ -50,8 +50,8 @@ WHAT'S INSIDE (NO HYPE, JUST FACTS)
 
 Download free and read your first menu word tonight.
 
-## What's New (version 1.0)
-Version 1.0. 4,500+ words: menu dishes, travel signs, Cantonese→Mandarin pairs. Pinyin + jyutping on every card, audio in both, Lock Screen and tear-off widgets. Offline, no account, no ads. Tell us which menu word to add next.
+## What's New (version 1.1)
+Seven new topic decks: Dentistry, Pottery, Dance (hip hop, Afro, house, krump, street jazz), Music production, Startups, VC & MBA, AI, and Chinese wisdom with real lines from Sun Tzu, Confucius and Laozi. Pick them on the first screen or from Words > + Topic. The small Home Screen widget now keeps every word readable, and stacked brush characters have more room.
 
 ## Screenshot captions (6.9" display, 1320 × 2868)
 1. Read the menu at family dinner
