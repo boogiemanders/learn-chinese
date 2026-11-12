@@ -97,6 +97,9 @@ enum Brush {
         var size: CGFloat
         var centerY: CGFloat
         var kern: CGFloat
+        /// Which part of the answer it belongs to, for the staggered reveal:
+        /// 0 the word, 1 the readings, 2 the meaning.
+        var stage: Int = 0
     }
 
     static func serifFont(_ size: CGFloat) -> UIFont {
@@ -105,14 +108,61 @@ enum Brush {
         return UIFont(descriptor: base.fontDescriptor.withDesign(.serif) ?? base.fontDescriptor, size: size)
     }
 
-    /// The poster's three lines: characters, readings, meaning.
+    /// The widest a poster line may be inside the 390-wide design.
+    static let posterTextWidth: CGFloat = 340
+
+    /// The poster's text: the characters, then the readings, then the meaning. Short words
+    /// get one line of each, as before. Long ones (a line from the Dao De Jing) split the
+    /// readings into a pinyin line and a jyutping line and wrap the meaning, shrinking only
+    /// as far as needed, so nothing runs off the screen.
     static func posterLines(hanzi: String, readings: String, meaning: String) -> [Line] {
-        let readingSize: CGFloat = width(readings, size: 24) > 350 ? 15 : 24
-        return [
-            Line(text: hanzi, size: 39, centerY: 418, kern: 8),
-            Line(text: readings, size: readingSize, centerY: 472, kern: 0),
-            Line(text: meaning, size: 24, centerY: 516, kern: 1),
-        ]
+        let maxW = posterTextWidth
+        var hanziSize: CGFloat = 39
+        while hanziSize > 26, width(hanzi, size: hanziSize, kern: 8) > maxW { hanziSize -= 1 }
+
+        // readings: one line if it fits, else one line per language, each wrapped if needed
+        var readingRows: [String] = [readings], readingSize: CGFloat = 24
+        if width(readings, size: 24) > maxW {
+            readingSize = 18
+            let parts = readings.components(separatedBy: " · ")
+            readingRows = parts.flatMap { wrap($0, size: readingSize, width: maxW) }
+        }
+        // meaning: one line at 24 if it fits, else wrapped at 22, else smaller
+        var meaningSize: CGFloat = 24
+        var meaningRows = [meaning]
+        if width(meaning, size: 24, kern: 1) > maxW {
+            meaningSize = 22
+            meaningRows = wrap(meaning, size: meaningSize, width: maxW, kern: 1)
+            while meaningRows.count > 2, meaningSize > 16 {
+                meaningSize -= 1
+                meaningRows = wrap(meaning, size: meaningSize, width: maxW, kern: 1)
+            }
+        }
+
+        var out = [Line(text: hanzi, size: hanziSize, centerY: 418, kern: 8, stage: 0)]
+        var y: CGFloat = 472
+        for (i, r) in readingRows.enumerated() {
+            if i > 0 { y += readingSize * 1.45 }
+            out.append(Line(text: r, size: readingSize, centerY: y, kern: 0, stage: 1))
+        }
+        y += 44
+        for (i, r) in meaningRows.enumerated() {
+            if i > 0 { y += meaningSize * 1.35 }
+            out.append(Line(text: r, size: meaningSize, centerY: y, kern: 1, stage: 2))
+        }
+        return out
+    }
+
+    /// Greedy word wrap; a single word wider than `width` gets its own line.
+    static func wrap(_ text: String, size: CGFloat, width w: CGFloat, kern: CGFloat = 0) -> [String] {
+        var rows: [String] = [], current = ""
+        for word in text.split(separator: " ").map(String.init) {
+            let candidate = current.isEmpty ? word : current + " " + word
+            if current.isEmpty || width(candidate, size: size, kern: kern) <= w { current = candidate }
+            else { rows.append(current); current = word }
+        }
+        if !current.isEmpty { rows.append(current) }
+        return rows.isEmpty ? [text] : rows
     }
 
     static func width(_ text: String, size: CGFloat, kern: CGFloat = 0) -> CGFloat {
@@ -188,7 +238,9 @@ enum Brush {
 
         var fallback: Fit?
         var s = minSize
-        while s <= maxSize + 1 {
+        // taller text blocks (wrapped readings and meaning) may need a bigger brush than usual;
+        // the loop stops at the first size that covers everything, so short words are unaffected
+        while s <= maxSize * 1.618 + 1 {
             var best: Fit?
             for (dx, dy) in offsets {
                 ctx.setFillColor(gray: 0, alpha: 1); ctx.fill(clear); ctx.setFillColor(gray: 1, alpha: 1)
@@ -338,7 +390,7 @@ final class FitCache {
     private let lock = NSLock()
     private let url: URL
 
-    init(url: URL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0].appendingPathComponent("brush-fits-v2.json")) {
+    init(url: URL = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0].appendingPathComponent("brush-fits-v4.json")) {
         self.url = url
         load()
     }

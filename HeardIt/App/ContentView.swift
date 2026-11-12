@@ -498,8 +498,10 @@ struct PosterCard: View, Animatable {
             knockout(word, opacity: 1, dy: 0, outside: r > 0.5 ? Theme.blue : Theme.ink)
             // readings, then meaning: staggered, drifting up into place
             let a1 = stage(r, from: 0.35, to: 0.75), a2 = stage(r, from: 0.55, to: 0.95)
-            knockout(lines[1], opacity: a1, dy: (1 - a1) * 13, outside: Theme.blue)
-            knockout(lines[2], opacity: a2, dy: (1 - a2) * 13, outside: Theme.blue)
+            for l in lines.dropFirst() {
+                let a = l.stage == 1 ? a1 : a2
+                knockout(l, opacity: a, dy: (1 - a) * 13, outside: Theme.blue)
+            }
             drawStamp(&ctx, stamp, stampAmount, press: press)
         }
         .padding(.horizontal, -overhang)
